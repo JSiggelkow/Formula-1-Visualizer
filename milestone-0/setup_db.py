@@ -32,12 +32,11 @@ cursor.execute(f"""
 print(f"Table {TABLE_NAME} created successfully.")
 
 # Read CSV and insert data
-with open(CSV_FILE, newline='', encoding='utf-8') as csvfile:
-    reader = csv.DictReader(csvfile)
+with open(CSV_FILE, newline='', encoding='utf-8') as csv_file:
+    reader = csv.DictReader(csv_file)
     for row in reader:
         cursor.execute(
-            f"INSERT INTO {TABLE_NAME} (id, name) VALUES (%s, %s)",
-            (int(row['id']), row['name'])
+            f"INSERT INTO {TABLE_NAME} (id, name) VALUES ({int(row['id'])}, \"{row['name']}\")"
         )
 
 print("CSV data imported successfully.")
