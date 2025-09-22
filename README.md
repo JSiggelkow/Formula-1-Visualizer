@@ -43,7 +43,7 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
 
 ### Populate a toy database
 
-1. Create a `.env` file in the repo's root, and populate it with the necessary environment variables to connect to the database. The list of environment variables can be found here. (TODO(qianxug): link this once merged)
+1. Create a `.env` file in the repo's root, and populate it with the necessary environment variables to connect to the database. The list of environment variables can be found [here](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-0/consts.py#L7-L10).
     - Most likely, just this line is enough:
         ```
         MYSQL_PASSWORD=[your root password]
