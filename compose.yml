@@ -14,13 +14,15 @@ services:
       retries: 10
 
   backend:
-    build: .
+    build:
+      context: .
+      dockerfile: ./milestone-0/dockerfile
     container_name: backend
     depends_on:
       db:
         condition: service_healthy
     env_file:
-      - ../.env
+      - .env
     environment:
       MYSQL_HOST: db
     ports:
