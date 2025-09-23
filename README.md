@@ -82,7 +82,7 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
 2. Activate the virtual environment you just created by running `source [path to the activation script]`.
     - This may look like `source venv/Scripts/activate` for Windows, or `source venv/bin/activate` for MacOS/Linux.
 3. Run `which python` and confirm that "venv" is somewhere in the outputted path.
-4. Install dependencies by running `pip install -r requirements.txt`. This might take a while.
+4. Install dependencies by running `cd milestone-0 && pip install -r requirements.txt`. This might take a while.
 
 ### Populate a toy database
 
