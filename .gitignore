@@ -157,3 +157,6 @@ profile_default/
 .spyproject
 
 site/
+
+# IDE
+.idea
