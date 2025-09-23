@@ -20,15 +20,15 @@ services:
       db:
         condition: service_healthy
     env_file:
-      - .env
+      - ../.env
     environment:
       MYSQL_HOST: db
     ports:
-      - "8080:8080"
+      - "8000:8000"
     command: >
       sh -c "
         python setup_db.py &&
-        uvicorn main:app --host 0.0.0.0 --port 8080
+        uvicorn main:app --host 0.0.0.0 --port 8000
       "
 volumes:
   f1-visualizer-data:
