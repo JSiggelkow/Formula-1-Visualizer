@@ -8,7 +8,7 @@ services:
     volumes:
       - f1-visualizer-data:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_PASSWORD
       interval: 3s
       timeout: 5s
       retries: 10
