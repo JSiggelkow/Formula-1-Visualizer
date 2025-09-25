@@ -15,11 +15,10 @@ cursor = conn.cursor()
 print("Database connection established successfully.")
 
 # Create database
-cursor.execute(f"DROP DATABASE IF EXISTS {DB_NAME}")
-cursor.execute(f"CREATE DATABASE {DB_NAME}")
+cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME}")
 cursor.execute(f"USE {DB_NAME}")
 
-print(f"Database ${DB_NAME} created successfully.")
+print(f"Database ${DB_NAME} created or already exists.")
 
 # Create table
 cursor.execute(f"""
@@ -29,17 +28,17 @@ cursor.execute(f"""
     )
 """)
 
-print(f"Table {TABLE_NAME} created successfully.")
+print(f"Table {TABLE_NAME} created or already exists.")
 
 # Read CSV and insert data
 with open(CSV_FILE, newline='', encoding='utf-8') as csv_file:
     reader = csv.DictReader(csv_file)
     for row in reader:
         cursor.execute(
-            f"INSERT INTO {TABLE_NAME} (id, name) VALUES ({int(row['id'])}, \"{row['name']}\")"
+            f"INSERT INTO {TABLE_NAME} (id, name) VALUES ({int(row['id'])}, \"{row['name']}\") ON DUPLICATE KEY UPDATE name = VALUES(name)"
         )
 
-print("CSV data imported successfully.")
+print("CSV data imported or updated successfully.")
 
 conn.commit()
 cursor.close()

@@ -4,6 +4,48 @@
 
 Note that the following instructions are all given based on a Unix-like command line interface.
 
+The Setup description is split into two parts:
+- Setup in containerized environment (Docker)
+- Setup on you local machine
+
+## Setup with Docker
+
+Docker lets you run the database and backend in isolated containers.
+This keeps your local environment deps from interfering and avoids port conflicts with other services on your machine.
+
+### Prerequisites
+- [Docker](https://docs.docker.com/desktop/setup/install/mac-install/)
+- I recommend using Docker Desktop for managing Containers (I think the desktop App does not work on linux)
+
+### Environment
+- Create a `.env` in the repo's root and add a MySQL password to it:
+- `MYSQL_PASSWORD=[your root password]`
+
+### Start the containers (milestone-0)
+- `docker compose up` (use `-d` to run in background)
+
+### Test the API
+- visit http://localhost:8000/docs in your browser
+- select the `Get Toy Data` endpoint, click `Try it out`, and click `Execute`
+- you should see the toy data returned in the response body
+
+### Connect to the database
+- `docker compose exec db mysql -u root -p`
+- enter your root password when prompted
+- test the connection by running the following commands:
+- `use toy_database;`
+- `select * from toy_data;`
+
+### Stop the containers
+- `docker compose down`
+
+### Important notes
+- The database uses a mapped volume for persistence. Deleting the volume will remove all database data.
+- The database is not exposed to the host machine.
+- Ensure no other service is using port 8000.
+
+## Setup on your local machine
+
 ### Prerequisites
 
 1. You have installed [MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/) and [Python](https://wiki.python.org/moin/BeginnersGuide/Download).
