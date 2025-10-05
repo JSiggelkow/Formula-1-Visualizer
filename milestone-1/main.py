@@ -75,19 +75,3 @@ def get_race_wins(year: int = None):
     results = cursor.fetchall()
     cursor.close()
     return results
-
-if __name__ == '__main__':
-    conn = get_db_conn()
-    cursor = conn.cursor(dictionary=True)
-
-    # Show Hamilton's finishing positions in the British Grand Prix from 2015-2020
-    cursor.execute(f"SELECT races.year, results.positionText \
-                     FROM drivers NATURAL JOIN races NATURAL JOIN results \
-                     WHERE surname = 'Hamilton' AND races.name = 'British Grand Prix' \
-                                                AND 2015 <= races.year AND races.year <= 2020")
-    results = cursor.fetchall()
-    print("year\tresult")
-    for col in results:
-        print(f"{col['year']}\t{col['positionText']}")
-    cursor.close()
-    conn.close()

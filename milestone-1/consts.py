@@ -10,4 +10,4 @@ MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
 MYSQL_PORT = int(os.getenv("MYSQL_PORT", 3306))
 
 DB_NAME = "f1db"
-TABLE_NAMES = ["drivers", "constructors", "circuits", "races", "status", "results"]
+TABLE_NAMES = ["drivers", "constructors", "circuits", "races", "status", "results", "lap_times"]
