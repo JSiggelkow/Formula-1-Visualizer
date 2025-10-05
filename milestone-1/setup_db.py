@@ -7,7 +7,7 @@ from consts import *
 conn = mysql.connector.connect(
     host=MYSQL_HOST,
     user=MYSQL_USER,
-    password='password',
+    password=MYSQL_PASSWORD,
     port=MYSQL_PORT
 )
 cursor = conn.cursor()
