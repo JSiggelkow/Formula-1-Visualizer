@@ -126,5 +126,5 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
 
 ### Run the front-end (Milestone 1)
 
-1. Run with `npm run dev`
+1. From the `milestone-1/frontend/` folder, run `npm run dev`
 2. For the connection with the backend to work, run the other steps but inside the `milestone-1/backend/` folder instead.
