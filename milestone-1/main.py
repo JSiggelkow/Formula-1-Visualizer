@@ -30,6 +30,7 @@ def get_drivers(forename: str = None, surname: str = None, driver_id: int = None
     cursor.execute(query)
     results = cursor.fetchall()
     cursor.close()
+    conn.close()
     return results
 
     # Basic Feature #2
@@ -37,27 +38,33 @@ def get_drivers(forename: str = None, surname: str = None, driver_id: int = None
 def get_driver_race_results(driver_id: int):
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
-    query = (f"SELECT results.points, results.grid, results.positionText, "
-             f"races.year, races.round, "
-             f"circuits.name AS circuit_name, circuits.city, circuits.country, "
-             f"constructors.name AS constructor_name, "
-             f"teammateName.name AS teammate_name "
-             f"FROM results "
-             f"JOIN races ON races.raceId = results.raceId "
-             f"JOIN circuits ON circuits.circuitId = races.circuitId "
-             f"JOIN constructors ON constructors.constructorId = results.constructorId "
-             f"JOIN drivers ON drivers.driverId = results.driverId "
-             f"LEFT JOIN (SELECT CONCAT(d1.forename, ' ', d1.surname) AS name, "
-             f"           r2.raceId, r2.constructorId "
-             f"           FROM drivers d1 "
-             f"           JOIN results r2 ON r2.driverId = d1.driverId) AS teammateName "
-             f"ON teammateName.raceId = results.raceId "
-             f"AND teammateName.constructorId = results.constructorId "
-             f"AND teammateName.name != CONCAT(drivers.forename, ' ', drivers.surname) "
-             f"WHERE results.driverId = {driver_id}")
-    cursor.execute(query)
+    query = """
+        SELECT 
+            r.driverId,
+            r.raceId,
+            r.points, 
+            r.grid, 
+            r.positionText,
+            ra.year, 
+            ra.round,
+            c.name AS circuit_name, 
+            c.city, 
+            c.country,
+            con.name AS constructor_name,
+            CONCAT(dtp.teammate_forename, ' ', dtp.teammate_surname) AS teammate
+        FROM results r
+        JOIN races ra ON ra.raceId = r.raceId
+        JOIN circuits c ON c.circuitId = ra.circuitId
+        JOIN constructors con ON con.constructorId = r.constructorId
+        LEFT JOIN driver_teammate_pairs dtp # uses a view that has all driver_teammate_pairs for every race
+            ON dtp.raceId = r.raceId 
+            AND dtp.driver_id = r.driverId
+        WHERE r.driverId = %s
+    """
+    cursor.execute(query, (driver_id,))
     results = cursor.fetchall()
     cursor.close()
+    conn.close()
     return results
 
     # Basic Feature #3
@@ -74,4 +81,70 @@ def get_race_wins(year: int = None):
     cursor.execute(query)
     results = cursor.fetchall()
     cursor.close()
+    conn.close()
+    return results
+
+# Basic Feature #4
+@app.get("/fastest-lap")
+def get_fastest_laps(race_id: int = None, circuit_id: int = None):
+    if race_id is None and circuit_id is None:
+        return {"error": "Either race_id or circuit_id must be provided"}
+    if race_id is not None and circuit_id is not None:
+        return {"error": "Only one of race_id or circuit_id can be provided, not both"}
+
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    if race_id is not None:
+        query = """
+            SELECT CONCAT(d.forename, ' ', d.surname) AS driver_name,
+                lt.lap,
+                lt.time,
+                lt.milliseconds,
+                r.name AS race_name,
+                r.year,
+                r.date,
+                c.name AS circuit_name,
+                c.city AS circuit_city,
+                c.country AS circuit_country
+            FROM lap_times lt
+                JOIN drivers d ON d.driverId = lt.driverId
+                JOIN races r ON r.raceId = lt.raceId
+                JOIN circuits c ON c.circuitId = r.circuitId
+            WHERE lt.raceId = %s
+            AND lt.milliseconds = (
+                    SELECT MIN(milliseconds)
+                    FROM lap_times
+                    WHERE raceId = %s
+                )
+                """
+        cursor.execute(query, (race_id, race_id))
+    else:
+        query = """
+            SELECT CONCAT(d.forename, ' ', d.surname) AS driver_name,
+                lt.lap,
+                lt.time,
+                lt.milliseconds,
+                r.name AS race_name,
+                r.year,
+                c.name AS circuit_name,
+                c.city AS circuit_city,
+                c.country AS circuit_country
+            FROM lap_times lt
+                JOIN drivers d ON d.driverId = lt.driverId
+                JOIN races r ON r.raceId = lt.raceId
+                JOIN circuits c ON c.circuitId = r.circuitId
+            WHERE c.circuitId = %s
+            AND lt.milliseconds = (
+                    SELECT MIN(lt2.milliseconds)
+                    FROM lap_times lt2
+                    JOIN races r2 ON r2.raceId = lt2.raceId
+                    WHERE r2.circuitId = %s
+                )
+                """
+        cursor.execute(query, (circuit_id, circuit_id))
+
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
     return results

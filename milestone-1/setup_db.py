@@ -30,6 +30,14 @@ for command in sql_commands:
         cursor.execute(command)
 conn.commit()
 
+# Create Views
+with open("define_views.sql", "r", encoding="utf-8") as f:
+    sql_commands = f.read().split(";")
+for command in sql_commands:
+    if command.strip():
+        cursor.execute(command)
+conn.commit()
+
 # Insert data for each table
 for table_name in TABLE_NAMES:
 
