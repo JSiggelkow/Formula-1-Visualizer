@@ -6,6 +6,6 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./milestone-1 .
+COPY ./milestone-1/backend .
 
 EXPOSE 8000

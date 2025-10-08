@@ -16,7 +16,7 @@ services:
   backend:
     build:
       context: .
-      dockerfile: ./milestone-1/dockerfile
+      dockerfile: ./milestone-1/backend/dockerfile
     container_name: backend
     depends_on:
       db:
@@ -32,5 +32,19 @@ services:
         python setup_db.py &&
         uvicorn main:app --host 0.0.0.0 --port 8000
       "
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./milestone-1/frontend/dockerfile
+    container_name: frontend
+    depends_on:
+      backend:
+        condition: service_started
+    environment:
+      VITE_BACKEND_URL: http://backend:8000
+    ports:
+      - "5173:5173"
+
 volumes:
   f1-visualizer-data:

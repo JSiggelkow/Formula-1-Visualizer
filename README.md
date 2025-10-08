@@ -10,7 +10,7 @@ The Setup description is split into two parts:
 
 ## Setup with Docker
 
-Docker lets you run the database and backend in isolated containers.
+Docker lets you run the database, backend, and frontend in isolated containers.
 This keeps your local environment deps from interfering and avoids port conflicts with other services on your machine.
 
 ### Prerequisites
@@ -21,20 +21,22 @@ This keeps your local environment deps from interfering and avoids port conflict
 - Create a `.env` in the repo's root and add a MySQL password to it:
 - `MYSQL_PASSWORD=[your root password]`
 
-### Start the containers (milestone-0)
+### Start the containers
 - `docker compose up` (use `-d` to run in background)
+
+### View the frontend
+- visit http://localhost:5173 in your browser
 
 ### Test the API
 - visit http://localhost:8000/docs in your browser
-- select the `Get Toy Data` endpoint, click `Try it out`, and click `Execute`
-- you should see the toy data returned in the response body
+- you can test the API endpoints.
 
 ### Connect to the database
 - `docker compose exec db mysql -u root -p`
 - enter your root password when prompted
 - test the connection by running the following commands:
-- `use toy_database;`
-- `select * from toy_data;`
+- `use f1db;`
+- `select * from drivers;`
 
 ### Stop the containers
 - `docker compose down`
@@ -42,7 +44,10 @@ This keeps your local environment deps from interfering and avoids port conflict
 ### Important notes
 - The database uses a mapped volume for persistence. Deleting the volume will remove all database data.
 - The database is not exposed to the host machine.
-- Ensure no other service is using port 8000.
+- Ensure no other service is using port 8000 or port 5173.
+
+### Helpful commands
+- 'docker compose up --build --force-recreate' to rebuild the images and recreate the containers
 
 ## Setup on your local machine
 
@@ -90,36 +95,18 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
         ```
         MYSQL_PASSWORD=[your root password]
         ```
-2. Run `cd milestone-0/`.
+2. Run `cd milestone-1/backend/`.
 3. Run `python setup_db.py`. This script creates a toy database, a table within the toy database, and inserts data from `toy_dataset.csv` into it.
     - The script has run successfully once you see "Done." printed to the terminal.
 
 ### Run the back-end
 
-1. Still from the `milestone-0/` folder, run the back-end locally using `uvicorn main:app --reload`.
-2. Visit http://127.0.0.1:8000/docs in your browser. You should see a "Get Toy Data" endpoint displayed.
-3. Select the endpoint, click "Try it out", and click "Execute". If all is configured properly, you should see the following data returned via the response body:
-    ```json
-    [
-    {
-        "id": 1,
-        "name": "Jonas"
-    },
-    {
-        "id": 2,
-        "name": "Lena"
-    },
-    {
-        "id": 3,
-        "name": "Michelle"
-    },
-    {
-        "id": 4,
-        "name": "Miles"
-    },
-    {
-        "id": 5,
-        "name": "Qianxu"
-    }
-    ]
-    ```
+1. Still from the `milestone-1/backend/` folder, run the back-end locally using `uvicorn main:app --reload`.
+2. Visit http://127.0.0.1:8000/docs in your browser. You should see a different endpoints displayed.
+3. Try out the endpoints.
+
+### Run the front-end
+
+1. From the `milestone-1/frontend/` folder, run `npm install` if needed.
+2. Run `npm run dev`.
+3. Go to `http://127.0.0.1:5173`.
