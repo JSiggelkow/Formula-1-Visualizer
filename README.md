@@ -47,7 +47,7 @@ This keeps your local environment deps from interfering and avoids port conflict
 - Ensure no other service is using port 8000 or port 5173.
 
 ### Helpful commands
-- 'docker compose up --build --force-recreate' to rebuild the images and recreate the containers
+- `docker compose up --build --force-recreate` to rebuild the images and recreate the containers
 
 ## Setup on your local machine
 

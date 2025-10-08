@@ -7,7 +7,7 @@ const DriverSearch = () => {
 
   const getDriverByForename = async (forename) => {
     try {
-      const response = await api.get(`/driver?forename=${forename}`);
+      const response = await api.get(`/api/driver?forename=${forename}`);
       setDriver(response.data.length > 0 ? response.data[0] : null);
     } catch (error) {
       console.error("Error fetching drivers by forename", error);
