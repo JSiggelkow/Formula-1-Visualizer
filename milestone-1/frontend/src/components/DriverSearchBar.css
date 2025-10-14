@@ -1,0 +1,23 @@
+.autocomplete {
+  flex: 1;
+}
+
+.search-bar-container {
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+
+  &:focus-within {
+    outline: none;
+    border-color: var(--mantine-color-red-6);
+  }
+}
+
+.submit-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
