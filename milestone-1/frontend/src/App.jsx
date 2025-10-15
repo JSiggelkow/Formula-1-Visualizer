@@ -1,17 +1,28 @@
-import React from 'react';
-import './App.css';
-import DriverSearch from './components/Drivers';
+import { MantineProvider } from "@mantine/core";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "@mantine/core/styles.css";
+
+import HomePage from "./pages/HomePage";
+import InfoPage from "./pages/InfoPage";
+import { theme } from "./theme/theme";
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>F1 App</h1>
-      </header>
-      <main>
-        <DriverSearch />
-      </main>
-    </div>
+    <MantineProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/driver/:driverId"
+            element={<InfoPage type="driver" />}
+          />
+          <Route
+            path="/race-wins/:year"
+            element={<InfoPage type="season-winners" />}
+          />
+        </Routes>
+      </Router>
+    </MantineProvider>
   );
 };
 

@@ -73,6 +73,7 @@ def get_driver_race_results(driver_id: int):
             ON dtp.raceId = r.raceId 
             AND dtp.driver_id = r.driverId
         WHERE r.driverId = %s
+        ORDER BY ra.year DESC, ra.round DESC
     """
     cursor.execute(query, (driver_id,))
     results = cursor.fetchall()
