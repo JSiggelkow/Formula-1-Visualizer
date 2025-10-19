@@ -17,6 +17,7 @@ else:
     data_folder = "sample_data"
     database_name = SAMPLE_DB_NAME
 
+# Connect to MySQL server
 conn = mysql.connector.connect(
     host=MYSQL_HOST,
     user=MYSQL_USER,

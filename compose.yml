@@ -30,6 +30,7 @@ services:
     command: >
       sh -c "
         python setup_db.py &&
+        python setup_db.py --prod &&
         uvicorn main:app --host 0.0.0.0 --port 8000
       "
 
