@@ -1,9 +1,22 @@
+import argparse
 import csv
 import mysql.connector
+import os
 
 from consts import *
 
-# Connect to MySQL server
+# Parse command-line arguments
+parser = argparse.ArgumentParser(description="Setup database script")
+parser.add_argument("--prod", action="store_true", help="Use production data instead of sample data")
+args = parser.parse_args()
+
+if args.prod:
+    data_folder = "prod_data"
+    database_name = PROD_DB_NAME
+else:
+    data_folder = "sample_data"
+    database_name = SAMPLE_DB_NAME
+
 conn = mysql.connector.connect(
     host=MYSQL_HOST,
     user=MYSQL_USER,
@@ -12,15 +25,14 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-print("Database connection established successfully.")
+print(f"Database connection established successfully.")
 
 # Create database
-cursor.execute(f"DROP DATABASE IF EXISTS {DB_NAME}")
-cursor.execute(f"CREATE DATABASE {DB_NAME}")
-cursor.execute(f"USE {DB_NAME}")
+cursor.execute(f"DROP DATABASE IF EXISTS {database_name}")
+cursor.execute(f"CREATE DATABASE {database_name}")
+cursor.execute(f"USE {database_name}")
 
-print(f"Database ${DB_NAME} created successfully.")
-
+print(f"Database {database_name} created successfully.")
 
 # Create all tables from sql file
 with open("define_tables.sql", "r", encoding="utf-8") as f:
@@ -45,7 +57,8 @@ for table_name in TABLE_NAMES:
     cursor.execute(f"DESCRIBE {table_name}") 
     columns = [row[0] for row in cursor.fetchall()]
 
-    file_path = "data/" + table_name + ".csv"
+    file_path = os.path.join(data_folder, f"{table_name}.csv")
+
     with open(file_path, newline='', encoding='utf-8') as csv_file:
         reader = csv.DictReader(csv_file)
 
