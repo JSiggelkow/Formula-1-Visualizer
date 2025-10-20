@@ -25,7 +25,7 @@ def get_db_conn():
         user=MYSQL_USER,  # TODO: don't use root user for the actual app
         password=MYSQL_PASSWORD,
         port=MYSQL_PORT,
-        database=DB_NAME
+        database=PROD_DB_NAME
     )
 
     # Basic Feature #1
@@ -141,6 +141,7 @@ def get_fastest_laps(race_id: int = None, circuit_id: int = None):
                 lt.milliseconds,
                 r.name AS race_name,
                 r.year,
+                r.date,
                 c.name AS circuit_name,
                 c.city AS circuit_city,
                 c.country AS circuit_country
