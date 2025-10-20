@@ -10,4 +10,6 @@ COPY ./milestone-1/frontend .
 
 EXPOSE 5173
 
+ENV VITE_BACKEND_URL=http://backend:8000
+
 CMD ["npm", "run", "dev"]
