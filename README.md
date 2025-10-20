@@ -48,6 +48,7 @@ This keeps your local environment deps from interfering and avoids port conflict
 
 ### Helpful commands
 - `docker compose up --build --force-recreate` to rebuild the images and recreate the containers
+- `docker exec -it db mysql -u root -p` to exec into the database container and run queries
 
 ## Setup on your local machine
 
