@@ -22,7 +22,7 @@ This keeps your local environment deps from interfering and avoids port conflict
 - `MYSQL_PASSWORD=[your root password]`
 
 ### Start the containers
-- `docker compose up` (use `-d` to run in background)
+- `docker compose up --build --force-recreate` (use `-d` to run in background)
 
 ### View the frontend
 - visit http://localhost:5173 in your browser
