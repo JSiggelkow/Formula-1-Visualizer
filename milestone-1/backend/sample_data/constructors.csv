@@ -1,0 +1,12 @@
+constructorId,constructorRef,name,nationality,url,colorPrimary,colorSecondary
+1,"mclaren","McLaren","British","http://en.wikipedia.org/wiki/McLaren",#F47600
+2,"bmw_sauber","BMW Sauber","German","http://en.wikipedia.org/wiki/BMW_Sauber",#FFFFFF,#16588E
+3,"williams","Williams","British","http://en.wikipedia.org/wiki/Williams_Grand_Prix_Engineering",#1868DB
+4,"renault","Renault","French","http://en.wikipedia.org/wiki/Renault_in_Formula_One",#f7d747
+5,"toro_rosso","Toro Rosso","Italian","http://en.wikipedia.org/wiki/Scuderia_Toro_Rosso",#00144A,#EC0742
+6,"ferrari","Ferrari","Italian","http://en.wikipedia.org/wiki/Scuderia_Ferrari",#EF1A2D
+7,"toyota","Toyota","Japanese","http://en.wikipedia.org/wiki/Toyota_Racing",#EB0A1E,#FFFFFF
+8,"super_aguri","Super Aguri","Japanese","http://en.wikipedia.org/wiki/Super_Aguri_F1",#FFFFFF,#e20010
+9,"red_bull","Red Bull","Austrian","http://en.wikipedia.org/wiki/Red_Bull_Racing",#121F45,#FF004C
+10,"force_india","Force India","Indian","http://en.wikipedia.org/wiki/Racing_Point_Force_India",#00A85C,#F27836
+11,"honda","Honda","Japanese","http://en.wikipedia.org/wiki/Honda_Racing_F1",#FFFFFF,#f30f34

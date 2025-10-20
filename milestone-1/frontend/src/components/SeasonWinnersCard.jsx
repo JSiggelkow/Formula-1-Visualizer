@@ -37,6 +37,7 @@ const SeasonWinnersCard = () => {
         type="submit"
         color="red.5"
         onClick={handleSubmit}
+        disabled={!year}
         mt="xl"
         h="3rem"
       >

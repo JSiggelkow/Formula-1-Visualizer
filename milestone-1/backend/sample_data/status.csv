@@ -1,0 +1,11 @@
+statusId,status
+1,"Finished"
+2,"Disqualified"
+3,"Accident"
+4,"Collision"
+5,"Engine"
+7,"Transmission"
+8,"Clutch"
+9,"Hydraulics"
+10,"Electrical"
+11,"+1 Lap"
