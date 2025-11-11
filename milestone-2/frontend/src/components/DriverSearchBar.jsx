@@ -1,105 +1,115 @@
-import { Autocomplete, Box, Button, Group, Text } from "@mantine/core";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {Autocomplete, Box, Button, Group, Text} from "@mantine/core";
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 import api from "../api";
 import "./DriverSearchBar.css";
 
-const DriverOption = ({ option }) => (
-  <Group justify="space-between" w="100%">
-    <Text fw={600} c="dark">
-      {option.driver?.forename} {option.driver?.surname}
-    </Text>
-    <Text size="sm" c="dimmed">
-      {option.driver?.nationality}
-    </Text>
-  </Group>
+const DriverOption = ({option}) => (
+    <Group justify="space-between" w="100%">
+        <Text fw={600} c="dark">
+            {option.driver?.forename} {option.driver?.surname}
+        </Text>
+        <Text size="sm" c="dimmed">
+            {option.driver?.nationality}
+        </Text>
+    </Group>
 );
 
 const DriverSearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [autocompleteData, setAutocompleteData] = useState([]);
-  const navigate = useNavigate();
+    const [searchTerm, setSearchTerm] = useState("");
+    const [autocompleteData, setAutocompleteData] = useState([]);
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    if (searchTerm.length >= 2) {
-      fetchDriverSuggestions(searchTerm);
-    } else {
-      setAutocompleteData([]);
-    }
-  }, [searchTerm]);
+    useEffect(() => {
+        if (searchTerm.length >= 2) {
+            fetchDriverSuggestions(searchTerm);
+        } else {
+            setAutocompleteData([]);
+        }
+    }, [searchTerm]);
 
-  const fetchDriverSuggestions = async (term) => {
-    try {
-      const [searchByForenameRes, searchBySurnameRes] = await Promise.all([
-        api.get(`/driver?forename=${term}`),
-        api.get(`/driver?surname=${term}`),
-      ]);
+    const fetchDriverSuggestions = async (term) => {
+        try {
+            const terms = term.trim().split(/\s+/)
+            const isFullName = terms.length >= 2;
 
-      // Combine and deduplicate based on driverId
-      const combined = [
-        ...searchByForenameRes.data,
-        ...searchBySurnameRes.data,
-      ];
-      const unique = combined.filter(
-        (driver, index, self) =>
-          index === self.findIndex((d) => d.driverId === driver.driverId),
-      );
+            let apiCalls;
 
-      const data = unique.map((driver) => ({
-        value: `${driver.forename} ${driver.surname}`,
-        label: `${driver.forename} ${driver.surname}`,
-        driver: driver,
-      }));
-      setAutocompleteData(data);
-    } catch (error) {
-      console.error("Error fetching driver suggestions:", error);
-      setAutocompleteData([]);
-    }
-  };
+            if (isFullName) {
 
-  const handleDriverSelect = (value) => {
-    const option = autocompleteData.find((opt) => opt.value === value);
-    if (option && option.driver) {
-      navigate(`/driver/${option.driver.driverId}`);
-    }
-  };
+                const forename = terms[0];
+                const surname = terms.slice(1).join(' ');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (autocompleteData.length > 0) {
-      handleDriverSelect(autocompleteData[0].value);
-    }
-  };
+                apiCalls = [
+                    api.get(`/driver?forename=${terms[0]}&surname=${terms[1]}`),
+                ];
+            } else {
+                apiCalls = [
+                    api.get(`/driver?forename=${term}`),
+                    api.get(`/driver?surname=${term}`),
+                ];
+            }
+            const responses = await Promise.all(apiCalls);
 
-  return (
-    <Box w="60%">
-      <Group gap={0} className="search-bar-container">
-        <Autocomplete
-          value={searchTerm}
-          onChange={setSearchTerm}
-          onOptionSubmit={handleDriverSelect}
-          data={autocompleteData}
-          placeholder="Search for a driver by first or last name (e.g., 'Lewis' or 'Hamilton')"
-          size="lg"
-          className="autocomplete"
-          classNames={{
-            input: "search-input",
-          }}
-          renderOption={({ option }) => <DriverOption option={option} />}
-        />
-        <Button
-          type="submit"
-          size="lg"
-          color="red.5"
-          className="submit-button"
-          onClick={handleSubmit}
-        >
-          Search
-        </Button>
-      </Group>
-    </Box>
-  );
+            const combined = responses.flatMap(res => res.data);
+            const unique = combined.filter(
+                (driver, index, self) => index === self.findIndex(d => d.driverId === driver.driverId))
+
+            const data = unique.map((driver) => ({
+                value: `${driver.forename} ${driver.surname}`,
+                label: `${driver.forename} ${driver.surname}`,
+                driver: driver,
+            }));
+            setAutocompleteData(data);
+        } catch (error) {
+            console.error("Error fetching driver suggestions:", error);
+            setAutocompleteData([]);
+        }
+    };
+
+    const handleDriverSelect = (value) => {
+        const option = autocompleteData.find((opt) => opt.value === value);
+        if (option && option.driver) {
+            navigate(`/driver/${option.driver.driverId}`);
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (autocompleteData.length > 0) {
+            handleDriverSelect(autocompleteData[0].value);
+        }
+    };
+
+    return (
+        <Box w="60%">
+            <Group gap={0} className="search-bar-container">
+                <Autocomplete
+                    value={searchTerm}
+                    onChange={setSearchTerm}
+                    onOptionSubmit={handleDriverSelect}
+                    data={autocompleteData}
+                    placeholder="Search for a driver by first or last name (e.g., 'Lewis' or 'Hamilton')"
+                    size="lg"
+                    className="autocomplete"
+                    classNames={{
+                        input: "search-input",
+                    }}
+                    renderOption={({option}) => <DriverOption option={option}/>}
+                />
+                <Button
+                    type="submit"
+                    size="lg"
+                    color="red.5"
+                    className="submit-button"
+                    onClick={handleSubmit}
+                >
+                    Search
+                </Button>
+            </Group>
+        </Box>
+    );
 };
 
 export default DriverSearchBar;
