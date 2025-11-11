@@ -16,7 +16,7 @@ services:
   backend:
     build:
       context: .
-      dockerfile: ./milestone-1/backend/dockerfile
+      dockerfile: ./milestone-2/backend/dockerfile
     container_name: backend
     depends_on:
       db:
@@ -37,7 +37,7 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: ./milestone-1/frontend/dockerfile
+      dockerfile: ./milestone-2/frontend/dockerfile
     container_name: frontend
     depends_on:
       backend:

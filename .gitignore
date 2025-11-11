@@ -160,3 +160,6 @@ site/
 
 # IDE
 .idea
+
+# MacOS
+.DS_STORE
