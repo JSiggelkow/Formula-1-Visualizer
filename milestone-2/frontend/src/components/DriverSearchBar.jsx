@@ -32,17 +32,18 @@ const DriverSearchBar = () => {
     const fetchDriverSuggestions = async (term) => {
         try {
             const terms = term.trim().split(/\s+/)
-            const isFullName = terms.length >= 2;
 
             let apiCalls;
 
-            if (isFullName) {
+            if (terms.length >= 2) {
 
-                const forename = terms[0];
-                const surname = terms.slice(1).join(' ');
+                const forename = terms.slice(0, terms.length - 1).join(' ');
+                const surname = terms[terms.length - 1];
 
                 apiCalls = [
-                    api.get(`/driver?forename=${terms[0]}&surname=${terms[1]}`),
+                    api.get(`/driver?forename=${forename}&surname=${surname}`),
+                    api.get(`/driver?forename=${term}`),
+                    api.get(`/driver?surname=${term}`),
                 ];
             } else {
                 apiCalls = [
