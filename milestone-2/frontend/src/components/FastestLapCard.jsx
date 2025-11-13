@@ -34,12 +34,13 @@ const FastestLapCard = () => {
 
   const fetchCircuits = async () => {
     try {
-      // For now, using mock data
-      setCircuits([
-        { value: "1", label: "Albert Park Grand Prix Circuit" },
-        { value: "2", label: "Sepang International Circuit" },
-        { value: "3", label: "Bahrain International Circuit" },
-      ]);
+      const circuitsRes = await api.get("/circuits");
+      const circuitOptions = circuitsRes.data.map(circuit => ({
+        value: String(circuit.circuitId),
+        label: circuit.name,
+      }));
+      circuitOptions.sort((a, b) => a.label.localeCompare(b.label));
+      setCircuits(circuitOptions);
     } catch (error) {
       console.error("Error fetching circuits:", error);
     }
@@ -47,12 +48,13 @@ const FastestLapCard = () => {
 
   const fetchRacesByYear = async (year) => {
     try {
-      // For now, using mock data
-      setRaces([
-        { value: "1", label: "Australian Grand Prix (Round 1)" },
-        { value: "2", label: "Malaysian Grand Prix (Round 2)" },
-        { value: "3", label: "Chinese Grand Prix (Round 3)" },
-      ]);
+      const racesRes = await api.get(`/races?year=${year}`);
+      const raceLabels = racesRes.data.map(race => ({
+        value: String(race.raceId),
+        label: race.name,
+      }));
+      raceLabels.sort((a, b) => a.label.localeCompare(b.label));
+      setRaces(raceLabels);
     } catch (error) {
       console.error("Error fetching races:", error);
     }
@@ -62,18 +64,16 @@ const FastestLapCard = () => {
     e.preventDefault();
 
     if (activeTab === "race" && selectedRace) {
-      console.log("selected race is", selectedRace);
-      //   navigate(`/fastest-lap/race/${selectedRace}`);
+      navigate(`/fastest-lap/race/${selectedRace}`);
     } else if (activeTab === "circuit" && selectedCircuit) {
-      console.log("selected circuit is", selectedCircuit);
-      //   navigate(`/fastest-lap/circuit/${selectedCircuit}`);
+      navigate(`/fastest-lap/circuit/${selectedCircuit}`);
     }
   };
 
   return (
     <Card bg="white" className="action-card" p="xl">
       <Title size="h3" c="red.6" mb="sm">
-        Fastest Lap (Hardcoded for now)
+        Fastest Lap
       </Title>
       <Text c="gray.7" mb="lg">
         Find the fastest lap time for a specific race or circuit
@@ -111,10 +111,11 @@ const FastestLapCard = () => {
             value={selectedRace}
             onChange={setSelectedRace}
             data={races}
+            disabled={!selectedYear || String(selectedYear).length < 4 || races.length === 0}
             classNames={{
                 input: "input"
             }}
-/>
+          />
         </>
       ) : (
         <>
@@ -137,6 +138,10 @@ const FastestLapCard = () => {
         onClick={handleSubmit}
         mt="xl"
         h="3rem"
+        disabled={
+          (activeTab === "race" && !selectedRace) ||
+          (activeTab === "circuit" && !selectedCircuit)
+        }
       >
         Select Race/Circuit
       </Button>
