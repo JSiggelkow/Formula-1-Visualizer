@@ -22,8 +22,8 @@ constructorId,constructorRef,name,nationality,url,colorPrimary,colorSecondary
 21,"arrows","Arrows","British","http://en.wikipedia.org/wiki/Arrows_Grand_Prix_International",#FF6600,#FF6600
 22,"benetton","Benetton","Italian","http://en.wikipedia.org/wiki/Benetton_Formula",#008860
 23,"brawn","Brawn","British","http://en.wikipedia.org/wiki/Brawn_GP",#FFFFFF,#D1E200
-24,"stewart","Stewart","British","http://en.wikipedia.org/wiki/Stewart_Grand_Prix",#FFFFFF,#2F4198
-25,"tyrrell","Tyrrell","British","http://en.wikipedia.org/wiki/Tyrrell_Racing",#1b4971
+24,"stewart1","Stewart","British","http://en.wikipedia.org/wiki/Stewart_Grand_Prix",#FFFFFF,#2F4198
+25,"tyrrell1","Tyrrell","British","http://en.wikipedia.org/wiki/Tyrrell_Racing",#1b4971
 26,"lola","Lola","British","http://en.wikipedia.org/wiki/MasterCard_Lola",#ed1b2c,#ed1b2c
 27,"ligier","Ligier","French","http://en.wikipedia.org/wiki/Ligier",#0056ba
 28,"forti","Forti","Italian","http://en.wikipedia.org/wiki/Forti",#FFD700,#005BAC
@@ -182,28 +182,28 @@ constructorId,constructorRef,name,nationality,url,colorPrimary,colorSecondary
 183,"brabham-climax","Brabham-Climax","British","http://en.wikipedia.org/wiki/Brabham",#002F6C,#FFFFFF
 184,"lds-climax","LDS-Climax","South African","http://en.wikipedia.org/wiki/LDS_(automobile)",#FFD100,#000000
 185,"lds-alfa_romeo","LDS-Alfa Romeo","South African","http://en.wikipedia.org/wiki/LDS_(automobile)",#FFD100,#000
-186,"hrt","HRT","Spanish","http://en.wikipedia.org/wiki/HRT_F1_Team",#A9A9A9,#FFD700
-187,"virgin","Virgin","British","http://en.wikipedia.org/wiki/Virgin_Racing",#FF0000,#000000
+186,"hrt-f1-team","HRT","Spanish","http://en.wikipedia.org/wiki/HRT_F1_Team",#A9A9A9,#FFD700
+187,"virgin1","Virgin","British","http://en.wikipedia.org/wiki/Virgin_Racing",#FF0000,#000000
 188,"caterham","Caterham","Malaysian","http://en.wikipedia.org/wiki/Caterham_F1",#004225,#FFD700
 189,"stewart","Stewart","British","http://en.wikipedia.org/wiki/Stewart_Grand_Prix",#FFFFFF,#0033A0
 190,"tyrrell","Tyrrell","British","http://en.wikipedia.org/wiki/Tyrrell_Racing",#0033A0,#FFFFFF
 191,"march2","March","British","http://en.wikipedia.org/wiki/March_Engineering",#FF0000,#FFFFFF
-192,"shadow","Shadow","British","http://en.wikipedia.org/wiki/Shadow_Racing_Cars",#000000,#FF0000
+192,"shadow1","Shadow","British","http://en.wikipedia.org/wiki/Shadow_Racing_Cars",#000000,#FF0000
 193,"pens","Penske","American","http://en.wikipedia.org/wiki/Penske_in_Formula_One",#FF0000,#FFFFFF
-194,"wolf","Wolf","Canadian","http://en.wikipedia.org/wiki/Walter_Wolf_Racing",#000080,#FFD700
-195,"fittipaldi","Fittipaldi","Brazilian","http://en.wikipedia.org/wiki/Fittipaldi_automotive",#FFD700,#00A859
-196,"merzario","Merzario","Italian","http://en.wikipedia.org/wiki/Merzario",#FFD700,#FF0000
-197,"kauhsen","Kauhsen","German","http://en.wikipedia.org/wiki/Kauhsen",#FFD700,#000000
-198,"rebaque","Rebaque","Mexican","http://en.wikipedia.org/wiki/Rebaque",#006341,#FF0000
-199,"ensign","Ensign","British","http://en.wikipedia.org/wiki/Ensign_Racing",#002147,#FF0000
-200,"lec","LEC","British","http://en.wikipedia.org/wiki/LEC_(Formula_One)",#FF4500,#FFFFFF
-201,"martini","Martini","Italian","http://en.wikipedia.org/wiki/Martini_Racing",#002147,#87CEEB
-202,"mbm","MBM","Swiss","http://en.wikipedia.org/wiki/MBM_(racing_team)",#FF0000,#FFFFFF
-203,"lds","LDS","South African","http://en.wikipedia.org/wiki/LDS_(automobile)",#FFD700,#007749
-204,"emeryson","Emeryson","British","http://en.wikipedia.org/wiki/Emeryson",#800000,#FFFFFF
-205,"scarab","Scarab","American","http://en.wikipedia.org/wiki/Scarab_(racing_team)",#4682B4,#FFFFFF
+194,"wolf1","Wolf","Canadian","http://en.wikipedia.org/wiki/Walter_Wolf_Racing",#000080,#FFD700
+195,"fittipaldi1","Fittipaldi","Brazilian","http://en.wikipedia.org/wiki/Fittipaldi_automotive",#FFD700,#00A859
+196,"merzario1","Merzario","Italian","http://en.wikipedia.org/wiki/Merzario",#FFD700,#FF0000
+197,"kauhsen1","Kauhsen","German","http://en.wikipedia.org/wiki/Kauhsen",#FFD700,#000000
+198,"rebaque1","Rebaque","Mexican","http://en.wikipedia.org/wiki/Rebaque",#006341,#FF0000
+199,"ensign1","Ensign","British","http://en.wikipedia.org/wiki/Ensign_Racing",#002147,#FF0000
+200,"lec1","LEC","British","http://en.wikipedia.org/wiki/LEC_(Formula_One)",#FF4500,#FFFFFF
+201,"martini1","Martini","Italian","http://en.wikipedia.org/wiki/Martini_Racing",#002147,#87CEEB
+202,"mbm1","MBM","Swiss","http://en.wikipedia.org/wiki/MBM_(racing_team)",#FF0000,#FFFFFF
+203,"lds1","LDS","South African","http://en.wikipedia.org/wiki/LDS_(automobile)",#FFD700,#007749
+204,"emeryson1","Emeryson","British","http://en.wikipedia.org/wiki/Emeryson",#800000,#FFFFFF
+205,"scarab1","Scarab","American","http://en.wikipedia.org/wiki/Scarab_(racing_team)",#4682B4,#FFFFFF
 206,"stever","Stever","American","http://en.wikipedia.org/wiki/Stever",#A9A9A9,#FF0000
-207,"connew","Connew","British","http://en.wikipedia.org/wiki/Connew",#8B0000,#FFFFFF
+207,"connew1","Connew","British","http://en.wikipedia.org/wiki/Connew",#8B0000,#FFFFFF
 208,"lotus_f1","Lotus F1","British","http://en.wikipedia.org/wiki/Lotus_F1",#b39759
 209,"manor","Manor Marussia","British","http://en.wikipedia.org/wiki/Manor_Motorsport",#db1922
 210,"haas","Haas F1 Team","American","http://en.wikipedia.org/wiki/Haas_F1_Team",#000000,#DA291C
