@@ -10,7 +10,7 @@ from consts import *
 
 logging.disable(logging.CRITICAL) # silence logs from external API calls
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 origins = [
     "http://localhost:5173",
@@ -171,8 +171,13 @@ def get_fastest_laps(race_id: int = None, circuit_id: int = None):
     return results
 
 # Basic Feature #5
-def insert_data_by_race(year: int, round: int) -> dict[str, int]:
+# Looks up what the most recent race is in the DB, then attempts to get info for the next race
+#   - just one race at a time for now, because updating many at a time can be expensive
+@app.get("/get-next-race")
+def update_latest_race() -> dict[str, int]:
     rows_added = {
+        "year": 0,
+        "round": 0,
         "circuits_added": 0,
         "races_added": 0,
         "drivers_added": 0,
@@ -187,25 +192,38 @@ def insert_data_by_race(year: int, round: int) -> dict[str, int]:
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
 
-    # check if race already exists in DB
-    cursor.execute("SELECT raceId FROM races WHERE year = %s AND round = %s", (year, round))
-    res = cursor.fetchone()
+    # first, find most recent race in DB
+    cursor.execute("""
+        SELECT year, round
+        FROM races
+        ORDER BY year DESC, round DESC
+        LIMIT 1
+    """)
 
-    if res: # race already exists in DB
-        return rows_added
+    latest_race = cursor.fetchone()
+    latest_year = latest_race['year']
+    latest_round = latest_race['round']
 
-    # try to fetch from API, check if result is empty (i.e. race does not exist)
     ergast_api = Ergast()
-    race_data = ergast_api.get_race_results(season=year, round=round, result_type='raw')[0]
 
-    # TODO: can uncomment this to use dummy data for testing
-    # import json
-    # filename = f"race_results_{year}_round{round}.json"
-    # with open(filename, "r", encoding="utf-8") as f:
-    #     race_data = json.load(f)[0]
+    # check if there is another race in the same season
+    year = latest_year
+    round = latest_round + 1
+    race_data = ergast_api.get_race_results(season=year, round=round, result_type='raw')
 
-    if not race_data: # api did not return result
+    # otherwise, move to first round of next season
+    if not race_data:
+        year = latest_year + 1
+        round = 1
+        race_data = ergast_api.get_race_results(season=year, round=round, result_type='raw')
+
+    # if not available, no update
+    if not race_data:
         return rows_added
+
+    race_data = race_data[0]
+    rows_added['year'] = year
+    rows_added['round'] = round
 
     # look up circuit by circuitId (api) witch matches circuitRef (our db)
     # check if circuit exists in DB
@@ -338,34 +356,34 @@ def insert_data_by_race(year: int, round: int) -> dict[str, int]:
         conn.commit()
         rows_added['results_added'] += 1
 
-    # insert all laptimes 
-    session = fastf1.get_session(year, round, 'Race')
-    session.load(telemetry=False, weather=False)
-    laps = session.laps
+    # insert all laptimes  TODO: figure out how to make this faster
+    # session = fastf1.get_session(year, round, 'Race')
+    # session.load(telemetry=False, weather=False)
+    # laps = session.laps
 
-    for _, lap_data in laps.iterrows():
-        driver_id = driver_code_to_id[lap_data["Driver"]] # this api uses driver code for ID
-        lap_number = int(lap_data["LapNumber"])
-        lap_time = lap_data["LapTime"]
-        if isinstance(lap_time, timedelta):
-            total_ms = int(lap_time.total_seconds() * 1000)
-            formatted_time = f"{lap_time.seconds // 60}:{lap_time.seconds % 60:02d}.{lap_time.microseconds // 1000:03d}"
-        else:
-            total_ms = 0
-            formatted_time = "NULL"
+    # for _, lap_data in laps.iterrows():
+    #     driver_id = driver_code_to_id[lap_data["Driver"]] # this api uses driver code for ID
+    #     lap_number = int(lap_data["LapNumber"])
+    #     lap_time = lap_data["LapTime"]
+    #     if isinstance(lap_time, timedelta):
+    #         total_ms = int(lap_time.total_seconds() * 1000)
+    #         formatted_time = f"{lap_time.seconds // 60}:{lap_time.seconds % 60:02d}.{lap_time.microseconds // 1000:03d}"
+    #     else:
+    #         total_ms = 0
+    #         formatted_time = "NULL"
 
-        cursor.execute("""
-            INSERT INTO lap_times (raceId, driverId, lap, time, milliseconds)
-            VALUES (%s, %s, %s, %s, %s)
-        """, (
-            race_id,
-            driver_id,
-            lap_number,
-            formatted_time,
-            total_ms
-        ))
+    #     cursor.execute("""
+    #         INSERT INTO lap_times (raceId, driverId, lap, time, milliseconds)
+    #         VALUES (%s, %s, %s, %s, %s)
+    #     """, (
+    #         race_id,
+    #         driver_id,
+    #         lap_number,
+    #         formatted_time,
+    #         total_ms
+    #     ))
 
-        rows_added['laptimes_added'] += 1
+    #     rows_added['laptimes_added'] += 1
 
     conn.commit()
     cursor.close()

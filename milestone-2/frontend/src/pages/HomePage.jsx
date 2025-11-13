@@ -3,6 +3,7 @@ import { Box, Flex, Text, Title } from "@mantine/core";
 import DriverSearchBar from "../components/DriverSearchBar";
 import FastestLapCard from "../components/FastestLapCard";
 import SeasonWinnersCard from "../components/SeasonWinnersCard";
+import UpdateDataCard from "../components/UpdateDataCard"
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <Flex justify="center" gap="xl">
         <SeasonWinnersCard />
         <FastestLapCard />
+        <UpdateDataCard />
       </Flex>
     </Box>
   );
