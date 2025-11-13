@@ -20,6 +20,14 @@ const App = () => {
             path="/race-wins/:year"
             element={<InfoPage type="season-winners" />}
           />
+          <Route
+            path="/fastest-lap/race/:raceId"
+            element={<InfoPage type="fastest-lap-by-race" />}
+          />
+          <Route
+            path="/fastest-lap/circuit/:circuitId"
+            element={<InfoPage type="fastest-lap-by-circuit" />}
+          />
         </Routes>
       </Router>
     </MantineProvider>

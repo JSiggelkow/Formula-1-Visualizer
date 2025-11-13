@@ -163,3 +163,27 @@ def get_fastest_laps(race_id: int = None, circuit_id: int = None):
     cursor.close()
     conn.close()
     return results
+
+@app.get("/circuits")
+def get_circuits():
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+    query = "SELECT * FROM circuits"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return results
+
+@app.get("/races")
+def get_races(year: int = None):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+    query = "SELECT * FROM races"
+    if year:
+        query += f" WHERE year = {year}"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return results
