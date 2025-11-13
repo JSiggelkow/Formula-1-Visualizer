@@ -357,33 +357,33 @@ def update_latest_race() -> dict[str, int]:
         rows_added['results_added'] += 1
 
     # insert all laptimes  TODO: figure out how to make this faster
-    # session = fastf1.get_session(year, round, 'Race')
-    # session.load(telemetry=False, weather=False)
-    # laps = session.laps
+    session = fastf1.get_session(year, round, 'Race')
+    session.load(telemetry=False, weather=False)
+    laps = session.laps
 
-    # for _, lap_data in laps.iterrows():
-    #     driver_id = driver_code_to_id[lap_data["Driver"]] # this api uses driver code for ID
-    #     lap_number = int(lap_data["LapNumber"])
-    #     lap_time = lap_data["LapTime"]
-    #     if isinstance(lap_time, timedelta):
-    #         total_ms = int(lap_time.total_seconds() * 1000)
-    #         formatted_time = f"{lap_time.seconds // 60}:{lap_time.seconds % 60:02d}.{lap_time.microseconds // 1000:03d}"
-    #     else:
-    #         total_ms = 0
-    #         formatted_time = "NULL"
+    for _, lap_data in laps.iterrows():
+        driver_id = driver_code_to_id[lap_data["Driver"]] # this api uses driver code for ID
+        lap_number = int(lap_data["LapNumber"])
+        lap_time = lap_data["LapTime"]
+        if isinstance(lap_time, timedelta):
+            total_ms = int(lap_time.total_seconds() * 1000)
+            formatted_time = f"{lap_time.seconds // 60}:{lap_time.seconds % 60:02d}.{lap_time.microseconds // 1000:03d}"
+        else:
+            total_ms = 0
+            formatted_time = "NULL"
 
-    #     cursor.execute("""
-    #         INSERT INTO lap_times (raceId, driverId, lap, time, milliseconds)
-    #         VALUES (%s, %s, %s, %s, %s)
-    #     """, (
-    #         race_id,
-    #         driver_id,
-    #         lap_number,
-    #         formatted_time,
-    #         total_ms
-    #     ))
+        cursor.execute("""
+            INSERT INTO lap_times (raceId, driverId, lap, time, milliseconds)
+            VALUES (%s, %s, %s, %s, %s)
+        """, (
+            race_id,
+            driver_id,
+            lap_number,
+            formatted_time,
+            total_ms
+        ))
 
-    #     rows_added['laptimes_added'] += 1
+        rows_added['laptimes_added'] += 1
 
     conn.commit()
     cursor.close()
