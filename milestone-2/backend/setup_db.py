@@ -75,6 +75,15 @@ for table_name in TABLE_NAMES:
 
 print("CSV data imported successfully.")
 
+# Create Indexes from sql file
+with open("define_indexes.sql", "r", encoding="utf-8") as f:
+    sql_commands = f.read().split(";")
+for command in sql_commands:
+    if command.strip():
+        cursor.execute(command)
+conn.commit()
+print("Indexes created successfully.")
+
 conn.commit()
 cursor.close()
 conn.close()
