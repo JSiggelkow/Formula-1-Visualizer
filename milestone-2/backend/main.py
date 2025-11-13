@@ -1,8 +1,14 @@
 import mysql.connector
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import fastf1
+from fastf1.ergast import Ergast
+from datetime import timedelta
+import logging
 
 from consts import *
+
+logging.disable(logging.CRITICAL) # silence logs from external API calls
 
 app = FastAPI()
 
@@ -163,3 +169,205 @@ def get_fastest_laps(race_id: int = None, circuit_id: int = None):
     cursor.close()
     conn.close()
     return results
+
+# Basic Feature #5
+def insert_data_by_race(year: int, round: int) -> dict[str, int]:
+    rows_added = {
+        "circuits_added": 0,
+        "races_added": 0,
+        "drivers_added": 0,
+        "constructors_added": 0,
+        "results_added": 0,
+        "status_added": 0,
+        "laptimes_added": 0
+    }
+
+    driver_code_to_id = {} # conversion table used when inserting lap_times
+
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    # check if race already exists in DB
+    cursor.execute("SELECT raceId FROM races WHERE year = %s AND round = %s", (year, round))
+    res = cursor.fetchone()
+
+    if res: # race already exists in DB
+        return rows_added
+
+    # try to fetch from API, check if result is empty (i.e. race does not exist)
+    ergast_api = Ergast()
+    race_data = ergast_api.get_race_results(season=year, round=round, result_type='raw')[0]
+
+    # TODO: can uncomment this to use dummy data for testing
+    # import json
+    # filename = f"race_results_{year}_round{round}.json"
+    # with open(filename, "r", encoding="utf-8") as f:
+    #     race_data = json.load(f)[0]
+
+    if not race_data: # api did not return result
+        return rows_added
+
+    # look up circuit by circuitId (api) witch matches circuitRef (our db)
+    # check if circuit exists in DB
+    circuit_data = race_data['Circuit']
+    cursor.execute("SELECT circuitId FROM circuits WHERE circuitRef = %s", 
+                   (circuit_data['circuitId'],))
+    res = cursor.fetchone()
+
+    # if circuit does not exist in DB, insert it
+    if not res:
+        cursor.execute("""
+            INSERT INTO circuits (circuitRef, name, city, country, lat, lng)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """, (
+            circuit_data['circuitId'],
+            circuit_data['circuitName'],
+            circuit_data['Location']['locality'],
+            circuit_data['Location']['country'],
+            circuit_data['Location']['lat'],
+            circuit_data['Location']['long']
+        ))
+        conn.commit()
+        rows_added['circuits_added'] += 1
+        circuit_id = cursor.lastrowid  # new circuit ID generated from insert
+    else:
+        circuit_id = res['circuitId'] # circuit ID that already exists in DB
+    
+    # insert new race
+    cursor.execute("""
+        INSERT INTO races (year, round, circuitId, name, date)
+        VALUES (%s, %s, %s, %s, %s)
+    """, (
+        year,
+        round,
+        circuit_id,
+        race_data['raceName'],
+        race_data['date']
+    ))
+    conn.commit()
+    rows_added['races_added'] += 1
+    race_id = cursor.lastrowid  # new raceID generated from insert
+
+    # insert data from each result
+    for result_data in race_data['Results']:
+
+        # check if driver exists in DB, if not insert
+        driver_data = result_data['Driver']
+        cursor.execute("SELECT driverId FROM drivers WHERE driverRef = %s",
+                       (driver_data['driverId'],))
+        res = cursor.fetchone()
+
+        # if driver does not exist in DB, insert them
+        if not res:
+            cursor.execute("""
+                INSERT INTO drivers (driverRef, code, forename, surname, dob, nationality)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """, (
+                driver_data['driverId'],
+                driver_data['code'],
+                driver_data['givenName'],
+                driver_data['familyName'],
+                driver_data['dateOfBirth'],
+                driver_data['nationality'],
+            ))
+            conn.commit()
+            rows_added['drivers_added'] += 1
+            driver_id = cursor.lastrowid  # new driver ID generated from insert
+        else:
+            driver_id = res['driverId'] # driver ID that already exists in DB
+
+        driver_code_to_id[driver_data['code']] = driver_id # store result to use when inserting laptimes
+
+        # check if ctor exists in DB, if not insert
+        ctor_data = result_data['Constructor']
+        cursor.execute("SELECT constructorId FROM constructors WHERE constructorRef = %s", 
+                       (ctor_data['constructorId'],))
+        res = cursor.fetchone()
+
+        # if ctor does not exist in DB, insert them
+        if not res:
+            cursor.execute("""
+                INSERT INTO constructors (constructorRef, name, nationality)
+                VALUES (%s, %s, %s)
+            """, (
+                ctor_data['constructorId'],
+                ctor_data['name'],
+                ctor_data['nationality'],
+            ))
+            conn.commit()
+            rows_added['constructors_added'] += 1
+            ctor_id = cursor.lastrowid  # new ID generated from insert
+        else:
+            ctor_id = res['constructorId'] # ctor ID that already exists in DB
+        
+
+        # check if status exists in DB, if not insert
+        cursor.execute("SELECT statusId FROM status WHERE status = %s", 
+                       (result_data['status'],))
+        res = cursor.fetchone()
+
+        # if status does not exist in DB, insert it
+        if not res:
+            cursor.execute("""
+                INSERT INTO status (status)
+                VALUES (%s)
+            """, (
+                result_data['status'],
+            ))
+            conn.commit()
+            rows_added['status_added'] += 1
+            status_id = cursor.lastrowid  # new ID generated from insert
+        else:
+            status_id = res['statusId'] # status ID that already exists in DB
+
+
+        # insert result
+        cursor.execute("""
+            INSERT INTO results (raceId, driverId, constructorId, grid, 
+                                positionText, points, statusId)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (
+            race_id,
+            driver_id,
+            ctor_id,
+            result_data['grid'],
+            result_data['positionText'],
+            result_data['points'],
+            status_id
+        ))
+        conn.commit()
+        rows_added['results_added'] += 1
+
+    # insert all laptimes 
+    session = fastf1.get_session(year, round, 'Race')
+    session.load(telemetry=False, weather=False)
+    laps = session.laps
+
+    for _, lap_data in laps.iterrows():
+        driver_id = driver_code_to_id[lap_data["Driver"]] # this api uses driver code for ID
+        lap_number = int(lap_data["LapNumber"])
+        lap_time = lap_data["LapTime"]
+        if isinstance(lap_time, timedelta):
+            total_ms = int(lap_time.total_seconds() * 1000)
+            formatted_time = f"{lap_time.seconds // 60}:{lap_time.seconds % 60:02d}.{lap_time.microseconds // 1000:03d}"
+        else:
+            total_ms = 0
+            formatted_time = "NULL"
+
+        cursor.execute("""
+            INSERT INTO lap_times (raceId, driverId, lap, time, milliseconds)
+            VALUES (%s, %s, %s, %s, %s)
+        """, (
+            race_id,
+            driver_id,
+            lap_number,
+            formatted_time,
+            total_ms
+        ))
+
+        rows_added['laptimes_added'] += 1
+
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return rows_added
