@@ -1,60 +1,60 @@
 -- Contents of the sample database
 
 mysql> SELECT * FROM circuits;
-+-----------+--------------------------------+--------------+-----------+
-| circuitId | name                           | city         | country   |
-+-----------+--------------------------------+--------------+-----------+
-|         1 | Albert Park Grand Prix Circuit | Melbourne    | Australia |
-|         2 | Sepang International Circuit   | Kuala Lumpur | Malaysia  |
-+-----------+--------------------------------+--------------+-----------+
++-----------+-------------+--------------------------------+--------------+-----------+------------+------------+
+| circuitId | circuitRef  | name                           | city         | country   | lat        | lng        |
++-----------+-------------+--------------------------------+--------------+-----------+------------+------------+
+|         1 | albert_park | Albert Park Grand Prix Circuit | Melbourne    | Australia | -37.849701 | 144.968002 |
+|         2 | sepang      | Sepang International Circuit   | Kuala Lumpur | Malaysia  |   2.760830 | 101.737999 |
++-----------+-------------+--------------------------------+--------------+-----------+------------+------------+
 2 rows in set (0.00 sec)
 
 mysql> SELECT * FROM constructors;
-+---------------+-------------+-------------+
-| constructorId | name        | nationality |
-+---------------+-------------+-------------+
-|             1 | McLaren     | British     |
-|             2 | BMW Sauber  | German      |
-|             3 | Williams    | British     |
-|             4 | Renault     | French      |
-|             5 | Toro Rosso  | Italian     |
-|             6 | Ferrari     | Italian     |
-|             7 | Toyota      | Japanese    |
-|             8 | Super Aguri | Japanese    |
-|             9 | Red Bull    | Austrian    |
-|            10 | Force India | Indian      |
-|            11 | Honda       | Japanese    |
-+---------------+-------------+-------------+
++---------------+----------------+-------------+-------------+
+| constructorId | constructorRef | name        | nationality |
++---------------+----------------+-------------+-------------+
+|             1 | mclaren        | McLaren     | British     |
+|             2 | bmw_sauber     | BMW Sauber  | German      |
+|             3 | williams       | Williams    | British     |
+|             4 | renault        | Renault     | French      |
+|             5 | toro_rosso     | Toro Rosso  | Italian     |
+|             6 | ferrari        | Ferrari     | Italian     |
+|             7 | toyota         | Toyota      | Japanese    |
+|             8 | super_aguri    | Super Aguri | Japanese    |
+|             9 | red_bull       | Red Bull    | Austrian    |
+|            10 | force_india    | Force India | Indian      |
+|            11 | honda          | Honda       | Japanese    |
++---------------+----------------+-------------+-------------+
 11 rows in set (0.00 sec)
 
 mysql> SELECT * FROM drivers;
-+----------+------+-----------+-------------+------------+-------------+
-| driverId | code | forename  | surname     | dob        | nationality |
-+----------+------+-----------+-------------+------------+-------------+
-|        1 | HAM  | Lewis     | Hamilton    | 1985-01-07 | British     |
-|        2 | HEI  | Nick      | Heidfeld    | 1977-05-10 | German      |
-|        3 | ROS  | Nico      | Rosberg     | 1985-06-27 | German      |
-|        4 | ALO  | Fernando  | Alonso      | 1981-07-29 | Spanish     |
-|        5 | KOV  | Heikki    | Kovalainen  | 1981-10-19 | Finnish     |
-|        6 | NAK  | Kazuki    | Nakajima    | 1985-01-11 | Japanese    |
-|        7 | BOU  | Sébastien | Bourdais    | 1979-02-28 | French      |
-|        8 | RAI  | Kimi      | Räikkönen   | 1979-10-17 | Finnish     |
-|        9 | KUB  | Robert    | Kubica      | 1984-12-07 | Polish      |
-|       10 | GLO  | Timo      | Glock       | 1982-03-18 | German      |
-|       11 | SAT  | Takuma    | Sato        | 1977-01-28 | Japanese    |
-|       12 | PIQ  | Nelson    | Piquet Jr.  | 1985-07-25 | Brazilian   |
-|       13 | MAS  | Felipe    | Massa       | 1981-04-25 | Brazilian   |
-|       14 | COU  | David     | Coulthard   | 1971-03-27 | British     |
-|       15 | TRU  | Jarno     | Trulli      | 1974-07-13 | Italian     |
-|       16 | SUT  | Adrian    | Sutil       | 1983-01-11 | German      |
-|       17 | WEB  | Mark      | Webber      | 1976-08-27 | Australian  |
-|       18 | BUT  | Jenson    | Button      | 1980-01-19 | British     |
-|       19 | DAV  | Anthony   | Davidson    | 1979-04-18 | British     |
-|       20 | VET  | Sebastian | Vettel      | 1987-07-03 | German      |
-|       21 | FIS  | Giancarlo | Fisichella  | 1973-01-14 | Italian     |
-|       22 | BAR  | Rubens    | Barrichello | 1972-05-23 | Brazilian   |
-|       23 | MAR  | Mark      | Martin      | 1980-05-15 | American    |
-+----------+------+-----------+-------------+------------+-------------+
++----------+-------------+------+-----------+-------------+------------+-------------+
+| driverId | driverRef   | code | forename  | surname     | dob        | nationality |
++----------+-------------+------+-----------+-------------+------------+-------------+
+|        1 | hamilton    | HAM  | Lewis     | Hamilton    | 1985-01-07 | British     |
+|        2 | heidfeld    | HEI  | Nick      | Heidfeld    | 1977-05-10 | German      |
+|        3 | rosberg     | ROS  | Nico      | Rosberg     | 1985-06-27 | German      |
+|        4 | alonso      | ALO  | Fernando  | Alonso      | 1981-07-29 | Spanish     |
+|        5 | kovalainen  | KOV  | Heikki    | Kovalainen  | 1981-10-19 | Finnish     |
+|        6 | nakajima    | NAK  | Kazuki    | Nakajima    | 1985-01-11 | Japanese    |
+|        7 | bourdais    | BOU  | S�bastien | Bourdais    | 1979-02-28 | French      |
+|        8 | raikkonen   | RAI  | Kimi      | R�ikk�nen   | 1979-10-17 | Finnish     |
+|        9 | kubica      | KUB  | Robert    | Kubica      | 1984-12-07 | Polish      |
+|       10 | glock       | GLO  | Timo      | Glock       | 1982-03-18 | German      |
+|       11 | sato        | SAT  | Takuma    | Sato        | 1977-01-28 | Japanese    |
+|       12 | piquet_jr   | PIQ  | Nelson    | Piquet Jr.  | 1985-07-25 | Brazilian   |
+|       13 | massa       | MAS  | Felipe    | Massa       | 1981-04-25 | Brazilian   |
+|       14 | coulthard   | COU  | David     | Coulthard   | 1971-03-27 | British     |
+|       15 | trulli      | TRU  | Jarno     | Trulli      | 1974-07-13 | Italian     |
+|       16 | sutil       | SUT  | Adrian    | Sutil       | 1983-01-11 | German      |
+|       17 | webber      | WEB  | Mark      | Webber      | 1976-08-27 | Australian  |
+|       18 | button      | BUT  | Jenson    | Button      | 1980-01-19 | British     |
+|       19 | davidson    | DAV  | Anthony   | Davidson    | 1979-04-18 | British     |
+|       20 | vettel      | VET  | Sebastian | Vettel      | 1987-07-03 | German      |
+|       21 | fisichella  | FIS  | Giancarlo | Fisichella  | 1973-01-14 | Italian     |
+|       22 | barrichello | BAR  | Rubens    | Barrichello | 1972-05-23 | Brazilian   |
+|       23 | martin      | MAR  | Mark      | Martin      | 1980-05-15 | American    |
++----------+-------------+------+-----------+-------------+------------+-------------+
 23 rows in set (0.00 sec)
 
 mysql> SELECT * FROM lap_times;
