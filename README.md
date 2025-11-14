@@ -125,3 +125,5 @@ You can visit http://127.0.0.1:5173 and try out any of the following features:
 - **Basic feature #2 (R7):** If you click on any of the suggested names, you will be taken to a new page with that driver's details, including basic personal information and a paginated list of their race results over the years.
 - **Basic feature #3 (R8):** Back on the home page, you can scroll down to the "Season Winners" card, specify a year, and view all of the race winners from that year.
 - **Basic feature #4 (R9):** This feature is a **work in progress**, with only the UI portion complete. You can interact with the input fields, but clicking on the "Select Race/Circuit" button won't work.
+- **Basic feature #5 (R10):** Click on the red "Get Next Race" button to trigger an update. This will look up the next chronological race that is not currently in the database and will add all relevant data from that race. It will then report how many rows were added to each table.
+

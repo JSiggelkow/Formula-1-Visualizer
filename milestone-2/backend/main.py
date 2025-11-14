@@ -362,15 +362,13 @@ def update_latest_race() -> dict[str, int]:
         driver_id = driver_code_to_id[lap_data["Driver"]] # this api uses driver code for ID
         lap_number = int(lap_data["LapNumber"])
         lap_time = lap_data["LapTime"]
-        if isinstance(lap_time, timedelta):
+        if isinstance(lap_time, timedelta): # don't add NULL laps
             total_ms = int(lap_time.total_seconds() * 1000)
             formatted_time = f"{lap_time.seconds // 60}:{lap_time.seconds % 60:02d}.{lap_time.microseconds // 1000:03d}"
-        else:
-            total_ms = 0
-            formatted_time = "NULL"
+            lap_rows.append((race_id, driver_id, lap_number, formatted_time, total_ms))
 
-        lap_rows.append((race_id, driver_id, lap_number, formatted_time, total_ms))
 
+    # bulk insert laptimes
     cursor.executemany("""
         INSERT INTO lap_times (raceId, driverId, lap, time, milliseconds)
         VALUES (%s, %s, %s, %s, %s)
@@ -407,6 +405,3 @@ def get_races(year: int = None):
     cursor.close()
     conn.close()
     return results
-
-
-update_latest_race()
