@@ -8,8 +8,8 @@ CREATE INDEX idx_drivers_surname ON drivers (surname);
 
 -- === Indexes for Basic Feature #2: get_driver_race_results ===
 
--- Speeds up the sorting ORDER BY year DESC, round DESC to avoid a slow "filesort".
-CREATE INDEX idx_races_year_round ON races (year DESC, round DESC);
+-- Optimizes the query's join plan by covering the filter on `driverId` and the `raceId` join key
+CREATE INDEX idx_results_driver_race ON results (driverId, raceId);
 
 -- === Indexes for Basic Feature #3: get_race_wins ===
 
