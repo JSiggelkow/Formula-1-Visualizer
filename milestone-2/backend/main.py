@@ -191,6 +191,7 @@ def update_latest_race() -> dict[str, int]:
 
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
+    conn.start_transaction()
 
     # first, find most recent race in DB
     cursor.execute("""
@@ -245,7 +246,6 @@ def update_latest_race() -> dict[str, int]:
             circuit_data['Location']['lat'],
             circuit_data['Location']['long']
         ))
-        conn.commit()
         rows_added['circuits_added'] += 1
         circuit_id = cursor.lastrowid  # new circuit ID generated from insert
     else:
@@ -262,7 +262,6 @@ def update_latest_race() -> dict[str, int]:
         race_data['raceName'],
         race_data['date']
     ))
-    conn.commit()
     rows_added['races_added'] += 1
     race_id = cursor.lastrowid  # new raceID generated from insert
 
@@ -288,7 +287,6 @@ def update_latest_race() -> dict[str, int]:
                 driver_data['dateOfBirth'],
                 driver_data['nationality'],
             ))
-            conn.commit()
             rows_added['drivers_added'] += 1
             driver_id = cursor.lastrowid  # new driver ID generated from insert
         else:
@@ -312,7 +310,6 @@ def update_latest_race() -> dict[str, int]:
                 ctor_data['name'],
                 ctor_data['nationality'],
             ))
-            conn.commit()
             rows_added['constructors_added'] += 1
             ctor_id = cursor.lastrowid  # new ID generated from insert
         else:
@@ -353,10 +350,9 @@ def update_latest_race() -> dict[str, int]:
             result_data['points'],
             status_id
         ))
-        conn.commit()
         rows_added['results_added'] += 1
 
-    # insert all laptimes  TODO: figure out how to make this faster
+    # insert all laptimes
     session = fastf1.get_session(year, round, 'Race')
     session.load(telemetry=False, weather=False)
     laps = session.laps
@@ -413,3 +409,5 @@ def get_races(year: int = None):
     cursor.close()
     conn.close()
     return results
+
+update_latest_race()

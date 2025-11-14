@@ -1,0 +1,1804 @@
+driverId	driverRef	code	forename	surname	dob	nationality
+862	doohan	DOO	Jack	Doohan	2003-01-20	Australian
+861	colapinto	COL	Franco	Colapinto	2003-05-27	Argentinian 
+860	bearman	BEA	Oliver	Bearman	2005-05-08	British
+859	lawson	LAW	Liam	Lawson	2002-02-11	New Zealander
+858	sargeant	SAR	Logan	Sargeant	2000-12-31	American
+857	piastri	PIA	Oscar	Piastri	2001-04-06	Australian
+856	de_vries	DEV	Nyck	de Vries	1995-02-06	Dutch
+855	zhou	ZHO	Guanyu	Zhou	1999-05-30	Chinese
+854	mick_schumacher	MSC	Mick	Schumacher	1999-03-22	German
+853	mazepin	MAZ	Nikita	Mazepin	1999-03-02	Russian
+852	tsunoda	TSU	Yuki	Tsunoda	2000-05-11	Japanese
+851	aitken	AIT	Jack	Aitken	1995-09-23	British
+850	pietro_fittipaldi	FIT	Pietro	Fittipaldi	1996-06-25	Brazilian
+849	latifi	LAT	Nicholas	Latifi	1995-06-29	Canadian
+848	albon	ALB	Alexander	Albon	1996-03-23	Thai
+847	russell	RUS	George	Russell	1998-02-15	British
+846	norris	NOR	Lando	Norris	1999-11-13	British
+845	sirotkin	SIR	Sergey	Sirotkin	1995-08-27	Russian
+844	leclerc	LEC	Charles	Leclerc	1997-10-16	Monegasque
+843	brendon_hartley	HAR	Brendon	Hartley	1989-11-10	New Zealander
+842	gasly	GAS	Pierre	Gasly	1996-02-07	French
+841	giovinazzi	GIO	Antonio	Giovinazzi	1993-12-14	Italian
+840	stroll	STR	Lance	Stroll	1998-10-29	Canadian
+839	ocon	OCO	Esteban	Ocon	1996-09-17	French
+838	vandoorne	VAN	Stoffel	Vandoorne	1992-03-26	Belgian
+837	haryanto	HAR	Rio	Haryanto	1993-01-22	Indonesian
+836	wehrlein	WEH	Pascal	Wehrlein	1994-10-18	German
+835	jolyon_palmer	PAL	Jolyon	Palmer	1991-01-20	British
+834	rossi	RSS	Alexander	Rossi	1991-09-25	American
+833	merhi	MER	Roberto	Merhi	1991-03-22	Spanish
+832	sainz	SAI	Carlos	Sainz	1994-09-01	Spanish
+831	nasr	NAS	Felipe	Nasr	1992-08-21	Brazilian
+830	max_verstappen	VER	Max	Verstappen	1997-09-30	Dutch
+829	stevens	STE	Will	Stevens	1991-06-28	British
+828	ericsson	ERI	Marcus	Ericsson	1990-09-02	Swedish
+827	lotterer	LOT	André	Lotterer	1981-11-19	German
+826	kvyat	KVY	Daniil	Kvyat	1994-04-26	Russian
+825	kevin_magnussen	MAG	Kevin	Magnussen	1992-10-05	Danish
+824	jules_bianchi	BIA	Jules	Bianchi	1989-08-03	French
+823	garde	VDG	Giedo	van der Garde	1985-04-25	Dutch
+822	bottas	BOT	Valtteri	Bottas	1989-08-28	Finnish
+821	gutierrez	GUT	Esteban	Gutiérrez	1991-08-05	Mexican
+820	chilton	CHI	Max	Chilton	1991-04-21	British
+819	pic	PIC	Charles	Pic	1990-02-15	French
+818	vergne	VER	Jean-Éric	Vergne	1990-04-25	French
+817	ricciardo	RIC	Daniel	Ricciardo	1989-07-01	Australian
+816	ambrosio	DAM	Jérôme	d'Ambrosio	1985-12-27	Belgian
+815	perez	PER	Sergio	Pérez	1990-01-26	Mexican
+814	resta	DIR	Paul	di Resta	1986-04-16	British
+813	maldonado	MAL	Pastor	Maldonado	1985-03-09	Venezuelan
+812	chandhok	CHA	Karun	Chandhok	1984-01-19	Indian
+811	bruno_senna	SEN	Bruno	Senna	1983-10-15	Brazilian
+810	grassi	DIG	Lucas	di Grassi	1984-08-11	Brazilian
+808	petrov	PET	Vitaly	Petrov	1984-09-08	Russian
+807	hulkenberg	HUL	Nico	Hülkenberg	1987-08-19	German
+806	oscar_gonzalez	\\N	Óscar	González	1923-11-10	Uruguayan
+805	kladis	\\N	Danny	Kladis	1917-02-10	American
+804	mantz	\\N	Johnny	Mantz	1918-09-18	American
+803	cantrell	\\N	Bill	Cantrell	1908-01-31	American
+802	serafini	\\N	Dorino	Serafini	1909-07-22	Italian
+801	pozzi	\\N	Charles	Pozzi	1909-08-27	French
+800	pagani	\\N	Nello	Pagani	1911-10-11	Italian
+799	jackson	\\N	Jimmy	Jackson	1910-07-25	American
+798	levrett	\\N	Bayliss	Levrett	1914-02-14	American
+797	holmes	\\N	Jackie	Holmes	1920-09-04	American
+796	ader	\\N	Walt	Ader	1913-12-15	American
+795	fohr	\\N	Myron	Fohr	1912-06-17	American
+794	chitwood	\\N	Joie	Chitwood	1912-04-14	American
+793	sommer	\\N	Raymond	Sommer	1906-08-31	French
+792	pian	\\N	Alfredo	Pián	1912-10-21	Argentine
+791	biondetti	\\N	Clemente	Biondetti	1898-08-18	Italian
+790	leslie_johnson	\\N	Leslie	Johnson	1912-03-22	British
+789	martin	\\N	Eugène	Martin	1915-03-24	French
+788	fry	\\N	Joe	Fry	1915-10-26	British
+787	harrison	\\N	Cuth	Harrison	1906-07-06	British
+786	fagioli	\\N	Luigi	Fagioli	1898-06-09	Italian
+785	crossley	\\N	Geoff	Crossley	1921-05-11	British
+784	hampshire	\\N	David	Hampshire	1917-12-29	British
+783	grignard	\\N	Georges	Grignard	1905-07-25	French
+782	jover	\\N	Juan	Jover	1903-11-23	Spanish
+781	richardson	\\N	Ken	Richardson	1911-08-21	British
+780	branca	\\N	Toni	Branca	1916-09-15	Swiss
+779	john_james	\\N	John	James	1914-05-10	British
+778	shawe_taylor	\\N	Brian	Shawe Taylor	1915-01-28	British
+777	parker	\\N	Philip	Fotheringham-Parker	1907-09-22	British
+776	kelly	\\N	Joe	Kelly	1913-03-13	Irish
+775	gordini	\\N	Aldo	Gordini	1921-05-20	French
+774	chaboud	\\N	Eugène	Chaboud	1907-04-12	French
+773	levegh	\\N	Pierre	Levegh	1905-12-22	French
+772	hellings	\\N	Mack	Hellings	1915-09-14	American
+771	walt_brown	\\N	Walt	Brown	1911-12-30	American
+770	green	\\N	Cecil	Green	1919-09-30	American
+769	mackey	\\N	Bill	Mackey	1927-12-15	American
+768	rose	\\N	Mauri	Rose	1906-05-26	American
+767	forberg	\\N	Carl	Forberg	1911-03-04	American
+766	wallard	\\N	Lee	Wallard	1910-09-07	American
+765	louveau	\\N	Henri	Louveau	1910-01-25	French
+764	guy_mairesse	\\N	Guy	Mairesse	1910-08-10	French
+763	sanesi	\\N	Consalvo	Sanesi	1911-03-28	Italian
+762	rol	\\N	Franco	Rol	1908-06-05	Italian
+761	crespo	\\N	Alberto	Crespo	1920-01-16	Argentine
+760	dusio	\\N	Piero	Dusio	1899-10-13	Italian
+759	flinterman	\\N	Jan	Flinterman	1919-10-02	Dutch
+758	lof	\\N	Dries	van der Lof	1919-08-23	Dutch
+757	peters	\\N	Josef	Peters	1914-09-16	German
+756	pietsch	\\N	Paul	Pietsch	1911-06-20	German
+755	schoeller	\\N	Rudolf	Schoeller	1902-04-27	Swiss
+754	balsa	\\N	Marcel	Balsa	1909-01-01	French
+753	klenk	\\N	Hans	Klenk	1919-10-28	German
+752	niedermayr	\\N	Helmut	Niedermayr	1915-11-29	German
+751	riess	\\N	Fritz	Riess	1922-07-11	German
+750	brudes	\\N	Adolf	Brudes	1899-10-15	German
+749	aston	\\N	Bill	Aston	1900-03-29	British
+748	cantoni	\\N	Eitel	Cantoni	1906-10-04	Uruguayan
+747	murray	\\N	David	Murray	1909-12-28	British
+746	bianco	\\N	Gino	Bianco	1916-07-22	Brazilian
+745	graham_whitehead	\\N	Graham	Whitehead	1922-04-15	British
+744	downing	\\N	Ken	Downing	1917-12-05	British
+743	thompson	\\N	Eric	Thompson	1919-11-04	British
+742	poore	\\N	Dennis	Poore	1916-08-19	British
+741	etancelin	\\N	Philippe	Étancelin	1896-12-28	French
+740	comotti	\\N	Franco	Comotti	1906-07-24	Italian
+739	charrington	\\N	Robin	Montgomerie-Charrington	1915-06-23	British
+738	gaze	\\N	Tony	Gaze	1920-02-03	Australian
+737	obrien	\\N	Robert	O'Brien	1908-04-11	American
+736	laurent	\\N	Roger	Laurent	1913-02-21	Belgian
+735	tornaco	\\N	Charles	de Tornaco	1927-06-07	Belgian
+734	ball	\\N	Bobby	Ball	1925-08-26	American
+733	miller	\\N	Chet	Miller	1902-07-19	American
+732	mcdowell	\\N	Johnny	McDowell	1915-01-29	American
+731	banks	\\N	Henry	Banks	1913-06-14	American
+730	fonder	\\N	George	Fonder	1917-06-22	American
+729	schindler	\\N	Bill	Schindler	1909-03-06	American
+728	james	\\N	Joe	James	1925-05-23	American
+727	rigsby	\\N	Jim	Rigsby	1923-06-06	American
+726	george_connor	\\N	George	Connor	1906-08-16	American
+725	abecassis	\\N	George	Abecassis	1913-03-21	British
+724	ulmen	\\N	Toni	Ulmen	1906-01-25	German
+723	fischer	\\N	Rudi	Fischer	1912-04-19	Swiss
+722	carini	\\N	Piero	Carini	1921-03-06	Italian
+721	hirt	\\N	Peter	Hirt	1910-03-30	Swiss
+720	terra	\\N	Max	de Terra	1918-10-06	Swiss
+719	scherrer	\\N	Albert	Scherrer	1908-02-28	Swiss
+718	loof	\\N	Ernst	Loof	1907-07-04	German
+717	hans_stuck	\\N	Hans	von Stuck	1900-12-27	German
+716	bauer	\\N	Erwin	Bauer	1912-07-17	German
+715	bechem	\\N	Günther	Bechem	1921-12-21	German
+714	adolff	\\N	Kurt	Adolff	1921-11-05	German
+713	fitzau	\\N	Theo	Fitzau	1923-02-10	East German
+712	heeks	\\N	Willi	Heeks	1922-02-13	German
+711	karch	\\N	Oswald	Karch	1917-03-06	German
+710	krause	\\N	Rudolf	Krause	1907-03-30	East German
+709	klodwig	\\N	Ernst	Klodwig	1903-05-23	East German
+708	duncan_hamilton	\\N	Duncan	Hamilton	1920-04-30	British
+707	ian_stewart	\\N	Ian	Stewart	1929-07-15	British
+706	jimmy_stewart	\\N	Jimmy	Stewart	1931-03-06	British
+705	crook	\\N	Tony	Crook	1920-02-16	British
+704	cabantous	\\N	Yves	Cabantous	1904-10-08	French
+703	legat	\\N	Arthur	Legat	1898-11-01	Belgian
+702	bob_scott	\\N	Bob	Scott	1928-10-04	American
+701	holland	\\N	Bill	Holland	1907-12-18	American
+700	scarborough	\\N	Carl	Scarborough	1914-07-03	American
+699	nalon	\\N	Duke	Nalon	1913-03-02	American
+698	cruz	\\N	Adolfo	Cruz	1923-06-28	Argentine
+697	bonetto	\\N	Felice	Bonetto	1903-06-09	Italian
+696	john_barber	\\N	John	Barber	1929-07-22	British
+695	galvez	\\N	Oscar	Gálvez	1913-08-17	Argentine
+694	riu	\\N	Giovanni	de Riu	1925-03-10	Italian
+693	wacker	\\N	Fred	Wacker	1918-07-10	American
+692	helfrich	\\N	Theo	Helfrich	1913-05-13	German
+691	lang	\\N	Hermann	Lang	1909-04-06	German
+690	nuckey	\\N	Rodney	Nuckey	1929-06-26	British
+689	alan_brown	\\N	Alan	Brown	1919-11-20	British
+688	brandon	\\N	Eric	Brandon	1920-07-18	British
+687	whitehead	\\N	Peter	Whitehead	1914-11-12	British
+686	reg_parnell	\\N	Reg	Parnell	1911-07-02	British
+685	riseley_prichard	\\N	John	Riseley-Prichard	1924-01-17	British
+684	whitehouse	\\N	Bill	Whitehouse	1909-04-01	British
+683	thorne	\\N	Leslie	Thorne	1916-06-23	British
+682	beauman	\\N	Don	Beauman	1928-07-26	British
+681	georges_berger	\\N	Georges	Berger	1918-09-14	Belgian
+680	swaters	\\N	Jacques	Swaters	1926-10-30	American
+679	mccoy	\\N	Ernie	McCoy	1921-02-19	American
+678	duncan	\\N	Len	Duncan	1911-07-25	American
+677	webb	\\N	Travis	Webb	1910-10-08	American
+676	armi	\\N	Frank	Armi	1918-10-12	American
+675	ayulo	\\N	Manny	Ayulo	1921-10-20	American
+674	crockett	\\N	Larry	Crockett	1926-10-23	American
+673	nazaruk	\\N	Mike	Nazaruk	1921-10-02	American
+672	daponte	\\N	Jorge	Daponte	1923-06-05	Argentine
+671	loyer	\\N	Roger	Loyer	1907-08-05	French
+670	marimon	\\N	Onofre	Marimón	1923-12-19	Argentine
+669	bira	\\N	Prince	Bira	1914-07-15	Thai
+668	lucas	\\N	Jean	Lucas	1917-04-25	French
+667	fitch	\\N	John	Fitch	1917-08-04	American
+666	rolt	\\N	Tony	Rolt	1918-10-16	British
+665	marr	\\N	Leslie	Marr	1922-08-14	British
+664	mcalpine	\\N	Kenneth	McAlpine	1920-09-21	British
+663	wharton	\\N	Ken	Wharton	1916-03-21	British
+662	sparken	\\N	Mike	Sparken	1930-06-16	French
+constructorId	constructorRef	name	nationality
+215	rb	RB F1 Team	Italian
+214	alpine	Alpine F1 Team	French
+213	alphatauri	AlphaTauri	Italian
+211	racing_point	Racing Point	British
+210	haas	Haas F1 Team	American
+209	manor	Manor Marussia	British
+208	lotus_f1	Lotus F1	British
+207	connew1	Connew	British
+206	stever	Stever	American
+205	scarab1	Scarab	American
+204	emeryson1	Emeryson	British
+203	lds1	LDS	South African
+202	mbm1	MBM	Swiss
+201	martini1	Martini	Italian
+200	lec1	LEC	British
+199	ensign1	Ensign	British
+198	rebaque1	Rebaque	Mexican
+197	kauhsen1	Kauhsen	German
+196	merzario1	Merzario	Italian
+195	fittipaldi1	Fittipaldi	Brazilian
+194	wolf1	Wolf	Canadian
+193	pens	Penske	American
+192	shadow1	Shadow	British
+191	march2	March	British
+190	tyrrell	Tyrrell	British
+189	stewart	Stewart	British
+188	caterham	Caterham	Malaysian
+187	virgin1	Virgin	British
+186	hrt-f1-team	HRT	Spanish
+185	lds-alfa_romeo	LDS-Alfa Romeo	South African
+184	lds-climax	LDS-Climax	South African
+183	brabham-climax	Brabham-Climax	British
+182	brabham-ford	Brabham-Ford	British
+181	brabham-brm	Brabham-BRM	British
+180	lotus-ford	Lotus-Ford	British
+179	de_tomaso-ferrari	De Tomaso-Ferrari	Italian
+178	cooper-alfa_romeo	Cooper-Alfa Romeo	British
+177	lotus-borgward	Lotus-Borgward	British
+176	lotus-brm	Lotus-BRM	British
+175	de_tomaso-alfa_romeo	De Tomaso-Alfa Romeo	Italian
+174	de_tomaso-osca	De Tomaso-Osca	Italian
+173	lotus-maserati	Lotus-Maserati	British
+172	lotus-climax	Lotus-Climax	British
+171	cooper-castellotti	Cooper-Castellotti	British
+170	cooper-climax	Cooper-Climax	British
+169	cooper-borgward	Cooper-Borgward	British
+168	cooper-osca	Cooper-OSCA	British
+167	cooper-maserati	Cooper-Maserati	British
+166	virgin	Virgin	British
+164	hrt	HRT	Spanish
+163	milano	Milano	Italian
+162	snowberger	Snowberger	American
+161	adams	Adams	American
+160	wetteroth	Wetteroth	American
+159	olson	Olson	American
+158	rae	Rae	American
+157	langley	Langley	American
+156	marchese	Marchese	American
+155	hall	Hall	American
+154	lago	Talbot-Lago	French
+153	cisitalia	Cisitalia	Italian
+152	butterworth	Aston Butterworth	British
+151	era	ERA	British
+150	deidt	Deidt	American
+149	sherman	Sherman	American
+148	frazer_nash	Frazer Nash	British
+147	afm	AFM	German
+146	emw	EMW	East German
+145	bmw	BMW	German
+144	veritas	Veritas	German
+143	del_roy	Del Roy	American
+142	turner	Turner	American
+141	simca	Simca	French
+140	klenk	Klenk	German
+139	bromme	Bromme	American
+138	nichels	Nichels	American
+137	arzani-volpini	Arzani-Volpini	Italian
+136	pankratz	Pankratz	American
+135	pawl	Pawl	American
+134	schroeder	Schroeder	American
+133	hwm	HWM	British
+132	lancia	Lancia	Italian
+131	mercedes	Mercedes	German
+130	bugatti	Bugatti	French
+129	stevens	Stevens	American
+128	gordini	Gordini	French
+127	osca	OSCA	Italian
+126	alta	Alta	British
+125	connaught	Connaught	British
+124	tec-mec	Tec-Mec	Italian
+123	fry	Fry	British
+122	sutton	Sutton	American
+121	elder	Elder	American
+120	dunn	Dunn	American
+119	moore	Moore	American
+118	vanwall	Vanwall	British
+117	aston_martin	Aston Martin	British
+116	ewing	Ewing	American
+115	vhristensen	Christensen	American
+114	kuzma	Kuzma	American
+113	kurtis_kraft	Kurtis Kraft	American
+112	meskowski	Meskowski	American
+111	trevis	Trevis	American
+110	lesovsky	Lesovsky	American
+109	phillips	Phillips	American
+108	epperly	Epperly	American
+107	watson	Watson	American
+106	scarab	Scarab	American
+105	maserati	Maserati	Italian
+104	behra-porsche	Behra-Porsche	Italian
+103	mbm	MBM	Swiss
+102	ferguson	Ferguson	British
+101	jbw	JBW	British
+100	enb	ENB	Belgian
+99	emeryson	Emeryson	British
+98	stebro	Stebro	Canadian
+97	gilby	Gilby	British
+96	derrington	Derrington	British
+95	porsche	Porsche	German
+94	brp	BRP	British
+93	re	RE	Rhodesian
+92	scirocco	Scirocco	British
+91	shannon	Shannon	British
+90	protos	Protos	British
+89	lds	LDS	South African
+88	eagle	Eagle	American
+87	cooper	Cooper	British
+86	tomaso	De Tomaso	Italian
+85	bellasi	Bellasi	Swiss
+84	connew	Connew	British
+83	politoys	Politoys	British
+82	matra	Matra	French
+81	tecno	Tecno	Italian
+80	iso_marlboro	Iso Marlboro	British
+79	token	Token	British
+78	amon	Amon	New Zealander
+77	trojan	Trojan	British
+76	lyncar	Lyncar	British
+75	hill	Embassy Hill	British
+74	maki	Maki	Japanese
+73	parnelli	Parnelli	American
+72	kojima	Kojima	Japanese
+71	apollon	Apollon	Swiss
+70	boro	Boro	Dutch
+69	mcguire	McGuire	Australian
+68	lec	LEC	British
+67	penske	Penske	American
+66	brm	BRM	British
+65	martini	Martini	French
+64	hesketh	Hesketh	British
+63	surtees	Surtees	British
+62	rebaque	Rebaque	Mexican
+61	kauhsen	Kauhsen	German
+60	merzario	Merzario	Italian
+59	wolf	Wolf	Canadian
+58	shadow	Shadow	British
+57	ensign	Ensign	British
+56	fittipaldi	Fittipaldi	Brazilian
+55	theodore	Theodore	Hong Kong
+54	ats	ATS	Italian
+53	toleman	Toleman	British
+52	spirit	Spirit	British
+51	alfa	Alfa Romeo	Swiss
+50	ram	RAM	British
+49	zakspeed	Zakspeed	German
+48	rial	Rial	German
+47	life	Life	Italian
+46	onyx	Onyx	British
+45	osella	Osella	Italian
+44	eurobrun	Euro Brun	Italian
+42	coloni	Coloni	Italian
+41	leyton	Leyton House	British
+40	lambo	Lambo	Italian
+39	ags	AGS	French
+38	moda	Andrea Moda	Italian
+37	march	March	British
+36	fondmetal	Fondmetal	Italian
+35	dallara	Dallara	Italian
+34	brabham	Brabham	British
+33	larrousse	Larrousse	French
+32	team_lotus	Team Lotus	British
+31	simtek	Simtek	British
+30	pacific	Pacific	British
+29	footwork	Footwork	British
+28	forti	Forti	Italian
+27	ligier	Ligier	French
+26	lola	Lola	British
+25	tyrrell1	Tyrrell	British
+24	stewart1	Stewart	British
+23	brawn	Brawn	British
+22	benetton	Benetton	Italian
+21	arrows	Arrows	British
+20	prost	Prost	French
+19	jaguar	Jaguar	British
+18	minardi	Minardi	Italian
+17	jordan	Jordan	Irish
+16	bar	BAR	British
+15	sauber	Sauber	Swiss
+14	spyker_mf1	Spyker MF1	Dutch
+13	mf1	MF1	Russian
+circuitId	circuitRef	name	city	country	lat	lng
+80	vegas	Las Vegas Strip Street Circuit	Las Vegas	United States	36.114700	-115.172997
+79	miami	Miami International Autodrome	Miami	USA	25.958099	-80.238899
+78	losail	Losail International Circuit	Al Daayen	Qatar	25.490000	51.454201
+77	jeddah	Jeddah Corniche Circuit	Jeddah	Saudi Arabia	21.631901	39.104401
+76	mugello	Autodromo Internazionale del Mugello	Mugello	Italy	43.997501	11.371900
+75	portimao	Autódromo Internacional do Algarve	Portimão	Portugal	37.227001	-8.626700
+73	baku	Baku City Circuit	Baku	Azerbaijan	40.372501	49.853298
+71	sochi	Sochi Autodrom	Sochi	Russia	43.405701	39.957802
+70	red_bull_ring	Red Bull Ring	Spielberg	Austria	47.219700	14.764700
+69	americas	Circuit of the Americas	Austin	USA	30.132799	-97.641098
+68	buddh	Buddh International Circuit	Uttar Pradesh	India	28.348700	77.533096
+67	pedralbes	Circuit de Pedralbes	Barcelona	Spain	41.390301	2.116670
+66	bremgarten	Circuit Bremgarten	Bern	Switzerland	46.958900	7.401940
+65	pescara	Pescara Circuit	Pescara	Italy	42.474998	14.150800
+64	ain-diab	Ain Diab	Casablanca	Morocco	33.578602	-7.687500
+63	sebring	Sebring International Raceway	Florida	USA	27.454700	-81.348297
+62	monsanto	Monsanto Park Circuit	Lisbon	Portugal	38.719700	-9.203060
+61	avus	AVUS	Berlin	Germany	52.480598	13.251400
+60	riverside	Riverside International Raceway	California	USA	33.937000	-117.273003
+59	boavista	Circuito da Boavista	Oporto	Portugal	41.170502	-8.673250
+58	aintree	Aintree	Liverpool	UK	53.476898	-2.940560
+57	zeltweg	Zeltweg	Styria	Austria	47.203899	14.747800
+56	george	Prince George Circuit	Eastern Cape Province	South Africa	-33.048599	27.873600
+55	reims	Reims-Gueux	Reims	France	49.254200	3.930830
+54	lemans	Le Mans	Le Mans	France	47.950001	0.224231
+53	essarts	Rouen-Les-Essarts	Rouen	France	49.330601	1.004580
+52	tremblant	Circuit Mont-Tremblant	Quebec	Canada	46.187698	-74.609901
+51	charade	Charade Circuit	Clermont-Ferrand	France	45.747200	3.038890
+50	nivelles	Nivelles-Baulers	Brussels	Belgium	50.621101	4.326940
+49	montjuic	Montjuïc	Barcelona	Spain	41.366402	2.151670
+48	mosport	Mosport International Raceway	Ontario	Canada	44.048100	-78.675598
+47	anderstorp	Scandinavian Raceway	Anderstorp	Sweden	57.265301	13.604200
+46	watkins_glen	Watkins Glen	New York State	USA	42.336899	-76.927200
+45	jarama	Jarama	Madrid	Spain	40.617100	-3.585580
+44	las_vegas	Las Vegas Street Circuit	Nevada	USA	36.116199	-115.174004
+43	long_beach	Long Beach	California	USA	33.765099	-118.189003
+42	dallas	Fair Park	Dallas	USA	32.777401	-96.758698
+41	dijon	Dijon-Prenois	Dijon	France	47.362499	4.899130
+40	zolder	Zolder	Heusden-Zolder	Belgium	50.989399	5.256940
+39	zandvoort	Circuit Park Zandvoort	Zandvoort	Netherlands	52.388802	4.540920
+38	brands_hatch	Brands Hatch	Kent	UK	51.356899	0.263056
+37	detroit	Detroit Street Circuit	Detroit	USA	42.329800	-83.040100
+36	jacarepagua	Autódromo Internacional Nelson Piquet	Rio de Janeiro	Brazil	-22.975599	-43.395000
+35	yeongam	Korean International Circuit	Yeongam County	Korea	34.733299	126.417000
+34	ricard	Circuit Paul Ricard	Le Castellet	France	43.250599	5.791670
+33	phoenix	Phoenix street circuit	Phoenix	USA	33.447899	-112.074997
+32	rodriguez	Autódromo Hermanos Rodríguez	Mexico City	Mexico	19.404200	-99.090698
+31	donington	Donington Park	Castle Donington	UK	52.830601	-1.375280
+30	kyalami	Kyalami	Midrand	South Africa	-25.989401	28.076700
+29	adelaide	Adelaide Street Circuit	Adelaide	Australia	-34.927200	138.617004
+28	okayama	Okayama International Circuit	Okayama	Japan	34.915001	134.220993
+27	estoril	Autódromo do Estoril	Estoril	Portugal	38.750599	-9.394170
+26	jerez	Circuito de Jerez	Jerez de la Frontera	Spain	36.708302	-6.034170
+25	galvez	Autódromo Juan y Oscar Gálvez	Buenos Aires	Argentina	-34.694302	-58.459301
+24	yas_marina	Yas Marina Circuit	Abu Dhabi	UAE	24.467199	54.603100
+22	suzuka	Suzuka Circuit	Suzuka	Japan	34.843102	136.541000
+21	imola	Autodromo Enzo e Dino Ferrari	Imola	Italy	44.343899	11.716700
+20	nurburgring	Nürburgring	Nürburg	Germany	50.335602	6.947500
+19	indianapolis	Indianapolis Motor Speedway	Indianapolis	USA	39.794998	-86.234703
+18	interlagos	Autódromo José Carlos Pace	São Paulo	Brazil	-23.703600	-46.699699
+17	shanghai	Shanghai International Circuit	Shanghai	China	31.338900	121.220001
+16	fuji	Fuji Speedway	Oyama	Japan	35.371700	138.927002
+15	marina_bay	Marina Bay Street Circuit	Marina Bay	Singapore	1.291400	103.863998
+14	monza	Autodromo Nazionale di Monza	Monza	Italy	45.615601	9.281110
+13	spa	Circuit de Spa-Francorchamps	Spa	Belgium	50.437199	5.971390
+12	valencia	Valencia Street Circuit	Valencia	Spain	39.458900	-0.331667
+11	hungaroring	Hungaroring	Budapest	Hungary	47.578899	19.248600
+10	hockenheimring	Hockenheimring	Hockenheim	Germany	49.327801	8.565830
+9	silverstone	Silverstone Circuit	Silverstone	UK	52.078602	-1.016940
+8	magny_cours	Circuit de Nevers Magny-Cours	Magny Cours	France	46.864201	3.163610
+7	villeneuve	Circuit Gilles Villeneuve	Montreal	Canada	45.500000	-73.522797
+6	monaco	Circuit de Monaco	Monte-Carlo	Monaco	43.734699	7.420560
+5	istanbul	Istanbul Park	Istanbul	Turkey	40.951698	29.405001
+4	catalunya	Circuit de Barcelona-Catalunya	Montmeló	Spain	41.570000	2.261110
+3	bahrain	Bahrain International Circuit	Sakhir	Bahrain	26.032499	50.510601
+2	sepang	Sepang International Circuit	Kuala Lumpur	Malaysia	2.760830	101.737999
+1	albert_park	Albert Park Grand Prix Circuit	Melbourne	Australia	-37.849701	144.968002
+raceId	year	round	circuitId	name	date
+1144	2024	24	24	Abu Dhabi Grand Prix	2024-12-08
+1143	2024	23	78	Qatar Grand Prix	2024-12-01
+1142	2024	22	80	Las Vegas Grand Prix	2024-11-23
+1141	2024	21	18	São Paulo Grand Prix	2024-11-03
+1140	2024	20	32	Mexico City Grand Prix	2024-10-27
+1139	2024	19	69	United States Grand Prix	2024-10-20
+1138	2024	18	15	Singapore Grand Prix	2024-09-22
+1137	2024	17	73	Azerbaijan Grand Prix	2024-09-15
+1136	2024	16	14	Italian Grand Prix	2024-09-01
+1135	2024	15	39	Dutch Grand Prix	2024-08-25
+1134	2024	14	13	Belgian Grand Prix	2024-07-28
+1133	2024	13	11	Hungarian Grand Prix	2024-07-21
+1132	2024	12	9	British Grand Prix	2024-07-07
+1131	2024	11	70	Austrian Grand Prix	2024-06-30
+1130	2024	10	4	Spanish Grand Prix	2024-06-23
+1129	2024	9	7	Canadian Grand Prix	2024-06-09
+1128	2024	8	6	Monaco Grand Prix	2024-05-26
+1127	2024	7	21	Emilia Romagna Grand Prix	2024-05-19
+1126	2024	6	79	Miami Grand Prix	2024-05-05
+1125	2024	5	17	Chinese Grand Prix	2024-04-21
+1124	2024	4	22	Japanese Grand Prix	2024-04-07
+1123	2024	3	1	Australian Grand Prix	2024-03-24
+1122	2024	2	77	Saudi Arabian Grand Prix	2024-03-09
+1121	2024	1	3	Bahrain Grand Prix	2024-03-02
+1120	2023	22	24	Abu Dhabi Grand Prix	2023-11-26
+1119	2023	21	80	Las Vegas Grand Prix	2023-11-19
+1118	2023	20	18	São Paulo Grand Prix	2023-11-05
+1117	2023	19	32	Mexico City Grand Prix	2023-10-29
+1116	2023	18	69	United States Grand Prix	2023-10-22
+1115	2023	17	78	Qatar Grand Prix	2023-10-08
+1114	2023	16	22	Japanese Grand Prix	2023-09-24
+1113	2023	15	15	Singapore Grand Prix	2023-09-17
+1112	2023	14	14	Italian Grand Prix	2023-09-03
+1111	2023	13	39	Dutch Grand Prix	2023-08-27
+1110	2023	12	13	Belgian Grand Prix	2023-07-30
+1109	2023	11	11	Hungarian Grand Prix	2023-07-23
+1108	2023	10	9	British Grand Prix	2023-07-09
+1107	2023	9	70	Austrian Grand Prix	2023-07-02
+1106	2023	8	7	Canadian Grand Prix	2023-06-18
+1105	2023	7	4	Spanish Grand Prix	2023-06-04
+1104	2023	6	6	Monaco Grand Prix	2023-05-28
+1102	2023	5	79	Miami Grand Prix	2023-05-07
+1101	2023	4	73	Azerbaijan Grand Prix	2023-04-30
+1100	2023	3	1	Australian Grand Prix	2023-04-02
+1099	2023	2	77	Saudi Arabian Grand Prix	2023-03-19
+1098	2023	1	3	Bahrain Grand Prix	2023-03-05
+1096	2022	22	24	Abu Dhabi Grand Prix	2022-11-20
+1095	2022	21	18	São Paulo Grand Prix	2022-11-13
+1094	2022	20	32	Mexico City Grand Prix	2022-10-30
+1093	2022	19	69	United States Grand Prix	2022-10-23
+1092	2022	18	22	Japanese Grand Prix	2022-10-09
+1091	2022	17	15	Singapore Grand Prix	2022-10-02
+1089	2022	16	14	Italian Grand Prix	2022-09-11
+1088	2022	15	39	Dutch Grand Prix	2022-09-04
+1087	2022	14	13	Belgian Grand Prix	2022-08-28
+1086	2022	13	11	Hungarian Grand Prix	2022-07-31
+1085	2022	12	34	French Grand Prix	2022-07-24
+1084	2022	11	70	Austrian Grand Prix	2022-07-10
+1083	2022	10	9	British Grand Prix	2022-07-03
+1082	2022	9	7	Canadian Grand Prix	2022-06-19
+1081	2022	8	73	Azerbaijan Grand Prix	2022-06-12
+1080	2022	7	6	Monaco Grand Prix	2022-05-29
+1079	2022	6	4	Spanish Grand Prix	2022-05-22
+1078	2022	5	79	Miami Grand Prix	2022-05-08
+1077	2022	4	21	Emilia Romagna Grand Prix	2022-04-24
+1076	2022	3	1	Australian Grand Prix	2022-04-10
+1075	2022	2	77	Saudi Arabian Grand Prix	2022-03-27
+1074	2022	1	3	Bahrain Grand Prix	2022-03-20
+1073	2021	22	24	Abu Dhabi Grand Prix	2021-12-12
+1072	2021	21	77	Saudi Arabian Grand Prix	2021-12-05
+1071	2021	19	18	São Paulo Grand Prix	2021-11-14
+1070	2021	18	32	Mexico City Grand Prix	2021-11-07
+1069	2021	17	69	United States Grand Prix	2021-10-24
+1067	2021	16	5	Turkish Grand Prix	2021-10-10
+1066	2021	15	71	Russian Grand Prix	2021-09-26
+1065	2021	14	14	Italian Grand Prix	2021-09-12
+1064	2021	13	39	Dutch Grand Prix	2021-09-05
+1063	2021	12	13	Belgian Grand Prix	2021-08-29
+1062	2021	11	11	Hungarian Grand Prix	2021-08-01
+1061	2021	10	9	British Grand Prix	2021-07-18
+1060	2021	9	70	Austrian Grand Prix	2021-07-04
+1059	2021	7	34	French Grand Prix	2021-06-20
+1058	2021	8	70	Styrian Grand Prix	2021-06-27
+1057	2021	6	73	Azerbaijan Grand Prix	2021-06-06
+1056	2021	5	6	Monaco Grand Prix	2021-05-23
+1055	2021	4	4	Spanish Grand Prix	2021-05-09
+1054	2021	3	75	Portuguese Grand Prix	2021-05-02
+1053	2021	2	21	Emilia Romagna Grand Prix	2021-04-18
+1052	2021	1	3	Bahrain Grand Prix	2021-03-28
+1051	2021	20	78	Qatar Grand Prix	2021-11-21
+1047	2020	17	24	Abu Dhabi Grand Prix	2020-12-13
+1046	2020	16	3	Sakhir Grand Prix	2020-12-06
+1045	2020	15	3	Bahrain Grand Prix	2020-11-29
+1044	2020	14	5	Turkish Grand Prix	2020-11-15
+1043	2020	13	21	Emilia Romagna Grand Prix	2020-11-01
+1042	2020	12	75	Portuguese Grand Prix	2020-10-25
+1041	2020	11	20	Eifel Grand Prix	2020-10-11
+1040	2020	10	71	Russian Grand Prix	2020-09-27
+1039	2020	9	76	Tuscan Grand Prix	2020-09-13
+1038	2020	8	14	Italian Grand Prix	2020-09-06
+1037	2020	7	13	Belgian Grand Prix	2020-08-30
+1036	2020	6	4	Spanish Grand Prix	2020-08-16
+1035	2020	5	9	70th Anniversary Grand Prix	2020-08-09
+1034	2020	4	9	British Grand Prix	2020-08-02
+1033	2020	3	11	Hungarian Grand Prix	2020-07-19
+1032	2020	2	70	Styrian Grand Prix	2020-07-12
+1031	2020	1	70	Austrian Grand Prix	2020-07-05
+1030	2019	21	24	Abu Dhabi Grand Prix	2019-12-01
+1029	2019	20	18	Brazilian Grand Prix	2019-11-17
+1028	2019	19	69	United States Grand Prix	2019-11-03
+1027	2019	18	32	Mexican Grand Prix	2019-10-27
+1026	2019	17	22	Japanese Grand Prix	2019-10-13
+1025	2019	16	71	Russian Grand Prix	2019-09-29
+1024	2019	15	15	Singapore Grand Prix	2019-09-22
+1023	2019	14	14	Italian Grand Prix	2019-09-08
+1022	2019	13	13	Belgian Grand Prix	2019-09-01
+1021	2019	12	11	Hungarian Grand Prix	2019-08-04
+1020	2019	11	10	German Grand Prix	2019-07-28
+1019	2019	10	9	British Grand Prix	2019-07-14
+1018	2019	9	70	Austrian Grand Prix	2019-06-30
+1017	2019	8	34	French Grand Prix	2019-06-23
+1016	2019	7	7	Canadian Grand Prix	2019-06-09
+1015	2019	6	6	Monaco Grand Prix	2019-05-26
+1014	2019	5	4	Spanish Grand Prix	2019-05-12
+1013	2019	4	73	Azerbaijan Grand Prix	2019-04-28
+1012	2019	3	17	Chinese Grand Prix	2019-04-14
+1011	2019	2	3	Bahrain Grand Prix	2019-03-31
+1010	2019	1	1	Australian Grand Prix	2019-03-17
+1009	2018	21	24	Abu Dhabi Grand Prix	2018-11-25
+1008	2018	20	18	Brazilian Grand Prix	2018-11-11
+1007	2018	19	32	Mexican Grand Prix	2018-10-28
+1006	2018	18	69	United States Grand Prix	2018-10-21
+1005	2018	17	22	Japanese Grand Prix	2018-10-07
+1004	2018	16	71	Russian Grand Prix	2018-09-30
+1003	2018	15	15	Singapore Grand Prix	2018-09-16
+1002	2018	14	14	Italian Grand Prix	2018-09-02
+1001	2018	13	13	Belgian Grand Prix	2018-08-26
+1000	2018	12	11	Hungarian Grand Prix	2018-07-29
+999	2018	11	10	German Grand Prix	2018-07-22
+998	2018	10	9	British Grand Prix	2018-07-08
+997	2018	9	70	Austrian Grand Prix	2018-07-01
+996	2018	8	34	French Grand Prix	2018-06-24
+995	2018	7	7	Canadian Grand Prix	2018-06-10
+994	2018	6	6	Monaco Grand Prix	2018-05-27
+993	2018	5	4	Spanish Grand Prix	2018-05-13
+992	2018	4	73	Azerbaijan Grand Prix	2018-04-29
+991	2018	3	17	Chinese Grand Prix	2018-04-15
+990	2018	2	3	Bahrain Grand Prix	2018-04-08
+989	2018	1	1	Australian Grand Prix	2018-03-25
+988	2017	20	24	Abu Dhabi Grand Prix	2017-11-26
+987	2017	19	18	Brazilian Grand Prix	2017-11-12
+986	2017	18	32	Mexican Grand Prix	2017-10-29
+985	2017	17	69	United States Grand Prix	2017-10-22
+984	2017	16	22	Japanese Grand Prix	2017-10-08
+983	2017	15	2	Malaysian Grand Prix	2017-10-01
+982	2017	14	15	Singapore Grand Prix	2017-09-17
+981	2017	13	14	Italian Grand Prix	2017-09-03
+980	2017	12	13	Belgian Grand Prix	2017-08-27
+979	2017	11	11	Hungarian Grand Prix	2017-07-30
+978	2017	10	9	British Grand Prix	2017-07-16
+977	2017	9	70	Austrian Grand Prix	2017-07-09
+976	2017	8	73	Azerbaijan Grand Prix	2017-06-25
+975	2017	7	7	Canadian Grand Prix	2017-06-11
+974	2017	6	6	Monaco Grand Prix	2017-05-28
+973	2017	5	4	Spanish Grand Prix	2017-05-14
+972	2017	4	71	Russian Grand Prix	2017-04-30
+971	2017	3	3	Bahrain Grand Prix	2017-04-16
+970	2017	2	17	Chinese Grand Prix	2017-04-09
+969	2017	1	1	Australian Grand Prix	2017-03-26
+968	2016	21	24	Abu Dhabi Grand Prix	2016-11-27
+967	2016	20	18	Brazilian Grand Prix	2016-11-13
+966	2016	19	32	Mexican Grand Prix	2016-10-30
+965	2016	18	69	United States Grand Prix	2016-10-23
+964	2016	17	22	Japanese Grand Prix	2016-10-09
+963	2016	16	2	Malaysian Grand Prix	2016-10-02
+962	2016	15	15	Singapore Grand Prix	2016-09-18
+961	2016	14	14	Italian Grand Prix	2016-09-04
+960	2016	13	13	Belgian Grand Prix	2016-08-28
+959	2016	12	10	German Grand Prix	2016-07-31
+958	2016	11	11	Hungarian Grand Prix	2016-07-24
+957	2016	10	9	British Grand Prix	2016-07-10
+956	2016	9	70	Austrian Grand Prix	2016-07-03
+955	2016	8	73	European Grand Prix	2016-06-19
+954	2016	7	7	Canadian Grand Prix	2016-06-12
+953	2016	6	6	Monaco Grand Prix	2016-05-29
+952	2016	5	4	Spanish Grand Prix	2016-05-15
+951	2016	4	71	Russian Grand Prix	2016-05-01
+950	2016	3	17	Chinese Grand Prix	2016-04-17
+949	2016	2	3	Bahrain Grand Prix	2016-04-03
+948	2016	1	1	Australian Grand Prix	2016-03-20
+945	2015	19	24	Abu Dhabi Grand Prix	2015-11-29
+944	2015	18	18	Brazilian Grand Prix	2015-11-15
+943	2015	17	32	Mexican Grand Prix	2015-11-01
+942	2015	16	69	United States Grand Prix	2015-10-25
+941	2015	15	71	Russian Grand Prix	2015-10-11
+940	2015	14	22	Japanese Grand Prix	2015-09-27
+939	2015	13	15	Singapore Grand Prix	2015-09-20
+938	2015	12	14	Italian Grand Prix	2015-09-06
+937	2015	11	13	Belgian Grand Prix	2015-08-23
+936	2015	10	11	Hungarian Grand Prix	2015-07-26
+resultId	raceId	driverId	constructorId	grid	positionText	points	statusId
+26764	1144	815	9	10	R	0	4
+26763	1144	861	3	20	R	0	5
+26762	1144	822	15	9	R	0	130
+26761	1144	859	215	12	17	0	5
+26760	1144	825	210	14	16	0	11
+26759	1144	862	214	17	15	0	11
+26758	1144	840	117	13	14	0	11
+26757	1144	855	15	15	13	0	11
+26756	1144	852	215	11	12	0	11
+26755	1144	848	3	18	11	0	11
+26754	1144	857	1	2	10	1	1
+26753	1144	4	117	8	9	2	1
+26752	1144	807	210	7	8	4	1
+26751	1144	842	214	5	7	6	1
+26750	1144	830	9	4	6	8	1
+26749	1144	847	131	6	5	10	1
+26748	1144	1	131	16	4	12	1
+26747	1144	844	6	19	3	15	1
+26746	1144	832	6	3	2	18	1
+26745	1144	846	1	1	1	25	1
+26744	1143	839	214	20	R	0	4
+26743	1143	861	3	19	R	0	4
+26742	1143	840	117	15	R	0	130
+26741	1143	815	9	9	R	0	20
+26740	1143	807	210	18	R	0	20
+26739	1143	848	3	16	15	0	11
+26738	1143	859	215	17	14	0	1
+26737	1143	852	215	14	13	0	1
+26736	1143	1	131	6	12	0	1
+26735	1143	822	15	13	11	0	1
+26734	1143	846	1	3	10	2	1
+26733	1143	825	210	10	9	2	1
+26732	1143	855	15	12	8	4	1
+26731	1143	4	117	8	7	6	1
+26730	1143	832	6	7	6	8	1
+26729	1143	842	214	11	5	10	1
+26728	1143	847	131	1	4	12	1
+26727	1143	857	1	4	3	15	1
+26726	1143	844	6	5	2	18	1
+26725	1143	830	9	2	1	25	1
+26724	1142	842	214	3	R	0	5
+26723	1142	848	3	17	R	0	21
+26722	1142	822	15	19	18	0	11
+26721	1142	839	214	11	17	0	11
+26720	1142	859	215	14	16	0	1
+26719	1142	840	117	18	15	0	1
+26718	1142	861	3	0	14	0	1
+26717	1142	855	15	13	13	0	1
+26716	1142	825	210	12	12	0	1
+26715	1142	4	117	16	11	0	1
+26714	1142	815	9	15	10	1	1
+26713	1142	852	215	7	9	2	1
+26712	1142	807	210	9	8	4	1
+26711	1142	857	1	8	7	6	1
+26710	1142	846	1	6	6	9	1
+26709	1142	830	9	5	5	10	1
+26708	1142	844	6	4	4	12	1
+26707	1142	832	6	2	3	15	1
+26706	1142	1	131	10	2	18	1
+26705	1142	847	131	1	1	25	1
+26704	1141	807	210	17	D	0	2
+26703	1141	840	117	10	W	0	54
+26702	1141	848	3	7	W	0	54
+26701	1141	861	3	16	R	0	3
+26700	1141	832	6	0	R	0	3
+26699	1141	855	15	19	15	0	1
+26698	1141	4	117	9	14	0	1
+26697	1141	822	15	11	13	0	1
+26696	1141	860	210	15	12	0	1
+26695	1141	815	9	12	11	0	1
+26694	1141	1	131	14	10	1	1
+26693	1141	859	215	5	9	2	1
+26692	1141	857	1	8	8	4	1
+26691	1141	852	215	3	7	6	1
+26690	1141	846	1	1	6	8	1
+26689	1141	844	6	6	5	10	1
+26688	1141	847	131	2	4	12	1
+26687	1141	842	214	13	3	15	1
+26686	1141	839	214	4	2	18	1
+26685	1141	830	9	17	1	26	1
+26684	1140	852	215	11	R	0	4
+26683	1140	848	3	9	R	0	4
+26682	1140	4	117	13	R	0	23
+26681	1140	815	9	18	17	0	11
+26680	1140	859	215	12	16	0	11
+26679	1140	855	15	19	15	0	11
+26678	1140	822	15	15	14	0	11
+26677	1140	839	214	0	13	0	11
+26676	1140	861	3	16	12	0	11
+26675	1140	840	117	14	11	0	11
+26674	1140	842	214	8	10	1	11
+26673	1140	807	210	10	9	2	11
+26672	1140	857	1	17	8	4	1
+26671	1140	825	210	7	7	6	1
+26670	1140	830	9	2	6	8	1
+26669	1140	847	131	5	5	10	1
+26668	1140	1	131	6	4	12	1
+26667	1140	844	6	4	3	16	1
+26666	1140	846	1	3	2	18	1
+26665	1140	832	6	1	1	25	1
+26664	1139	1	131	17	R	0	20
+26663	1139	855	15	18	19	0	11
+26662	1139	839	214	12	18	0	11
+26661	1139	822	15	16	17	0	11
+26660	1139	848	3	14	16	0	11
+26659	1139	840	117	13	15	0	11
+26658	1139	852	215	10	14	0	11
+26657	1139	4	117	7	13	0	11
+26656	1139	842	214	6	12	0	1
+26655	1139	825	210	8	11	0	1
+26654	1139	861	3	15	10	1	1
+26653	1139	859	215	19	9	2	1
+26652	1139	807	210	11	8	4	1
+26651	1139	815	9	9	7	6	1
+26650	1139	847	131	20	6	8	1
+26649	1139	857	1	5	5	10	1
+26648	1139	846	1	1	4	12	1
+26647	1139	830	9	2	3	15	1
+26646	1139	832	6	3	2	18	1
+26645	1139	844	6	4	1	25	1
+26644	1138	848	3	11	R	0	131
+26643	1138	825	210	14	19	0	3
+26642	1138	817	215	16	18	0	11
+26641	1138	842	214	18	17	0	11
+26640	1138	822	15	19	16	0	11
+26639	1138	855	15	20	15	0	11
+26638	1138	840	117	17	14	0	11
+26637	1138	839	214	15	13	0	11
+26636	1138	852	215	8	12	0	11
+26635	1138	861	3	12	11	0	11
+26634	1138	815	9	13	10	1	11
+26633	1138	807	210	6	9	2	11
+26632	1138	4	117	7	8	4	11
+26631	1138	832	6	10	7	6	1
+26630	1138	1	131	3	6	8	1
+26629	1138	844	6	9	5	10	1
+26628	1138	847	131	4	4	12	1
+26627	1138	857	1	5	3	15	1
+26626	1138	830	9	2	2	18	1
+26625	1138	846	1	1	1	25	1
+26624	1137	852	215	11	R	0	31
+26623	1137	840	117	13	19	0	31
+26622	1137	832	6	3	18	0	31
+26621	1137	815	9	4	17	0	31
+26620	1137	822	15	16	16	0	11
+26619	1137	839	214	0	15	0	11
+26618	1137	855	15	17	14	0	1
+26617	1137	817	215	14	13	0	1
+26616	1137	842	214	18	12	0	1
+26615	1137	807	210	12	11	0	1
+26614	1137	860	210	10	10	1	1
+26613	1137	1	131	0	9	2	1
+26612	1137	861	3	8	8	4	1
+26611	1137	848	3	9	7	6	1
+26610	1137	4	117	7	6	8	1
+26609	1137	830	9	6	5	10	1
+26608	1137	846	1	15	4	13	1
+26607	1137	847	131	5	3	15	1
+26606	1137	844	6	1	2	18	1
+26605	1137	857	1	2	1	25	1
+26604	1136	852	215	16	R	0	25
+26603	1136	840	117	17	19	0	11
+26602	1136	855	15	20	18	0	11
+26601	1136	807	210	10	17	0	11
+26600	1136	822	15	19	16	0	11
+26599	1136	842	214	14	15	0	11
+26598	1136	839	214	15	14	0	11
+26597	1136	817	215	12	13	0	1
+26596	1136	861	3	18	12	0	1
+26595	1136	4	117	11	11	0	1
+26594	1136	825	210	13	10	1	1
+26593	1136	848	3	9	9	2	1
+26592	1136	815	9	8	8	4	1
+26591	1136	847	131	3	7	6	1
+26590	1136	830	9	7	6	8	1
+26589	1136	1	131	6	5	10	1
+26588	1136	832	6	5	4	12	1
+26587	1136	846	1	1	3	16	1
+26586	1136	857	1	2	2	18	1
+26585	1136	844	6	4	1	25	1
+26584	1135	855	15	17	20	0	12
+26583	1135	822	15	16	19	0	12
+26582	1135	825	210	0	18	0	11
+26581	1135	852	215	11	17	0	11
+26580	1135	858	3	18	16	0	11
+26579	1135	839	214	15	15	0	11
+26578	1135	848	3	19	14	0	11
+26577	1135	840	117	8	13	0	11
+26576	1135	817	215	13	12	0	11
+26575	1135	807	210	12	11	0	11
+26574	1135	4	117	7	10	1	11
+26573	1135	842	214	9	9	2	11
+26572	1135	1	131	14	8	4	1
+26571	1135	847	131	4	7	6	1
+26570	1135	815	9	5	6	8	1
+26569	1135	832	6	10	5	10	1
+26568	1135	857	1	3	4	12	1
+26567	1135	844	6	6	3	15	1
+26566	1135	830	9	2	2	18	1
+26565	1135	846	1	1	1	26	1
+driverId	driverRef	code	forename	surname	dob	nationality
+902	test_driver_40	T40	Forename40	Surname40	1990-02-09	Country
+901	test_driver_39	T39	Forename39	Surname39	1990-02-08	Country
+900	test_driver_38	T38	Forename38	Surname38	1990-02-07	Country
+899	test_driver_37	T37	Forename37	Surname37	1990-02-06	Country
+898	test_driver_36	T36	Forename36	Surname36	1990-02-05	Country
+897	test_driver_35	T35	Forename35	Surname35	1990-02-04	Country
+896	test_driver_34	T34	Forename34	Surname34	1990-02-03	Country
+895	test_driver_33	T33	Forename33	Surname33	1990-02-02	Country
+894	test_driver_32	T32	Forename32	Surname32	1990-02-01	Country
+893	test_driver_31	T31	Forename31	Surname31	1990-01-31	Country
+892	test_driver_30	T30	Forename30	Surname30	1990-01-30	Country
+891	test_driver_29	T29	Forename29	Surname29	1990-01-29	Country
+890	test_driver_28	T28	Forename28	Surname28	1990-01-28	Country
+889	test_driver_27	T27	Forename27	Surname27	1990-01-27	Country
+888	test_driver_26	T26	Forename26	Surname26	1990-01-26	Country
+887	test_driver_25	T25	Forename25	Surname25	1990-01-25	Country
+886	test_driver_24	T24	Forename24	Surname24	1990-01-24	Country
+885	test_driver_23	T23	Forename23	Surname23	1990-01-23	Country
+884	test_driver_22	T22	Forename22	Surname22	1990-01-22	Country
+883	test_driver_21	T21	Forename21	Surname21	1990-01-21	Country
+882	test_driver_20	T20	Forename20	Surname20	1990-01-20	Country
+881	test_driver_19	T19	Forename19	Surname19	1990-01-19	Country
+880	test_driver_18	T18	Forename18	Surname18	1990-01-18	Country
+879	test_driver_17	T17	Forename17	Surname17	1990-01-17	Country
+878	test_driver_16	T16	Forename16	Surname16	1990-01-16	Country
+877	test_driver_15	T15	Forename15	Surname15	1990-01-15	Country
+876	test_driver_14	T14	Forename14	Surname14	1990-01-14	Country
+875	test_driver_13	T13	Forename13	Surname13	1990-01-13	Country
+874	test_driver_12	T12	Forename12	Surname12	1990-01-12	Country
+873	test_driver_11	T11	Forename11	Surname11	1990-01-11	Country
+872	test_driver_10	T10	Forename10	Surname10	1990-01-10	Country
+871	test_driver_9	T09	Forename9	Surname9	1990-01-09	Country
+870	test_driver_8	T08	Forename8	Surname8	1990-01-08	Country
+869	test_driver_7	T07	Forename7	Surname7	1990-01-07	Country
+868	test_driver_6	T06	Forename6	Surname6	1990-01-06	Country
+867	test_driver_5	T05	Forename5	Surname5	1990-01-05	Country
+866	test_driver_4	T04	Forename4	Surname4	1990-01-04	Country
+865	test_driver_3	T03	Forename3	Surname3	1990-01-03	Country
+864	test_driver_2	T02	Forename2	Surname2	1990-01-02	Country
+863	test_driver_1	T01	Forename1	Surname1	1990-01-01	Country
+862	doohan	DOO	Jack	Doohan	2003-01-20	Australian
+861	colapinto	COL	Franco	Colapinto	2003-05-27	Argentinian 
+860	bearman	BEA	Oliver	Bearman	2005-05-08	British
+859	lawson	LAW	Liam	Lawson	2002-02-11	New Zealander
+858	sargeant	SAR	Logan	Sargeant	2000-12-31	American
+857	piastri	PIA	Oscar	Piastri	2001-04-06	Australian
+856	de_vries	DEV	Nyck	de Vries	1995-02-06	Dutch
+855	zhou	ZHO	Guanyu	Zhou	1999-05-30	Chinese
+854	mick_schumacher	MSC	Mick	Schumacher	1999-03-22	German
+853	mazepin	MAZ	Nikita	Mazepin	1999-03-02	Russian
+852	tsunoda	TSU	Yuki	Tsunoda	2000-05-11	Japanese
+851	aitken	AIT	Jack	Aitken	1995-09-23	British
+850	pietro_fittipaldi	FIT	Pietro	Fittipaldi	1996-06-25	Brazilian
+849	latifi	LAT	Nicholas	Latifi	1995-06-29	Canadian
+848	albon	ALB	Alexander	Albon	1996-03-23	Thai
+847	russell	RUS	George	Russell	1998-02-15	British
+846	norris	NOR	Lando	Norris	1999-11-13	British
+845	sirotkin	SIR	Sergey	Sirotkin	1995-08-27	Russian
+844	leclerc	LEC	Charles	Leclerc	1997-10-16	Monegasque
+843	brendon_hartley	HAR	Brendon	Hartley	1989-11-10	New Zealander
+842	gasly	GAS	Pierre	Gasly	1996-02-07	French
+841	giovinazzi	GIO	Antonio	Giovinazzi	1993-12-14	Italian
+840	stroll	STR	Lance	Stroll	1998-10-29	Canadian
+839	ocon	OCO	Esteban	Ocon	1996-09-17	French
+838	vandoorne	VAN	Stoffel	Vandoorne	1992-03-26	Belgian
+837	haryanto	HAR	Rio	Haryanto	1993-01-22	Indonesian
+836	wehrlein	WEH	Pascal	Wehrlein	1994-10-18	German
+835	jolyon_palmer	PAL	Jolyon	Palmer	1991-01-20	British
+834	rossi	RSS	Alexander	Rossi	1991-09-25	American
+833	merhi	MER	Roberto	Merhi	1991-03-22	Spanish
+832	sainz	SAI	Carlos	Sainz	1994-09-01	Spanish
+831	nasr	NAS	Felipe	Nasr	1992-08-21	Brazilian
+830	max_verstappen	VER	Max	Verstappen	1997-09-30	Dutch
+829	stevens	STE	Will	Stevens	1991-06-28	British
+828	ericsson	ERI	Marcus	Ericsson	1990-09-02	Swedish
+827	lotterer	LOT	André	Lotterer	1981-11-19	German
+826	kvyat	KVY	Daniil	Kvyat	1994-04-26	Russian
+825	kevin_magnussen	MAG	Kevin	Magnussen	1992-10-05	Danish
+824	jules_bianchi	BIA	Jules	Bianchi	1989-08-03	French
+823	garde	VDG	Giedo	van der Garde	1985-04-25	Dutch
+822	bottas	BOT	Valtteri	Bottas	1989-08-28	Finnish
+821	gutierrez	GUT	Esteban	Gutiérrez	1991-08-05	Mexican
+820	chilton	CHI	Max	Chilton	1991-04-21	British
+819	pic	PIC	Charles	Pic	1990-02-15	French
+818	vergne	VER	Jean-Éric	Vergne	1990-04-25	French
+817	ricciardo	RIC	Daniel	Ricciardo	1989-07-01	Australian
+816	ambrosio	DAM	Jérôme	d'Ambrosio	1985-12-27	Belgian
+815	perez	PER	Sergio	Pérez	1990-01-26	Mexican
+814	resta	DIR	Paul	di Resta	1986-04-16	British
+813	maldonado	MAL	Pastor	Maldonado	1985-03-09	Venezuelan
+812	chandhok	CHA	Karun	Chandhok	1984-01-19	Indian
+811	bruno_senna	SEN	Bruno	Senna	1983-10-15	Brazilian
+810	grassi	DIG	Lucas	di Grassi	1984-08-11	Brazilian
+808	petrov	PET	Vitaly	Petrov	1984-09-08	Russian
+807	hulkenberg	HUL	Nico	Hülkenberg	1987-08-19	German
+806	oscar_gonzalez	\\N	Óscar	González	1923-11-10	Uruguayan
+805	kladis	\\N	Danny	Kladis	1917-02-10	American
+804	mantz	\\N	Johnny	Mantz	1918-09-18	American
+803	cantrell	\\N	Bill	Cantrell	1908-01-31	American
+802	serafini	\\N	Dorino	Serafini	1909-07-22	Italian
+801	pozzi	\\N	Charles	Pozzi	1909-08-27	French
+800	pagani	\\N	Nello	Pagani	1911-10-11	Italian
+799	jackson	\\N	Jimmy	Jackson	1910-07-25	American
+798	levrett	\\N	Bayliss	Levrett	1914-02-14	American
+797	holmes	\\N	Jackie	Holmes	1920-09-04	American
+796	ader	\\N	Walt	Ader	1913-12-15	American
+795	fohr	\\N	Myron	Fohr	1912-06-17	American
+794	chitwood	\\N	Joie	Chitwood	1912-04-14	American
+793	sommer	\\N	Raymond	Sommer	1906-08-31	French
+792	pian	\\N	Alfredo	Pián	1912-10-21	Argentine
+791	biondetti	\\N	Clemente	Biondetti	1898-08-18	Italian
+790	leslie_johnson	\\N	Leslie	Johnson	1912-03-22	British
+789	martin	\\N	Eugène	Martin	1915-03-24	French
+788	fry	\\N	Joe	Fry	1915-10-26	British
+787	harrison	\\N	Cuth	Harrison	1906-07-06	British
+786	fagioli	\\N	Luigi	Fagioli	1898-06-09	Italian
+785	crossley	\\N	Geoff	Crossley	1921-05-11	British
+784	hampshire	\\N	David	Hampshire	1917-12-29	British
+783	grignard	\\N	Georges	Grignard	1905-07-25	French
+782	jover	\\N	Juan	Jover	1903-11-23	Spanish
+781	richardson	\\N	Ken	Richardson	1911-08-21	British
+780	branca	\\N	Toni	Branca	1916-09-15	Swiss
+779	john_james	\\N	John	James	1914-05-10	British
+778	shawe_taylor	\\N	Brian	Shawe Taylor	1915-01-28	British
+777	parker	\\N	Philip	Fotheringham-Parker	1907-09-22	British
+776	kelly	\\N	Joe	Kelly	1913-03-13	Irish
+775	gordini	\\N	Aldo	Gordini	1921-05-20	French
+774	chaboud	\\N	Eugène	Chaboud	1907-04-12	French
+773	levegh	\\N	Pierre	Levegh	1905-12-22	French
+772	hellings	\\N	Mack	Hellings	1915-09-14	American
+771	walt_brown	\\N	Walt	Brown	1911-12-30	American
+770	green	\\N	Cecil	Green	1919-09-30	American
+769	mackey	\\N	Bill	Mackey	1927-12-15	American
+768	rose	\\N	Mauri	Rose	1906-05-26	American
+767	forberg	\\N	Carl	Forberg	1911-03-04	American
+766	wallard	\\N	Lee	Wallard	1910-09-07	American
+765	louveau	\\N	Henri	Louveau	1910-01-25	French
+764	guy_mairesse	\\N	Guy	Mairesse	1910-08-10	French
+763	sanesi	\\N	Consalvo	Sanesi	1911-03-28	Italian
+762	rol	\\N	Franco	Rol	1908-06-05	Italian
+761	crespo	\\N	Alberto	Crespo	1920-01-16	Argentine
+760	dusio	\\N	Piero	Dusio	1899-10-13	Italian
+759	flinterman	\\N	Jan	Flinterman	1919-10-02	Dutch
+758	lof	\\N	Dries	van der Lof	1919-08-23	Dutch
+757	peters	\\N	Josef	Peters	1914-09-16	German
+756	pietsch	\\N	Paul	Pietsch	1911-06-20	German
+755	schoeller	\\N	Rudolf	Schoeller	1902-04-27	Swiss
+754	balsa	\\N	Marcel	Balsa	1909-01-01	French
+753	klenk	\\N	Hans	Klenk	1919-10-28	German
+752	niedermayr	\\N	Helmut	Niedermayr	1915-11-29	German
+751	riess	\\N	Fritz	Riess	1922-07-11	German
+750	brudes	\\N	Adolf	Brudes	1899-10-15	German
+749	aston	\\N	Bill	Aston	1900-03-29	British
+748	cantoni	\\N	Eitel	Cantoni	1906-10-04	Uruguayan
+747	murray	\\N	David	Murray	1909-12-28	British
+746	bianco	\\N	Gino	Bianco	1916-07-22	Brazilian
+745	graham_whitehead	\\N	Graham	Whitehead	1922-04-15	British
+744	downing	\\N	Ken	Downing	1917-12-05	British
+743	thompson	\\N	Eric	Thompson	1919-11-04	British
+742	poore	\\N	Dennis	Poore	1916-08-19	British
+741	etancelin	\\N	Philippe	Étancelin	1896-12-28	French
+740	comotti	\\N	Franco	Comotti	1906-07-24	Italian
+739	charrington	\\N	Robin	Montgomerie-Charrington	1915-06-23	British
+738	gaze	\\N	Tony	Gaze	1920-02-03	Australian
+737	obrien	\\N	Robert	O'Brien	1908-04-11	American
+736	laurent	\\N	Roger	Laurent	1913-02-21	Belgian
+735	tornaco	\\N	Charles	de Tornaco	1927-06-07	Belgian
+734	ball	\\N	Bobby	Ball	1925-08-26	American
+733	miller	\\N	Chet	Miller	1902-07-19	American
+732	mcdowell	\\N	Johnny	McDowell	1915-01-29	American
+731	banks	\\N	Henry	Banks	1913-06-14	American
+730	fonder	\\N	George	Fonder	1917-06-22	American
+729	schindler	\\N	Bill	Schindler	1909-03-06	American
+728	james	\\N	Joe	James	1925-05-23	American
+727	rigsby	\\N	Jim	Rigsby	1923-06-06	American
+726	george_connor	\\N	George	Connor	1906-08-16	American
+725	abecassis	\\N	George	Abecassis	1913-03-21	British
+724	ulmen	\\N	Toni	Ulmen	1906-01-25	German
+723	fischer	\\N	Rudi	Fischer	1912-04-19	Swiss
+722	carini	\\N	Piero	Carini	1921-03-06	Italian
+721	hirt	\\N	Peter	Hirt	1910-03-30	Swiss
+720	terra	\\N	Max	de Terra	1918-10-06	Swiss
+719	scherrer	\\N	Albert	Scherrer	1908-02-28	Swiss
+718	loof	\\N	Ernst	Loof	1907-07-04	German
+717	hans_stuck	\\N	Hans	von Stuck	1900-12-27	German
+716	bauer	\\N	Erwin	Bauer	1912-07-17	German
+715	bechem	\\N	Günther	Bechem	1921-12-21	German
+714	adolff	\\N	Kurt	Adolff	1921-11-05	German
+713	fitzau	\\N	Theo	Fitzau	1923-02-10	East German
+712	heeks	\\N	Willi	Heeks	1922-02-13	German
+711	karch	\\N	Oswald	Karch	1917-03-06	German
+710	krause	\\N	Rudolf	Krause	1907-03-30	East German
+709	klodwig	\\N	Ernst	Klodwig	1903-05-23	East German
+708	duncan_hamilton	\\N	Duncan	Hamilton	1920-04-30	British
+707	ian_stewart	\\N	Ian	Stewart	1929-07-15	British
+706	jimmy_stewart	\\N	Jimmy	Stewart	1931-03-06	British
+705	crook	\\N	Tony	Crook	1920-02-16	British
+704	cabantous	\\N	Yves	Cabantous	1904-10-08	French
+703	legat	\\N	Arthur	Legat	1898-11-01	Belgian
+702	bob_scott	\\N	Bob	Scott	1928-10-04	American
+constructorId	constructorRef	name	nationality
+255	test_ctor_40	Constructor40	Country
+254	test_ctor_39	Constructor39	Country
+253	test_ctor_38	Constructor38	Country
+252	test_ctor_37	Constructor37	Country
+251	test_ctor_36	Constructor36	Country
+250	test_ctor_35	Constructor35	Country
+249	test_ctor_34	Constructor34	Country
+248	test_ctor_33	Constructor33	Country
+247	test_ctor_32	Constructor32	Country
+246	test_ctor_31	Constructor31	Country
+245	test_ctor_30	Constructor30	Country
+244	test_ctor_29	Constructor29	Country
+243	test_ctor_28	Constructor28	Country
+242	test_ctor_27	Constructor27	Country
+241	test_ctor_26	Constructor26	Country
+240	test_ctor_25	Constructor25	Country
+239	test_ctor_24	Constructor24	Country
+238	test_ctor_23	Constructor23	Country
+237	test_ctor_22	Constructor22	Country
+236	test_ctor_21	Constructor21	Country
+235	test_ctor_20	Constructor20	Country
+234	test_ctor_19	Constructor19	Country
+233	test_ctor_18	Constructor18	Country
+232	test_ctor_17	Constructor17	Country
+231	test_ctor_16	Constructor16	Country
+230	test_ctor_15	Constructor15	Country
+229	test_ctor_14	Constructor14	Country
+228	test_ctor_13	Constructor13	Country
+227	test_ctor_12	Constructor12	Country
+226	test_ctor_11	Constructor11	Country
+225	test_ctor_10	Constructor10	Country
+224	test_ctor_9	Constructor9	Country
+223	test_ctor_8	Constructor8	Country
+222	test_ctor_7	Constructor7	Country
+221	test_ctor_6	Constructor6	Country
+220	test_ctor_5	Constructor5	Country
+219	test_ctor_4	Constructor4	Country
+218	test_ctor_3	Constructor3	Country
+217	test_ctor_2	Constructor2	Country
+216	test_ctor_1	Constructor1	Country
+215	rb	RB F1 Team	Italian
+214	alpine	Alpine F1 Team	French
+213	alphatauri	AlphaTauri	Italian
+211	racing_point	Racing Point	British
+210	haas	Haas F1 Team	American
+209	manor	Manor Marussia	British
+208	lotus_f1	Lotus F1	British
+207	connew1	Connew	British
+206	stever	Stever	American
+205	scarab1	Scarab	American
+204	emeryson1	Emeryson	British
+203	lds1	LDS	South African
+202	mbm1	MBM	Swiss
+201	martini1	Martini	Italian
+200	lec1	LEC	British
+199	ensign1	Ensign	British
+198	rebaque1	Rebaque	Mexican
+197	kauhsen1	Kauhsen	German
+196	merzario1	Merzario	Italian
+195	fittipaldi1	Fittipaldi	Brazilian
+194	wolf1	Wolf	Canadian
+193	pens	Penske	American
+192	shadow1	Shadow	British
+191	march2	March	British
+190	tyrrell	Tyrrell	British
+189	stewart	Stewart	British
+188	caterham	Caterham	Malaysian
+187	virgin1	Virgin	British
+186	hrt-f1-team	HRT	Spanish
+185	lds-alfa_romeo	LDS-Alfa Romeo	South African
+184	lds-climax	LDS-Climax	South African
+183	brabham-climax	Brabham-Climax	British
+182	brabham-ford	Brabham-Ford	British
+181	brabham-brm	Brabham-BRM	British
+180	lotus-ford	Lotus-Ford	British
+179	de_tomaso-ferrari	De Tomaso-Ferrari	Italian
+178	cooper-alfa_romeo	Cooper-Alfa Romeo	British
+177	lotus-borgward	Lotus-Borgward	British
+176	lotus-brm	Lotus-BRM	British
+175	de_tomaso-alfa_romeo	De Tomaso-Alfa Romeo	Italian
+174	de_tomaso-osca	De Tomaso-Osca	Italian
+173	lotus-maserati	Lotus-Maserati	British
+172	lotus-climax	Lotus-Climax	British
+171	cooper-castellotti	Cooper-Castellotti	British
+170	cooper-climax	Cooper-Climax	British
+169	cooper-borgward	Cooper-Borgward	British
+168	cooper-osca	Cooper-OSCA	British
+167	cooper-maserati	Cooper-Maserati	British
+166	virgin	Virgin	British
+164	hrt	HRT	Spanish
+163	milano	Milano	Italian
+162	snowberger	Snowberger	American
+161	adams	Adams	American
+160	wetteroth	Wetteroth	American
+159	olson	Olson	American
+158	rae	Rae	American
+157	langley	Langley	American
+156	marchese	Marchese	American
+155	hall	Hall	American
+154	lago	Talbot-Lago	French
+153	cisitalia	Cisitalia	Italian
+152	butterworth	Aston Butterworth	British
+151	era	ERA	British
+150	deidt	Deidt	American
+149	sherman	Sherman	American
+148	frazer_nash	Frazer Nash	British
+147	afm	AFM	German
+146	emw	EMW	East German
+145	bmw	BMW	German
+144	veritas	Veritas	German
+143	del_roy	Del Roy	American
+142	turner	Turner	American
+141	simca	Simca	French
+140	klenk	Klenk	German
+139	bromme	Bromme	American
+138	nichels	Nichels	American
+137	arzani-volpini	Arzani-Volpini	Italian
+136	pankratz	Pankratz	American
+135	pawl	Pawl	American
+134	schroeder	Schroeder	American
+133	hwm	HWM	British
+132	lancia	Lancia	Italian
+131	mercedes	Mercedes	German
+130	bugatti	Bugatti	French
+129	stevens	Stevens	American
+128	gordini	Gordini	French
+127	osca	OSCA	Italian
+126	alta	Alta	British
+125	connaught	Connaught	British
+124	tec-mec	Tec-Mec	Italian
+123	fry	Fry	British
+122	sutton	Sutton	American
+121	elder	Elder	American
+120	dunn	Dunn	American
+119	moore	Moore	American
+118	vanwall	Vanwall	British
+117	aston_martin	Aston Martin	British
+116	ewing	Ewing	American
+115	vhristensen	Christensen	American
+114	kuzma	Kuzma	American
+113	kurtis_kraft	Kurtis Kraft	American
+112	meskowski	Meskowski	American
+111	trevis	Trevis	American
+110	lesovsky	Lesovsky	American
+109	phillips	Phillips	American
+108	epperly	Epperly	American
+107	watson	Watson	American
+106	scarab	Scarab	American
+105	maserati	Maserati	Italian
+104	behra-porsche	Behra-Porsche	Italian
+103	mbm	MBM	Swiss
+102	ferguson	Ferguson	British
+101	jbw	JBW	British
+100	enb	ENB	Belgian
+99	emeryson	Emeryson	British
+98	stebro	Stebro	Canadian
+97	gilby	Gilby	British
+96	derrington	Derrington	British
+95	porsche	Porsche	German
+94	brp	BRP	British
+93	re	RE	Rhodesian
+92	scirocco	Scirocco	British
+91	shannon	Shannon	British
+90	protos	Protos	British
+89	lds	LDS	South African
+88	eagle	Eagle	American
+87	cooper	Cooper	British
+86	tomaso	De Tomaso	Italian
+85	bellasi	Bellasi	Swiss
+84	connew	Connew	British
+83	politoys	Politoys	British
+82	matra	Matra	French
+81	tecno	Tecno	Italian
+80	iso_marlboro	Iso Marlboro	British
+79	token	Token	British
+78	amon	Amon	New Zealander
+77	trojan	Trojan	British
+76	lyncar	Lyncar	British
+75	hill	Embassy Hill	British
+74	maki	Maki	Japanese
+73	parnelli	Parnelli	American
+72	kojima	Kojima	Japanese
+71	apollon	Apollon	Swiss
+70	boro	Boro	Dutch
+69	mcguire	McGuire	Australian
+68	lec	LEC	British
+67	penske	Penske	American
+66	brm	BRM	British
+65	martini	Martini	French
+64	hesketh	Hesketh	British
+63	surtees	Surtees	British
+62	rebaque	Rebaque	Mexican
+61	kauhsen	Kauhsen	German
+60	merzario	Merzario	Italian
+59	wolf	Wolf	Canadian
+58	shadow	Shadow	British
+57	ensign	Ensign	British
+56	fittipaldi	Fittipaldi	Brazilian
+55	theodore	Theodore	Hong Kong
+54	ats	ATS	Italian
+circuitId	circuitRef	name	city	country	lat	lng
+120	test_circuit_40	Circuit40	City40	Country	40.099998	40.099998
+119	test_circuit_39	Circuit39	City39	Country	39.099998	39.099998
+118	test_circuit_38	Circuit38	City38	Country	38.099998	38.099998
+117	test_circuit_37	Circuit37	City37	Country	37.099998	37.099998
+116	test_circuit_36	Circuit36	City36	Country	36.099998	36.099998
+115	test_circuit_35	Circuit35	City35	Country	35.099998	35.099998
+114	test_circuit_34	Circuit34	City34	Country	34.099998	34.099998
+113	test_circuit_33	Circuit33	City33	Country	33.099998	33.099998
+112	test_circuit_32	Circuit32	City32	Country	32.099998	32.099998
+111	test_circuit_31	Circuit31	City31	Country	31.100000	31.100000
+110	test_circuit_30	Circuit30	City30	Country	30.100000	30.100000
+109	test_circuit_29	Circuit29	City29	Country	29.100000	29.100000
+108	test_circuit_28	Circuit28	City28	Country	28.100000	28.100000
+107	test_circuit_27	Circuit27	City27	Country	27.100000	27.100000
+106	test_circuit_26	Circuit26	City26	Country	26.100000	26.100000
+105	test_circuit_25	Circuit25	City25	Country	25.100000	25.100000
+104	test_circuit_24	Circuit24	City24	Country	24.100000	24.100000
+103	test_circuit_23	Circuit23	City23	Country	23.100000	23.100000
+102	test_circuit_22	Circuit22	City22	Country	22.100000	22.100000
+101	test_circuit_21	Circuit21	City21	Country	21.100000	21.100000
+100	test_circuit_20	Circuit20	City20	Country	20.100000	20.100000
+99	test_circuit_19	Circuit19	City19	Country	19.100000	19.100000
+98	test_circuit_18	Circuit18	City18	Country	18.100000	18.100000
+97	test_circuit_17	Circuit17	City17	Country	17.100000	17.100000
+96	test_circuit_16	Circuit16	City16	Country	16.100000	16.100000
+95	test_circuit_15	Circuit15	City15	Country	15.100000	15.100000
+94	test_circuit_14	Circuit14	City14	Country	14.100000	14.100000
+93	test_circuit_13	Circuit13	City13	Country	13.100000	13.100000
+92	test_circuit_12	Circuit12	City12	Country	12.100000	12.100000
+91	test_circuit_11	Circuit11	City11	Country	11.100000	11.100000
+90	test_circuit_10	Circuit10	City10	Country	10.100000	10.100000
+89	test_circuit_9	Circuit9	City9	Country	9.900000	9.900000
+88	test_circuit_8	Circuit8	City8	Country	8.800000	8.800000
+87	test_circuit_7	Circuit7	City7	Country	7.700000	7.700000
+86	test_circuit_6	Circuit6	City6	Country	6.600000	6.600000
+85	test_circuit_5	Circuit5	City5	Country	5.500000	5.500000
+84	test_circuit_4	Circuit4	City4	Country	4.400000	4.400000
+83	test_circuit_3	Circuit3	City3	Country	3.300000	3.300000
+82	test_circuit_2	Circuit2	City2	Country	2.200000	2.200000
+81	test_circuit_1	Circuit1	City1	Country	1.100000	1.100000
+80	vegas	Las Vegas Strip Street Circuit	Las Vegas	United States	36.114700	-115.172997
+79	miami	Miami International Autodrome	Miami	USA	25.958099	-80.238899
+78	losail	Losail International Circuit	Al Daayen	Qatar	25.490000	51.454201
+77	jeddah	Jeddah Corniche Circuit	Jeddah	Saudi Arabia	21.631901	39.104401
+76	mugello	Autodromo Internazionale del Mugello	Mugello	Italy	43.997501	11.371900
+75	portimao	Autódromo Internacional do Algarve	Portimão	Portugal	37.227001	-8.626700
+73	baku	Baku City Circuit	Baku	Azerbaijan	40.372501	49.853298
+71	sochi	Sochi Autodrom	Sochi	Russia	43.405701	39.957802
+70	red_bull_ring	Red Bull Ring	Spielberg	Austria	47.219700	14.764700
+69	americas	Circuit of the Americas	Austin	USA	30.132799	-97.641098
+68	buddh	Buddh International Circuit	Uttar Pradesh	India	28.348700	77.533096
+67	pedralbes	Circuit de Pedralbes	Barcelona	Spain	41.390301	2.116670
+66	bremgarten	Circuit Bremgarten	Bern	Switzerland	46.958900	7.401940
+65	pescara	Pescara Circuit	Pescara	Italy	42.474998	14.150800
+64	ain-diab	Ain Diab	Casablanca	Morocco	33.578602	-7.687500
+63	sebring	Sebring International Raceway	Florida	USA	27.454700	-81.348297
+62	monsanto	Monsanto Park Circuit	Lisbon	Portugal	38.719700	-9.203060
+61	avus	AVUS	Berlin	Germany	52.480598	13.251400
+60	riverside	Riverside International Raceway	California	USA	33.937000	-117.273003
+59	boavista	Circuito da Boavista	Oporto	Portugal	41.170502	-8.673250
+58	aintree	Aintree	Liverpool	UK	53.476898	-2.940560
+57	zeltweg	Zeltweg	Styria	Austria	47.203899	14.747800
+56	george	Prince George Circuit	Eastern Cape Province	South Africa	-33.048599	27.873600
+55	reims	Reims-Gueux	Reims	France	49.254200	3.930830
+54	lemans	Le Mans	Le Mans	France	47.950001	0.224231
+53	essarts	Rouen-Les-Essarts	Rouen	France	49.330601	1.004580
+52	tremblant	Circuit Mont-Tremblant	Quebec	Canada	46.187698	-74.609901
+51	charade	Charade Circuit	Clermont-Ferrand	France	45.747200	3.038890
+50	nivelles	Nivelles-Baulers	Brussels	Belgium	50.621101	4.326940
+49	montjuic	Montjuïc	Barcelona	Spain	41.366402	2.151670
+48	mosport	Mosport International Raceway	Ontario	Canada	44.048100	-78.675598
+47	anderstorp	Scandinavian Raceway	Anderstorp	Sweden	57.265301	13.604200
+46	watkins_glen	Watkins Glen	New York State	USA	42.336899	-76.927200
+45	jarama	Jarama	Madrid	Spain	40.617100	-3.585580
+44	las_vegas	Las Vegas Street Circuit	Nevada	USA	36.116199	-115.174004
+43	long_beach	Long Beach	California	USA	33.765099	-118.189003
+42	dallas	Fair Park	Dallas	USA	32.777401	-96.758698
+41	dijon	Dijon-Prenois	Dijon	France	47.362499	4.899130
+40	zolder	Zolder	Heusden-Zolder	Belgium	50.989399	5.256940
+39	zandvoort	Circuit Park Zandvoort	Zandvoort	Netherlands	52.388802	4.540920
+38	brands_hatch	Brands Hatch	Kent	UK	51.356899	0.263056
+37	detroit	Detroit Street Circuit	Detroit	USA	42.329800	-83.040100
+36	jacarepagua	Autódromo Internacional Nelson Piquet	Rio de Janeiro	Brazil	-22.975599	-43.395000
+35	yeongam	Korean International Circuit	Yeongam County	Korea	34.733299	126.417000
+34	ricard	Circuit Paul Ricard	Le Castellet	France	43.250599	5.791670
+33	phoenix	Phoenix street circuit	Phoenix	USA	33.447899	-112.074997
+32	rodriguez	Autódromo Hermanos Rodríguez	Mexico City	Mexico	19.404200	-99.090698
+31	donington	Donington Park	Castle Donington	UK	52.830601	-1.375280
+30	kyalami	Kyalami	Midrand	South Africa	-25.989401	28.076700
+29	adelaide	Adelaide Street Circuit	Adelaide	Australia	-34.927200	138.617004
+28	okayama	Okayama International Circuit	Okayama	Japan	34.915001	134.220993
+27	estoril	Autódromo do Estoril	Estoril	Portugal	38.750599	-9.394170
+26	jerez	Circuito de Jerez	Jerez de la Frontera	Spain	36.708302	-6.034170
+25	galvez	Autódromo Juan y Oscar Gálvez	Buenos Aires	Argentina	-34.694302	-58.459301
+24	yas_marina	Yas Marina Circuit	Abu Dhabi	UAE	24.467199	54.603100
+22	suzuka	Suzuka Circuit	Suzuka	Japan	34.843102	136.541000
+21	imola	Autodromo Enzo e Dino Ferrari	Imola	Italy	44.343899	11.716700
+20	nurburgring	Nürburgring	Nürburg	Germany	50.335602	6.947500
+19	indianapolis	Indianapolis Motor Speedway	Indianapolis	USA	39.794998	-86.234703
+18	interlagos	Autódromo José Carlos Pace	São Paulo	Brazil	-23.703600	-46.699699
+17	shanghai	Shanghai International Circuit	Shanghai	China	31.338900	121.220001
+16	fuji	Fuji Speedway	Oyama	Japan	35.371700	138.927002
+15	marina_bay	Marina Bay Street Circuit	Marina Bay	Singapore	1.291400	103.863998
+14	monza	Autodromo Nazionale di Monza	Monza	Italy	45.615601	9.281110
+13	spa	Circuit de Spa-Francorchamps	Spa	Belgium	50.437199	5.971390
+12	valencia	Valencia Street Circuit	Valencia	Spain	39.458900	-0.331667
+11	hungaroring	Hungaroring	Budapest	Hungary	47.578899	19.248600
+10	hockenheimring	Hockenheimring	Hockenheim	Germany	49.327801	8.565830
+9	silverstone	Silverstone Circuit	Silverstone	UK	52.078602	-1.016940
+8	magny_cours	Circuit de Nevers Magny-Cours	Magny Cours	France	46.864201	3.163610
+7	villeneuve	Circuit Gilles Villeneuve	Montreal	Canada	45.500000	-73.522797
+6	monaco	Circuit de Monaco	Monte-Carlo	Monaco	43.734699	7.420560
+5	istanbul	Istanbul Park	Istanbul	Turkey	40.951698	29.405001
+4	catalunya	Circuit de Barcelona-Catalunya	Montmeló	Spain	41.570000	2.261110
+3	bahrain	Bahrain International Circuit	Sakhir	Bahrain	26.032499	50.510601
+2	sepang	Sepang International Circuit	Kuala Lumpur	Malaysia	2.760830	101.737999
+1	albert_park	Albert Park Grand Prix Circuit	Melbourne	Australia	-37.849701	144.968002
+raceId	year	round	circuitId	name	date
+1184	2030	40	40	Race40	2030-02-09
+1183	2030	39	39	Race39	2030-02-08
+1182	2030	38	38	Race38	2030-02-07
+1181	2030	37	37	Race37	2030-02-06
+1180	2030	36	36	Race36	2030-02-05
+1179	2030	35	35	Race35	2030-02-04
+1178	2030	34	34	Race34	2030-02-03
+1177	2030	33	33	Race33	2030-02-02
+1176	2030	32	32	Race32	2030-02-01
+1175	2030	31	31	Race31	2030-01-31
+1174	2030	30	30	Race30	2030-01-30
+1173	2030	29	29	Race29	2030-01-29
+1172	2030	28	28	Race28	2030-01-28
+1171	2030	27	27	Race27	2030-01-27
+1170	2030	26	26	Race26	2030-01-26
+1169	2030	25	25	Race25	2030-01-25
+1168	2030	24	24	Race24	2030-01-24
+1167	2030	23	22	Race23	2030-01-23
+1166	2030	22	22	Race22	2030-01-22
+1165	2030	21	21	Race21	2030-01-21
+1164	2030	20	20	Race20	2030-01-20
+1163	2030	19	19	Race19	2030-01-19
+1162	2030	18	18	Race18	2030-01-18
+1161	2030	17	17	Race17	2030-01-17
+1160	2030	16	16	Race16	2030-01-16
+1159	2030	15	15	Race15	2030-01-15
+1158	2030	14	14	Race14	2030-01-14
+1157	2030	13	13	Race13	2030-01-13
+1156	2030	12	12	Race12	2030-01-12
+1155	2030	11	11	Race11	2030-01-11
+1154	2030	10	10	Race10	2030-01-10
+1153	2030	9	9	Race9	2030-01-09
+1152	2030	8	8	Race8	2030-01-08
+1151	2030	7	7	Race7	2030-01-07
+1150	2030	6	6	Race6	2030-01-06
+1149	2030	5	5	Race5	2030-01-05
+1148	2030	4	4	Race4	2030-01-04
+1147	2030	3	3	Race3	2030-01-03
+1146	2030	2	2	Race2	2030-01-02
+1145	2030	1	1	Race1	2030-01-01
+1144	2024	24	24	Abu Dhabi Grand Prix	2024-12-08
+1143	2024	23	78	Qatar Grand Prix	2024-12-01
+1142	2024	22	80	Las Vegas Grand Prix	2024-11-23
+1141	2024	21	18	São Paulo Grand Prix	2024-11-03
+1140	2024	20	32	Mexico City Grand Prix	2024-10-27
+1139	2024	19	69	United States Grand Prix	2024-10-20
+1138	2024	18	15	Singapore Grand Prix	2024-09-22
+1137	2024	17	73	Azerbaijan Grand Prix	2024-09-15
+1136	2024	16	14	Italian Grand Prix	2024-09-01
+1135	2024	15	39	Dutch Grand Prix	2024-08-25
+1134	2024	14	13	Belgian Grand Prix	2024-07-28
+1133	2024	13	11	Hungarian Grand Prix	2024-07-21
+1132	2024	12	9	British Grand Prix	2024-07-07
+1131	2024	11	70	Austrian Grand Prix	2024-06-30
+1130	2024	10	4	Spanish Grand Prix	2024-06-23
+1129	2024	9	7	Canadian Grand Prix	2024-06-09
+1128	2024	8	6	Monaco Grand Prix	2024-05-26
+1127	2024	7	21	Emilia Romagna Grand Prix	2024-05-19
+1126	2024	6	79	Miami Grand Prix	2024-05-05
+1125	2024	5	17	Chinese Grand Prix	2024-04-21
+1124	2024	4	22	Japanese Grand Prix	2024-04-07
+1123	2024	3	1	Australian Grand Prix	2024-03-24
+1122	2024	2	77	Saudi Arabian Grand Prix	2024-03-09
+1121	2024	1	3	Bahrain Grand Prix	2024-03-02
+1120	2023	22	24	Abu Dhabi Grand Prix	2023-11-26
+1119	2023	21	80	Las Vegas Grand Prix	2023-11-19
+1118	2023	20	18	São Paulo Grand Prix	2023-11-05
+1117	2023	19	32	Mexico City Grand Prix	2023-10-29
+1116	2023	18	69	United States Grand Prix	2023-10-22
+1115	2023	17	78	Qatar Grand Prix	2023-10-08
+1114	2023	16	22	Japanese Grand Prix	2023-09-24
+1113	2023	15	15	Singapore Grand Prix	2023-09-17
+1112	2023	14	14	Italian Grand Prix	2023-09-03
+1111	2023	13	39	Dutch Grand Prix	2023-08-27
+1110	2023	12	13	Belgian Grand Prix	2023-07-30
+1109	2023	11	11	Hungarian Grand Prix	2023-07-23
+1108	2023	10	9	British Grand Prix	2023-07-09
+1107	2023	9	70	Austrian Grand Prix	2023-07-02
+1106	2023	8	7	Canadian Grand Prix	2023-06-18
+1105	2023	7	4	Spanish Grand Prix	2023-06-04
+1104	2023	6	6	Monaco Grand Prix	2023-05-28
+1102	2023	5	79	Miami Grand Prix	2023-05-07
+1101	2023	4	73	Azerbaijan Grand Prix	2023-04-30
+1100	2023	3	1	Australian Grand Prix	2023-04-02
+1099	2023	2	77	Saudi Arabian Grand Prix	2023-03-19
+1098	2023	1	3	Bahrain Grand Prix	2023-03-05
+1096	2022	22	24	Abu Dhabi Grand Prix	2022-11-20
+1095	2022	21	18	São Paulo Grand Prix	2022-11-13
+1094	2022	20	32	Mexico City Grand Prix	2022-10-30
+1093	2022	19	69	United States Grand Prix	2022-10-23
+1092	2022	18	22	Japanese Grand Prix	2022-10-09
+1091	2022	17	15	Singapore Grand Prix	2022-10-02
+1089	2022	16	14	Italian Grand Prix	2022-09-11
+1088	2022	15	39	Dutch Grand Prix	2022-09-04
+1087	2022	14	13	Belgian Grand Prix	2022-08-28
+1086	2022	13	11	Hungarian Grand Prix	2022-07-31
+1085	2022	12	34	French Grand Prix	2022-07-24
+1084	2022	11	70	Austrian Grand Prix	2022-07-10
+1083	2022	10	9	British Grand Prix	2022-07-03
+1082	2022	9	7	Canadian Grand Prix	2022-06-19
+1081	2022	8	73	Azerbaijan Grand Prix	2022-06-12
+1080	2022	7	6	Monaco Grand Prix	2022-05-29
+1079	2022	6	4	Spanish Grand Prix	2022-05-22
+1078	2022	5	79	Miami Grand Prix	2022-05-08
+1077	2022	4	21	Emilia Romagna Grand Prix	2022-04-24
+1076	2022	3	1	Australian Grand Prix	2022-04-10
+1075	2022	2	77	Saudi Arabian Grand Prix	2022-03-27
+1074	2022	1	3	Bahrain Grand Prix	2022-03-20
+1073	2021	22	24	Abu Dhabi Grand Prix	2021-12-12
+1072	2021	21	77	Saudi Arabian Grand Prix	2021-12-05
+1071	2021	19	18	São Paulo Grand Prix	2021-11-14
+1070	2021	18	32	Mexico City Grand Prix	2021-11-07
+1069	2021	17	69	United States Grand Prix	2021-10-24
+1067	2021	16	5	Turkish Grand Prix	2021-10-10
+1066	2021	15	71	Russian Grand Prix	2021-09-26
+1065	2021	14	14	Italian Grand Prix	2021-09-12
+1064	2021	13	39	Dutch Grand Prix	2021-09-05
+1063	2021	12	13	Belgian Grand Prix	2021-08-29
+1062	2021	11	11	Hungarian Grand Prix	2021-08-01
+1061	2021	10	9	British Grand Prix	2021-07-18
+1060	2021	9	70	Austrian Grand Prix	2021-07-04
+1059	2021	7	34	French Grand Prix	2021-06-20
+1058	2021	8	70	Styrian Grand Prix	2021-06-27
+1057	2021	6	73	Azerbaijan Grand Prix	2021-06-06
+1056	2021	5	6	Monaco Grand Prix	2021-05-23
+1055	2021	4	4	Spanish Grand Prix	2021-05-09
+1054	2021	3	75	Portuguese Grand Prix	2021-05-02
+1053	2021	2	21	Emilia Romagna Grand Prix	2021-04-18
+1052	2021	1	3	Bahrain Grand Prix	2021-03-28
+1051	2021	20	78	Qatar Grand Prix	2021-11-21
+1047	2020	17	24	Abu Dhabi Grand Prix	2020-12-13
+1046	2020	16	3	Sakhir Grand Prix	2020-12-06
+1045	2020	15	3	Bahrain Grand Prix	2020-11-29
+1044	2020	14	5	Turkish Grand Prix	2020-11-15
+1043	2020	13	21	Emilia Romagna Grand Prix	2020-11-01
+1042	2020	12	75	Portuguese Grand Prix	2020-10-25
+1041	2020	11	20	Eifel Grand Prix	2020-10-11
+1040	2020	10	71	Russian Grand Prix	2020-09-27
+1039	2020	9	76	Tuscan Grand Prix	2020-09-13
+1038	2020	8	14	Italian Grand Prix	2020-09-06
+1037	2020	7	13	Belgian Grand Prix	2020-08-30
+1036	2020	6	4	Spanish Grand Prix	2020-08-16
+1035	2020	5	9	70th Anniversary Grand Prix	2020-08-09
+1034	2020	4	9	British Grand Prix	2020-08-02
+1033	2020	3	11	Hungarian Grand Prix	2020-07-19
+1032	2020	2	70	Styrian Grand Prix	2020-07-12
+1031	2020	1	70	Austrian Grand Prix	2020-07-05
+1030	2019	21	24	Abu Dhabi Grand Prix	2019-12-01
+1029	2019	20	18	Brazilian Grand Prix	2019-11-17
+1028	2019	19	69	United States Grand Prix	2019-11-03
+1027	2019	18	32	Mexican Grand Prix	2019-10-27
+1026	2019	17	22	Japanese Grand Prix	2019-10-13
+1025	2019	16	71	Russian Grand Prix	2019-09-29
+1024	2019	15	15	Singapore Grand Prix	2019-09-22
+1023	2019	14	14	Italian Grand Prix	2019-09-08
+1022	2019	13	13	Belgian Grand Prix	2019-09-01
+1021	2019	12	11	Hungarian Grand Prix	2019-08-04
+1020	2019	11	10	German Grand Prix	2019-07-28
+1019	2019	10	9	British Grand Prix	2019-07-14
+1018	2019	9	70	Austrian Grand Prix	2019-06-30
+1017	2019	8	34	French Grand Prix	2019-06-23
+1016	2019	7	7	Canadian Grand Prix	2019-06-09
+1015	2019	6	6	Monaco Grand Prix	2019-05-26
+1014	2019	5	4	Spanish Grand Prix	2019-05-12
+1013	2019	4	73	Azerbaijan Grand Prix	2019-04-28
+1012	2019	3	17	Chinese Grand Prix	2019-04-14
+1011	2019	2	3	Bahrain Grand Prix	2019-03-31
+1010	2019	1	1	Australian Grand Prix	2019-03-17
+1009	2018	21	24	Abu Dhabi Grand Prix	2018-11-25
+1008	2018	20	18	Brazilian Grand Prix	2018-11-11
+1007	2018	19	32	Mexican Grand Prix	2018-10-28
+1006	2018	18	69	United States Grand Prix	2018-10-21
+1005	2018	17	22	Japanese Grand Prix	2018-10-07
+1004	2018	16	71	Russian Grand Prix	2018-09-30
+1003	2018	15	15	Singapore Grand Prix	2018-09-16
+1002	2018	14	14	Italian Grand Prix	2018-09-02
+1001	2018	13	13	Belgian Grand Prix	2018-08-26
+1000	2018	12	11	Hungarian Grand Prix	2018-07-29
+999	2018	11	10	German Grand Prix	2018-07-22
+998	2018	10	9	British Grand Prix	2018-07-08
+997	2018	9	70	Austrian Grand Prix	2018-07-01
+996	2018	8	34	French Grand Prix	2018-06-24
+995	2018	7	7	Canadian Grand Prix	2018-06-10
+994	2018	6	6	Monaco Grand Prix	2018-05-27
+993	2018	5	4	Spanish Grand Prix	2018-05-13
+992	2018	4	73	Azerbaijan Grand Prix	2018-04-29
+991	2018	3	17	Chinese Grand Prix	2018-04-15
+990	2018	2	3	Bahrain Grand Prix	2018-04-08
+989	2018	1	1	Australian Grand Prix	2018-03-25
+988	2017	20	24	Abu Dhabi Grand Prix	2017-11-26
+987	2017	19	18	Brazilian Grand Prix	2017-11-12
+986	2017	18	32	Mexican Grand Prix	2017-10-29
+985	2017	17	69	United States Grand Prix	2017-10-22
+984	2017	16	22	Japanese Grand Prix	2017-10-08
+983	2017	15	2	Malaysian Grand Prix	2017-10-01
+982	2017	14	15	Singapore Grand Prix	2017-09-17
+981	2017	13	14	Italian Grand Prix	2017-09-03
+980	2017	12	13	Belgian Grand Prix	2017-08-27
+979	2017	11	11	Hungarian Grand Prix	2017-07-30
+978	2017	10	9	British Grand Prix	2017-07-16
+resultId	raceId	driverId	constructorId	grid	positionText	points	statusId
+26804	40	40	40	1	1	25	1
+26803	39	39	39	1	1	25	1
+26802	38	38	38	1	1	25	1
+26801	37	37	37	1	1	25	1
+26800	36	36	36	1	1	25	1
+26799	35	35	35	1	1	25	1
+26798	34	34	34	1	1	25	1
+26797	33	33	33	1	1	25	1
+26796	32	32	32	1	1	25	1
+26795	31	31	31	1	1	25	1
+26794	30	30	30	1	1	25	1
+26793	29	29	29	1	1	25	1
+26792	28	28	28	1	1	25	1
+26791	27	27	27	1	1	25	1
+26790	26	26	26	1	1	25	1
+26789	25	25	25	1	1	25	1
+26788	24	24	24	1	1	25	1
+26787	23	23	23	1	1	25	1
+26786	22	22	22	1	1	25	1
+26785	21	21	21	1	1	25	1
+26784	20	20	20	1	1	25	1
+26783	19	19	19	1	1	25	1
+26782	18	18	18	1	1	25	1
+26781	17	17	17	1	1	25	1
+26780	16	16	16	1	1	25	1
+26779	15	15	15	1	1	25	1
+26778	14	14	14	1	1	25	1
+26777	13	13	13	1	1	25	1
+26776	12	12	12	1	1	25	1
+26775	11	11	11	1	1	25	1
+26774	10	10	10	1	1	25	1
+26773	9	9	9	1	1	25	1
+26772	8	8	8	1	1	25	1
+26771	7	7	7	1	1	25	1
+26770	6	6	6	1	1	25	1
+26769	5	5	5	1	1	25	1
+26768	4	4	4	1	1	25	1
+26767	3	3	3	1	1	25	1
+26766	2	2	2	1	1	25	1
+26765	1	1	1	1	1	25	1
+26764	1144	815	9	10	R	0	4
+26763	1144	861	3	20	R	0	5
+26762	1144	822	15	9	R	0	130
+26761	1144	859	215	12	17	0	5
+26760	1144	825	210	14	16	0	11
+26759	1144	862	214	17	15	0	11
+26758	1144	840	117	13	14	0	11
+26757	1144	855	15	15	13	0	11
+26756	1144	852	215	11	12	0	11
+26755	1144	848	3	18	11	0	11
+26754	1144	857	1	2	10	1	1
+26753	1144	4	117	8	9	2	1
+26752	1144	807	210	7	8	4	1
+26751	1144	842	214	5	7	6	1
+26750	1144	830	9	4	6	8	1
+26749	1144	847	131	6	5	10	1
+26748	1144	1	131	16	4	12	1
+26747	1144	844	6	19	3	15	1
+26746	1144	832	6	3	2	18	1
+26745	1144	846	1	1	1	25	1
+26744	1143	839	214	20	R	0	4
+26743	1143	861	3	19	R	0	4
+26742	1143	840	117	15	R	0	130
+26741	1143	815	9	9	R	0	20
+26740	1143	807	210	18	R	0	20
+26739	1143	848	3	16	15	0	11
+26738	1143	859	215	17	14	0	1
+26737	1143	852	215	14	13	0	1
+26736	1143	1	131	6	12	0	1
+26735	1143	822	15	13	11	0	1
+26734	1143	846	1	3	10	2	1
+26733	1143	825	210	10	9	2	1
+26732	1143	855	15	12	8	4	1
+26731	1143	4	117	8	7	6	1
+26730	1143	832	6	7	6	8	1
+26729	1143	842	214	11	5	10	1
+26728	1143	847	131	1	4	12	1
+26727	1143	857	1	4	3	15	1
+26726	1143	844	6	5	2	18	1
+26725	1143	830	9	2	1	25	1
+26724	1142	842	214	3	R	0	5
+26723	1142	848	3	17	R	0	21
+26722	1142	822	15	19	18	0	11
+26721	1142	839	214	11	17	0	11
+26720	1142	859	215	14	16	0	1
+26719	1142	840	117	18	15	0	1
+26718	1142	861	3	0	14	0	1
+26717	1142	855	15	13	13	0	1
+26716	1142	825	210	12	12	0	1
+26715	1142	4	117	16	11	0	1
+26714	1142	815	9	15	10	1	1
+26713	1142	852	215	7	9	2	1
+26712	1142	807	210	9	8	4	1
+26711	1142	857	1	8	7	6	1
+26710	1142	846	1	6	6	9	1
+26709	1142	830	9	5	5	10	1
+26708	1142	844	6	4	4	12	1
+26707	1142	832	6	2	3	15	1
+26706	1142	1	131	10	2	18	1
+26705	1142	847	131	1	1	25	1
+26704	1141	807	210	17	D	0	2
+26703	1141	840	117	10	W	0	54
+26702	1141	848	3	7	W	0	54
+26701	1141	861	3	16	R	0	3
+26700	1141	832	6	0	R	0	3
+26699	1141	855	15	19	15	0	1
+26698	1141	4	117	9	14	0	1
+26697	1141	822	15	11	13	0	1
+26696	1141	860	210	15	12	0	1
+26695	1141	815	9	12	11	0	1
+26694	1141	1	131	14	10	1	1
+26693	1141	859	215	5	9	2	1
+26692	1141	857	1	8	8	4	1
+26691	1141	852	215	3	7	6	1
+26690	1141	846	1	1	6	8	1
+26689	1141	844	6	6	5	10	1
+26688	1141	847	131	2	4	12	1
+26687	1141	842	214	13	3	15	1
+26686	1141	839	214	4	2	18	1
+26685	1141	830	9	17	1	26	1
+26684	1140	852	215	11	R	0	4
+26683	1140	848	3	9	R	0	4
+26682	1140	4	117	13	R	0	23
+26681	1140	815	9	18	17	0	11
+26680	1140	859	215	12	16	0	11
+26679	1140	855	15	19	15	0	11
+26678	1140	822	15	15	14	0	11
+26677	1140	839	214	0	13	0	11
+26676	1140	861	3	16	12	0	11
+26675	1140	840	117	14	11	0	11
+26674	1140	842	214	8	10	1	11
+26673	1140	807	210	10	9	2	11
+26672	1140	857	1	17	8	4	1
+26671	1140	825	210	7	7	6	1
+26670	1140	830	9	2	6	8	1
+26669	1140	847	131	5	5	10	1
+26668	1140	1	131	6	4	12	1
+26667	1140	844	6	4	3	16	1
+26666	1140	846	1	3	2	18	1
+26665	1140	832	6	1	1	25	1
+26664	1139	1	131	17	R	0	20
+26663	1139	855	15	18	19	0	11
+26662	1139	839	214	12	18	0	11
+26661	1139	822	15	16	17	0	11
+26660	1139	848	3	14	16	0	11
+26659	1139	840	117	13	15	0	11
+26658	1139	852	215	10	14	0	11
+26657	1139	4	117	7	13	0	11
+26656	1139	842	214	6	12	0	1
+26655	1139	825	210	8	11	0	1
+26654	1139	861	3	15	10	1	1
+26653	1139	859	215	19	9	2	1
+26652	1139	807	210	11	8	4	1
+26651	1139	815	9	9	7	6	1
+26650	1139	847	131	20	6	8	1
+26649	1139	857	1	5	5	10	1
+26648	1139	846	1	1	4	12	1
+26647	1139	830	9	2	3	15	1
+26646	1139	832	6	3	2	18	1
+26645	1139	844	6	4	1	25	1
+26644	1138	848	3	11	R	0	131
+26643	1138	825	210	14	19	0	3
+26642	1138	817	215	16	18	0	11
+26641	1138	842	214	18	17	0	11
+26640	1138	822	15	19	16	0	11
+26639	1138	855	15	20	15	0	11
+26638	1138	840	117	17	14	0	11
+26637	1138	839	214	15	13	0	11
+26636	1138	852	215	8	12	0	11
+26635	1138	861	3	12	11	0	11
+26634	1138	815	9	13	10	1	11
+26633	1138	807	210	6	9	2	11
+26632	1138	4	117	7	8	4	11
+26631	1138	832	6	10	7	6	1
+26630	1138	1	131	3	6	8	1
+26629	1138	844	6	9	5	10	1
+26628	1138	847	131	4	4	12	1
+26627	1138	857	1	5	3	15	1
+26626	1138	830	9	2	2	18	1
+26625	1138	846	1	1	1	25	1
+26624	1137	852	215	11	R	0	31
+26623	1137	840	117	13	19	0	31
+26622	1137	832	6	3	18	0	31
+26621	1137	815	9	4	17	0	31
+26620	1137	822	15	16	16	0	11
+26619	1137	839	214	0	15	0	11
+26618	1137	855	15	17	14	0	1
+26617	1137	817	215	14	13	0	1
+26616	1137	842	214	18	12	0	1
+26615	1137	807	210	12	11	0	1
+26614	1137	860	210	10	10	1	1
+26613	1137	1	131	0	9	2	1
+26612	1137	861	3	8	8	4	1
+26611	1137	848	3	9	7	6	1
+26610	1137	4	117	7	6	8	1
+26609	1137	830	9	6	5	10	1
+26608	1137	846	1	15	4	13	1
+26607	1137	847	131	5	3	15	1
+26606	1137	844	6	1	2	18	1
+26605	1137	857	1	2	1	25	1
