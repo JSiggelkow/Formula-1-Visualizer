@@ -1,0 +1,20 @@
+Database connection established successfully.
+Database f1db created successfully.
+CSV data imported successfully.
+Indexes created successfully.
+Done.
+Slow implementation:
+real    0m15.109s
+user    0m3.738s
+sys     0m0.420s
+
+{'year': 2025, 'round': 10, 'circuits_added': 1, 'races_added': 1, 'drivers_added': 3, 'constructors_added': 2, 'results_added': 20, 'status_added': 3, 'laptimes_added': 1349}
+Database connection established successfully.
+Database f1db created successfully.
+CSV data imported successfully.
+Indexes created successfully.
+Done.
+Fast implementation:
+real    0m1.115s
+user    0m3.232s
+sys     0m0.142s
