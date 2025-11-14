@@ -1,0 +1,78 @@
+circuitId	circuitRef	name	city	country	lat	lng
+1	albert_park	Albert Park Grand Prix Circuit	Melbourne	Australia	-37.849701	144.968002
+2	sepang	Sepang International Circuit	Kuala Lumpur	Malaysia	2.760830	101.737999
+3	bahrain	Bahrain International Circuit	Sakhir	Bahrain	26.032499	50.510601
+4	catalunya	Circuit de Barcelona-Catalunya	Montmeló	Spain	41.570000	2.261110
+5	istanbul	Istanbul Park	Istanbul	Turkey	40.951698	29.405001
+6	monaco	Circuit de Monaco	Monte-Carlo	Monaco	43.734699	7.420560
+7	villeneuve	Circuit Gilles Villeneuve	Montreal	Canada	45.500000	-73.522797
+8	magny_cours	Circuit de Nevers Magny-Cours	Magny Cours	France	46.864201	3.163610
+9	silverstone	Silverstone Circuit	Silverstone	UK	52.078602	-1.016940
+10	hockenheimring	Hockenheimring	Hockenheim	Germany	49.327801	8.565830
+11	hungaroring	Hungaroring	Budapest	Hungary	47.578899	19.248600
+12	valencia	Valencia Street Circuit	Valencia	Spain	39.458900	-0.331667
+13	spa	Circuit de Spa-Francorchamps	Spa	Belgium	50.437199	5.971390
+14	monza	Autodromo Nazionale di Monza	Monza	Italy	45.615601	9.281110
+15	marina_bay	Marina Bay Street Circuit	Marina Bay	Singapore	1.291400	103.863998
+16	fuji	Fuji Speedway	Oyama	Japan	35.371700	138.927002
+17	shanghai	Shanghai International Circuit	Shanghai	China	31.338900	121.220001
+18	interlagos	Autódromo José Carlos Pace	São Paulo	Brazil	-23.703600	-46.699699
+19	indianapolis	Indianapolis Motor Speedway	Indianapolis	USA	39.794998	-86.234703
+20	nurburgring	Nürburgring	Nürburg	Germany	50.335602	6.947500
+21	imola	Autodromo Enzo e Dino Ferrari	Imola	Italy	44.343899	11.716700
+22	suzuka	Suzuka Circuit	Suzuka	Japan	34.843102	136.541000
+24	yas_marina	Yas Marina Circuit	Abu Dhabi	UAE	24.467199	54.603100
+25	galvez	Autódromo Juan y Oscar Gálvez	Buenos Aires	Argentina	-34.694302	-58.459301
+26	jerez	Circuito de Jerez	Jerez de la Frontera	Spain	36.708302	-6.034170
+27	estoril	Autódromo do Estoril	Estoril	Portugal	38.750599	-9.394170
+28	okayama	Okayama International Circuit	Okayama	Japan	34.915001	134.220993
+29	adelaide	Adelaide Street Circuit	Adelaide	Australia	-34.927200	138.617004
+30	kyalami	Kyalami	Midrand	South Africa	-25.989401	28.076700
+31	donington	Donington Park	Castle Donington	UK	52.830601	-1.375280
+32	rodriguez	Autódromo Hermanos Rodríguez	Mexico City	Mexico	19.404200	-99.090698
+33	phoenix	Phoenix street circuit	Phoenix	USA	33.447899	-112.074997
+34	ricard	Circuit Paul Ricard	Le Castellet	France	43.250599	5.791670
+35	yeongam	Korean International Circuit	Yeongam County	Korea	34.733299	126.417000
+36	jacarepagua	Autódromo Internacional Nelson Piquet	Rio de Janeiro	Brazil	-22.975599	-43.395000
+37	detroit	Detroit Street Circuit	Detroit	USA	42.329800	-83.040100
+38	brands_hatch	Brands Hatch	Kent	UK	51.356899	0.263056
+39	zandvoort	Circuit Park Zandvoort	Zandvoort	Netherlands	52.388802	4.540920
+40	zolder	Zolder	Heusden-Zolder	Belgium	50.989399	5.256940
+41	dijon	Dijon-Prenois	Dijon	France	47.362499	4.899130
+42	dallas	Fair Park	Dallas	USA	32.777401	-96.758698
+43	long_beach	Long Beach	California	USA	33.765099	-118.189003
+44	las_vegas	Las Vegas Street Circuit	Nevada	USA	36.116199	-115.174004
+45	jarama	Jarama	Madrid	Spain	40.617100	-3.585580
+46	watkins_glen	Watkins Glen	New York State	USA	42.336899	-76.927200
+47	anderstorp	Scandinavian Raceway	Anderstorp	Sweden	57.265301	13.604200
+48	mosport	Mosport International Raceway	Ontario	Canada	44.048100	-78.675598
+49	montjuic	Montjuïc	Barcelona	Spain	41.366402	2.151670
+50	nivelles	Nivelles-Baulers	Brussels	Belgium	50.621101	4.326940
+51	charade	Charade Circuit	Clermont-Ferrand	France	45.747200	3.038890
+52	tremblant	Circuit Mont-Tremblant	Quebec	Canada	46.187698	-74.609901
+53	essarts	Rouen-Les-Essarts	Rouen	France	49.330601	1.004580
+54	lemans	Le Mans	Le Mans	France	47.950001	0.224231
+55	reims	Reims-Gueux	Reims	France	49.254200	3.930830
+56	george	Prince George Circuit	Eastern Cape Province	South Africa	-33.048599	27.873600
+57	zeltweg	Zeltweg	Styria	Austria	47.203899	14.747800
+58	aintree	Aintree	Liverpool	UK	53.476898	-2.940560
+59	boavista	Circuito da Boavista	Oporto	Portugal	41.170502	-8.673250
+60	riverside	Riverside International Raceway	California	USA	33.937000	-117.273003
+61	avus	AVUS	Berlin	Germany	52.480598	13.251400
+62	monsanto	Monsanto Park Circuit	Lisbon	Portugal	38.719700	-9.203060
+63	sebring	Sebring International Raceway	Florida	USA	27.454700	-81.348297
+64	ain-diab	Ain Diab	Casablanca	Morocco	33.578602	-7.687500
+65	pescara	Pescara Circuit	Pescara	Italy	42.474998	14.150800
+66	bremgarten	Circuit Bremgarten	Bern	Switzerland	46.958900	7.401940
+67	pedralbes	Circuit de Pedralbes	Barcelona	Spain	41.390301	2.116670
+68	buddh	Buddh International Circuit	Uttar Pradesh	India	28.348700	77.533096
+69	americas	Circuit of the Americas	Austin	USA	30.132799	-97.641098
+70	red_bull_ring	Red Bull Ring	Spielberg	Austria	47.219700	14.764700
+71	sochi	Sochi Autodrom	Sochi	Russia	43.405701	39.957802
+73	baku	Baku City Circuit	Baku	Azerbaijan	40.372501	49.853298
+75	portimao	Autódromo Internacional do Algarve	Portimão	Portugal	37.227001	-8.626700
+76	mugello	Autodromo Internazionale del Mugello	Mugello	Italy	43.997501	11.371900
+77	jeddah	Jeddah Corniche Circuit	Jeddah	Saudi Arabia	21.631901	39.104401
+78	losail	Losail International Circuit	Al Daayen	Qatar	25.490000	51.454201
+79	miami	Miami International Autodrome	Miami	USA	25.958099	-80.238899
+80	vegas	Las Vegas Strip Street Circuit	Las Vegas	United States	36.114700	-115.172997
