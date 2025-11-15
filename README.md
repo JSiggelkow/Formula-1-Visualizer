@@ -122,10 +122,20 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
 ### Supported features
 You can visit http://127.0.0.1:5173 and try out any of the following features:
 - **Basic feature #1 (R6):** When you type in a driver's name into the main search bar, a list of autocomplete suggestions pop up under the search bar.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/DriverSearchBar.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L37-L53)
 - **Basic feature #2 (R7):** If you click on any of the suggested names, you will be taken to a new page with that driver's details, including basic personal information and a paginated list of their race results over the years.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/DriverInfo.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L55-L88)
 - **Basic feature #3 (R8):** Back on the home page, you can scroll down to the "Season Winners" card, specify a year, and view all of the race winners from that year.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/SeasonWinnersCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/SeasonWinners.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L90-L105)
 - **Basic feature #4 (R9):** Using the "Fastest Lap" card, you can toggle between the "By Race" and "By Circuit" search options. You can search for the fastest lap by selecting a year and race name, or by selecting a circuit name.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/FastestLapCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/FastestLap.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L107-L171) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L385-L407)
 - **Basic feature #5 (R10):** Click on the red "Get Next Race" button to trigger an update. This will look up the next chronological race that is not currently in the database and will add all relevant data from that race. It will then report how many rows were added to each table.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/UpdateDataCard.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L173-L383)
 
 ## Evaluating query performance
 
