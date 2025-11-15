@@ -121,9 +121,38 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
 
 ### Supported features
 You can visit http://127.0.0.1:5173 and try out any of the following features:
-- **Basic feature #1 (R6):** When you type in a driver's first name or last name into the main search bar, a list of autocomplete suggestions pop up under the search bar. Note that querying by full name isn't supported for now, but we plan on adding it.
+- **Basic feature #1 (R6):** When you type in a driver's name into the main search bar, a list of autocomplete suggestions pop up under the search bar.
 - **Basic feature #2 (R7):** If you click on any of the suggested names, you will be taken to a new page with that driver's details, including basic personal information and a paginated list of their race results over the years.
 - **Basic feature #3 (R8):** Back on the home page, you can scroll down to the "Season Winners" card, specify a year, and view all of the race winners from that year.
-- **Basic feature #4 (R9):** This feature is a **work in progress**, with only the UI portion complete. You can interact with the input fields, but clicking on the "Select Race/Circuit" button won't work.
+- **Basic feature #4 (R9):** Using the "Fastest Lap" card, you can toggle between the "By Race" and "By Circuit" search options. You can search for the fastest lap by selecting a year and race name, or by selecting a circuit name.
 - **Basic feature #5 (R10):** Click on the red "Get Next Race" button to trigger an update. This will look up the next chronological race that is not currently in the database and will add all relevant data from that race. It will then report how many rows were added to each table.
 
+## Evaluating query performance
+
+### R6 - R9
+You can manually evaluate the performance following these steps:
+1. Connect to the database and select the production database: `USE f1db;`
+2. Execute the contents of [`define_temp_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/define_temp_indexes.sql). The comment at the top of the file explains why this is necessary.
+3. Execute the contents of [`drop_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/drop_indexes.sql) to remove performance optimizations.
+4. Run each production query in [`prod_query_tests/`](https://github.com/JSiggelkow/Formula-1-Visualizer/tree/main/milestone-2/prod_query_tests) with `EXPLAIN ANALYZE`. Record the last value of the `time` field shown at the root of the execution plan. For example, this shows that the query took 0.475 ms to complete:
+    ```
+    mysql> EXPLAIN ANALYZE SELECT * FROM drivers WHERE forename = 'Mark';
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | EXPLAIN                                                                                                                                                                                                 |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | -> Filter: (drivers.forename = 'Mark')  (cost=87.3 rows=86.1) (actual time=0.182..0.475 rows=3 loops=1)
+        -> Table scan on drivers  (cost=87.3 rows=861) (actual time=0.174..0.432 rows=861 loops=1)
+    |
+    +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    1 row in set (0.00 sec)
+    ```
+    
+    These values are query execution times _without_ performance optimizations.
+5. Execute the contents of [`define_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/define_indexes.sql) to add back performance optimizations.
+    - Please make sure to complete this step to restore the production database state.
+6. Execute the contents of [`drop_temp_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/drop_temp_indexes.sql). 
+7. Repeat step 3. This time, the recorded values are query execution times _with_ performance optimizations.
+8. Compare the performance side by side for each production query.
+
+### R10
+Run [this script](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/test.sh) to automatically evaluate the performance difference.
