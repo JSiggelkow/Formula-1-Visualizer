@@ -96,20 +96,20 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
         ```
         MYSQL_PASSWORD=[your root password]
         ```
-2. Run `cd milestone-2/backend/`.
-3. Run `python setup_db.py`. This script creates a sample database with data loaded from `milestone-2/backend/sample_data`, which is a subset of the production data.
+2. Run `cd final/backend/`.
+3. Run `python setup_db.py`. This script creates a sample database with data loaded from `final/backend/sample_data`, which is a subset of the production data.
     - The script has run successfully once you see "Done." printed to the terminal.
 4. Optionally, if you plan to try the application, run `python setup_db.py --prod` to populate the production database.
 
 ### Run the back-end
 
-1. Still from the `milestone-2/backend/` folder, run the back-end locally using `uvicorn main:app --reload`.
+1. Still from the `final/backend/` folder, run the back-end locally using `uvicorn main:app --reload`.
 2. Visit http://127.0.0.1:8000/docs in your browser. You should see different endpoints displayed.
 3. Try out the endpoints.
 
 ### Run the front-end
 
-1. In a new terminal session, run `cd milestone-2/frontend/ && npm install`.
+1. In a new terminal session, run `cd final/frontend/ && npm install`.
 2. Run `npm run dev`.
 3. Go to http://127.0.0.1:5173 in your browser.
 
