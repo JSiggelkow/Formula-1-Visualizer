@@ -2,7 +2,7 @@
 
 -- Get all drivers with the forename 'Mark'
 SELECT * FROM drivers 
-WHERE forename = 'Mark';
+WHERE forename LIKE 'Mark%';
 
 -- Get driver with driverId 17
 SELECT * FROM drivers 
