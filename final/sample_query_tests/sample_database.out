@@ -1,0 +1,139 @@
+-- Contents of the sample database
+
+mysql> SELECT * FROM circuits;
++-----------+-------------+--------------------------------+--------------+-----------+------------+------------+
+| circuitId | circuitRef  | name                           | city         | country   | lat        | lng        |
++-----------+-------------+--------------------------------+--------------+-----------+------------+------------+
+|         1 | albert_park | Albert Park Grand Prix Circuit | Melbourne    | Australia | -37.849701 | 144.968002 |
+|         2 | sepang      | Sepang International Circuit   | Kuala Lumpur | Malaysia  |   2.760830 | 101.737999 |
++-----------+-------------+--------------------------------+--------------+-----------+------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM constructors;
++---------------+----------------+-------------+-------------+
+| constructorId | constructorRef | name        | nationality |
++---------------+----------------+-------------+-------------+
+|             1 | mclaren        | McLaren     | British     |
+|             2 | bmw_sauber     | BMW Sauber  | German      |
+|             3 | williams       | Williams    | British     |
+|             4 | renault        | Renault     | French      |
+|             5 | toro_rosso     | Toro Rosso  | Italian     |
+|             6 | ferrari        | Ferrari     | Italian     |
+|             7 | toyota         | Toyota      | Japanese    |
+|             8 | super_aguri    | Super Aguri | Japanese    |
+|             9 | red_bull       | Red Bull    | Austrian    |
+|            10 | force_india    | Force India | Indian      |
+|            11 | honda          | Honda       | Japanese    |
++---------------+----------------+-------------+-------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT * FROM drivers;
++----------+-------------+------+-----------+-------------+------------+-------------+
+| driverId | driverRef   | code | forename  | surname     | dob        | nationality |
++----------+-------------+------+-----------+-------------+------------+-------------+
+|        1 | hamilton    | HAM  | Lewis     | Hamilton    | 1985-01-07 | British     |
+|        2 | heidfeld    | HEI  | Nick      | Heidfeld    | 1977-05-10 | German      |
+|        3 | rosberg     | ROS  | Nico      | Rosberg     | 1985-06-27 | German      |
+|        4 | alonso      | ALO  | Fernando  | Alonso      | 1981-07-29 | Spanish     |
+|        5 | kovalainen  | KOV  | Heikki    | Kovalainen  | 1981-10-19 | Finnish     |
+|        6 | nakajima    | NAK  | Kazuki    | Nakajima    | 1985-01-11 | Japanese    |
+|        7 | bourdais    | BOU  | S�bastien | Bourdais    | 1979-02-28 | French      |
+|        8 | raikkonen   | RAI  | Kimi      | R�ikk�nen   | 1979-10-17 | Finnish     |
+|        9 | kubica      | KUB  | Robert    | Kubica      | 1984-12-07 | Polish      |
+|       10 | glock       | GLO  | Timo      | Glock       | 1982-03-18 | German      |
+|       11 | sato        | SAT  | Takuma    | Sato        | 1977-01-28 | Japanese    |
+|       12 | piquet_jr   | PIQ  | Nelson    | Piquet Jr.  | 1985-07-25 | Brazilian   |
+|       13 | massa       | MAS  | Felipe    | Massa       | 1981-04-25 | Brazilian   |
+|       14 | coulthard   | COU  | David     | Coulthard   | 1971-03-27 | British     |
+|       15 | trulli      | TRU  | Jarno     | Trulli      | 1974-07-13 | Italian     |
+|       16 | sutil       | SUT  | Adrian    | Sutil       | 1983-01-11 | German      |
+|       17 | webber      | WEB  | Mark      | Webber      | 1976-08-27 | Australian  |
+|       18 | button      | BUT  | Jenson    | Button      | 1980-01-19 | British     |
+|       19 | davidson    | DAV  | Anthony   | Davidson    | 1979-04-18 | British     |
+|       20 | vettel      | VET  | Sebastian | Vettel      | 1987-07-03 | German      |
+|       21 | fisichella  | FIS  | Giancarlo | Fisichella  | 1973-01-14 | Italian     |
+|       22 | barrichello | BAR  | Rubens    | Barrichello | 1972-05-23 | Brazilian   |
+|       23 | martin      | MAR  | Mark      | Martin      | 1980-05-15 | American    |
++----------+-------------+------+-----------+-------------+------------+-------------+
+23 rows in set (0.00 sec)
+
+mysql> SELECT * FROM lap_times;
++--------+----------+-----+----------+--------------+
+| raceId | driverId | lap | time     | milliseconds |
++--------+----------+-----+----------+--------------+
+|     18 |        1 |   1 | 2:01.465 |       121465 |
+|     18 |        1 |  15 | 1:27.750 |        87750 |
+|     18 |        1 |  39 | 1:27.452 |        87452 |
+|     18 |        1 |  58 | 1:29.625 |        89625 |
+|     18 |        5 |   1 | 2:03.824 |       123824 |
+|     18 |        5 |  15 | 1:28.744 |        88744 |
+|     18 |        5 |  20 | 1:27.725 |        87725 |
+|     18 |        5 |  43 | 1:27.418 |        87418 |
+|     18 |        5 |  58 | 1:29.236 |        89236 |
+|     18 |        8 |   1 | 2:09.474 |       129474 |
+|     18 |        8 |  20 | 1:27.903 |        87903 |
+|     18 |        8 |  40 | 1:28.760 |        88760 |
+|     18 |        8 |  53 | 1:34.488 |        94488 |
+|     19 |        1 |  35 | 1:34.223 |        94223 |
+|     19 |        4 |  35 | 1:33.692 |        93692 |
+|     19 |        5 |  35 | 1:33.875 |        93875 |
+|     19 |        8 |  35 | 1:34.156 |        94156 |
++--------+----------+-----+----------+--------------+
+17 rows in set (0.00 sec)
+
+mysql> SELECT * FROM races;    
++--------+------+-------+-----------+-----------------------+------------+
+| raceId | year | round | circuitId | name                  | date       |
++--------+------+-------+-----------+-----------------------+------------+
+|     18 | 2008 |     1 |         1 | Australian Grand Prix | 2008-03-16 |
+|     19 | 2008 |     2 |         2 | Malaysian Grand Prix  | 2008-03-23 |
++--------+------+-------+-----------+-----------------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM results;
++----------+--------+----------+---------------+------+--------------+--------+----------+
+| resultId | raceId | driverId | constructorId | grid | positionText | points | statusId |
++----------+--------+----------+---------------+------+--------------+--------+----------+
+|        1 |     18 |        1 |             1 |    1 | 1            |     10 |        1 |
+|        2 |     18 |        2 |             2 |    5 | 2            |      8 |        1 |
+|        3 |     18 |        3 |             3 |    7 | 3            |      6 |        1 |
+|        4 |     18 |        4 |             4 |   11 | 4            |      5 |        1 |
+|        5 |     18 |        5 |             1 |    3 | 5            |      4 |        1 |
+|        6 |     18 |        6 |             3 |   13 | 6            |      3 |       11 |
+|        7 |     18 |        7 |             5 |   17 | 7            |      2 |        5 |
+|        8 |     18 |        8 |             6 |   15 | 8            |      1 |        5 |
+|        9 |     18 |        9 |             2 |    2 | R            |      0 |        4 |
+|       10 |     18 |       10 |             7 |   18 | R            |      0 |        3 |
+|       11 |     18 |       11 |             8 |   19 | R            |      0 |        7 |
+|       12 |     18 |       12 |             4 |   20 | R            |      0 |        8 |
+|       13 |     18 |       13 |             6 |    4 | R            |      0 |        5 |
+|       14 |     18 |       14 |             9 |    8 | R            |      0 |        4 |
+|       15 |     18 |       15 |             7 |    6 | R            |      0 |       10 |
+|       16 |     18 |       16 |            10 |   22 | R            |      0 |        9 |
+|       17 |     18 |       17 |             9 |   14 | R            |      0 |        4 |
+|       18 |     18 |       18 |            11 |   12 | R            |      0 |        4 |
+|       19 |     18 |       19 |             8 |   21 | R            |      0 |        4 |
+|       20 |     18 |       20 |             5 |    9 | R            |      0 |        4 |
+|       21 |     18 |       21 |            10 |   16 | R            |      0 |        4 |
+|       22 |     18 |       22 |            11 |   10 | D            |      0 |        2 |
+|       23 |     19 |        1 |             1 |    2 | 2            |      8 |        1 |
+|       24 |     19 |        2 |             2 |    1 | 1            |     10 |        1 |
++----------+--------+----------+---------------+------+--------------+--------+----------+
+24 rows in set (0.00 sec)
+
+mysql> SELECT * FROM status; 
++----------+--------------+
+| statusId | status       |
++----------+--------------+
+|        1 | Finished     |
+|        2 | Disqualified |
+|        3 | Accident     |
+|        4 | Collision    |
+|        5 | Engine       |
+|        7 | Transmission |
+|        8 | Clutch       |
+|        9 | Hydraulics   |
+|       10 | Electrical   |
+|       11 | +1 Lap       |
++----------+--------------+
+10 rows in set (0.00 sec)

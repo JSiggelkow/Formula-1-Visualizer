@@ -1,0 +1,16 @@
+-- Get all drivers with the forename 'Mark'
++----------+-----------+------+----------+---------+------------+-------------+
+| driverId | driverRef | code | forename | surname | dob        | nationality |
++----------+-----------+------+----------+---------+------------+-------------+
+|       23 | martin    | MAR  | Mark     | Martin  | 1980-05-15 | American    |
+|       17 | webber    | WEB  | Mark     | Webber  | 1976-08-27 | Australian  |
++----------+-----------+------+----------+---------+------------+-------------+
+2 rows in set (0.00 sec)
+
+-- Get driver with driverId 17
++----------+-----------+------+----------+---------+------------+-------------+
+| driverId | driverRef | code | forename | surname | dob        | nationality |
++----------+-----------+------+----------+---------+------------+-------------+
+|       17 | webber    | WEB  | Mark     | Webber  | 1976-08-27 | Australian  |
++----------+-----------+------+----------+---------+------------+-------------+
+1 row in set (0.00 sec)
