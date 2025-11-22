@@ -143,13 +143,4 @@ class WikipediaScraper:
         return self.scraped_data
 
     def get_cached_content(self, url: str) -> Optional[str]:
-        """
-        Get cached content for a specific URL
-        
-        Args:
-            url: Wikipedia URL
-            
-        Returns:
-            Cached biographical content or None if not found
-        """
         return self.scraped_data.get(url)

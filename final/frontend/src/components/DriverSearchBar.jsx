@@ -118,7 +118,6 @@ const DriverSearchBar = () => {
                 label: `${driver.forename} ${driver.surname}`,
                 driver: driver,
             }));
-            console.log("Got data:", data);
             setAutocompleteData(data);
         } catch (error) {
             console.error("Error fetching driver suggestions:", error);
