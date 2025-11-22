@@ -386,7 +386,32 @@ def update_latest_race() -> dict[str, int]:
     cursor.close()
     conn.close()
     return rows_added
-  
+
+@app.get("/driver-v2")
+def get_drivers_v2(search_str: str):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+    query = """
+    SELECT 
+        driverId,
+        forename,
+        surname,
+        nationality,
+        MATCH(code, forename, surname, nationality, about) AGAINST (%s IN NATURAL LANGUAGE MODE) as relevance_score,
+        LEFT(about, 200) as bio_preview
+    FROM drivers 
+    WHERE MATCH(code, forename, surname, nationality, about) AGAINST (%s IN NATURAL LANGUAGE MODE)
+    ORDER BY relevance_score DESC;
+    """
+    params = [search_str, search_str]
+
+    cursor.execute(query, params)
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    return results
+
 @app.get("/circuits")
 def get_circuits():
     conn = get_db_conn()

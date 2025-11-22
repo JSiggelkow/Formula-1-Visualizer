@@ -1,33 +1,83 @@
-import {Autocomplete, Box, Button, Group, Text} from "@mantine/core";
-import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import { Autocomplete, Box, Button, Group, Switch, Text, Loader } from "@mantine/core";
+import { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import api from "../api";
 import "./DriverSearchBar.css";
 
-const DriverOption = ({option}) => (
-    <Group justify="space-between" w="100%">
-        <Text fw={600} c="dark">
-            {option.driver?.forename} {option.driver?.surname}
-        </Text>
-        <Text size="sm" c="dimmed">
-            {option.driver?.nationality}
-        </Text>
-    </Group>
-);
+const DriverOption = ({option}) => {
+    return (
+        <Group justify="space-between" w="100%">
+            <Text fw={600} c="dark">
+                {option.driver?.forename} {option.driver?.surname}
+            </Text>
+            <Text size="sm" c="dimmed">
+                {option.driver?.nationality}
+            </Text>
+        </Group>
+    );
+};
 
 const DriverSearchBar = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [autocompleteData, setAutocompleteData] = useState([]);
+    const [useAdvancedSearch, setUseAdvancedSearch] = useState(false);
+    const [lastSearchedTerm, setLastSearchedTerm] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+
     const navigate = useNavigate();
+    const pollIntervalRef = useRef(null);
+    const searchTermRef = useRef("");
+    const lastSearchedTermRef = useRef("");
 
     useEffect(() => {
-        if (searchTerm.length >= 2) {
-            fetchDriverSuggestions(searchTerm);
-        } else {
+        searchTermRef.current = searchTerm;
+    }, [searchTerm]);
+
+    useEffect(() => {
+        lastSearchedTermRef.current = lastSearchedTerm;
+    }, [lastSearchedTerm]);
+
+    // Handle immediate clearing when search becomes empty (don't wait for poll)
+    useEffect(() => {
+        if (searchTerm.length === 0) {
             setAutocompleteData([]);
+            setLastSearchedTerm("");
+            setIsLoading(false);
         }
     }, [searchTerm]);
+
+    // Setup polling to check for search term changes to avoid excessive API calls
+    useEffect(() => {
+        if (pollIntervalRef.current) {
+            clearInterval(pollIntervalRef.current);
+        }
+        
+        // Trigger immediate search when switching search modes if there's a current search term
+        if (searchTerm.length > 0) {
+            setIsLoading(true);
+            fetchDriverSuggestions(searchTerm);
+            setLastSearchedTerm(searchTerm);
+        }
+
+        const pollInterval = useAdvancedSearch ? 1000 : 100;   
+        pollIntervalRef.current = setInterval(() => {
+            const currentTerm = searchTermRef.current;
+            const lastTerm = lastSearchedTermRef.current;
+            
+            if (currentTerm !== lastTerm && currentTerm.length > 0) {
+                setIsLoading(true);
+                fetchDriverSuggestions(currentTerm);
+                setLastSearchedTerm(currentTerm);
+            }
+        }, pollInterval);
+        
+        return () => {
+            if (pollIntervalRef.current) {
+                clearInterval(pollIntervalRef.current);
+            }
+        };
+    }, [useAdvancedSearch]);
 
     const fetchDriverSuggestions = async (term) => {
         try {
@@ -35,22 +85,28 @@ const DriverSearchBar = () => {
 
             let apiCalls;
 
-            if (terms.length >= 2) {
-
-                const forename = terms.slice(0, terms.length - 1).join(' ');
-                const surname = terms[terms.length - 1];
-
-                apiCalls = [
-                    api.get(`/driver?forename=${forename}&surname=${surname}`),
-                    api.get(`/driver?forename=${term}`),
-                    api.get(`/driver?surname=${term}`),
-                ];
+            if (useAdvancedSearch) {
+                const endpoint = '/driver-v2';
+                apiCalls = [api.get(`${endpoint}?search_str=${term}`)];
             } else {
-                apiCalls = [
-                    api.get(`/driver?forename=${term}`),
-                    api.get(`/driver?surname=${term}`),
-                ];
+                const endpoint = '/driver';
+                if (terms.length >= 2) {
+                    const forename = terms.slice(0, terms.length - 1).join(' ');
+                    const surname = terms[terms.length - 1];
+
+                    apiCalls = [
+                        api.get(`${endpoint}?forename=${forename}&surname=${surname}`),
+                        api.get(`${endpoint}?forename=${term}`),
+                        api.get(`${endpoint}?surname=${term}`),
+                    ];
+                } else {
+                    apiCalls = [
+                        api.get(`${endpoint}?forename=${term}`),
+                        api.get(`${endpoint}?surname=${term}`),
+                    ];
+                }
             }
+
             const responses = await Promise.all(apiCalls);
 
             const combined = responses.flatMap(res => res.data);
@@ -62,10 +118,13 @@ const DriverSearchBar = () => {
                 label: `${driver.forename} ${driver.surname}`,
                 driver: driver,
             }));
+            console.log("Got data:", data);
             setAutocompleteData(data);
         } catch (error) {
             console.error("Error fetching driver suggestions:", error);
             setAutocompleteData([]);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -91,13 +150,21 @@ const DriverSearchBar = () => {
                     onChange={setSearchTerm}
                     onOptionSubmit={handleDriverSelect}
                     data={autocompleteData}
-                    placeholder="Search for a driver by first or last name (e.g., 'Lewis' or 'Hamilton')"
+                    placeholder={
+                        useAdvancedSearch ?
+                            "Search for a driver by characteristic (e.g. \"Formula Two\")" :
+                            "Search for a driver by name (e.g. \"Max Verstappen\")"
+                    }
                     size="lg"
                     className="autocomplete"
                     classNames={{
                         input: "search-input",
                     }}
                     renderOption={({option}) => <DriverOption option={option}/>}
+                    filter={() => {
+                        return autocompleteData;
+                    }}
+                    rightSection={isLoading ? <Loader size="sm" color="red.5" /> : null}
                 />
                 <Button
                     type="submit"
@@ -109,6 +176,15 @@ const DriverSearchBar = () => {
                     Search
                 </Button>
             </Group>
+            <Switch
+                label="Use advanced search mode"
+                checked={useAdvancedSearch}
+                onChange={(event) => setUseAdvancedSearch(event.currentTarget.checked)}
+                mt="md"
+                color="red.6"
+                c="gray.3"
+                display="inline-flex"
+            />
         </Box>
     );
 };
