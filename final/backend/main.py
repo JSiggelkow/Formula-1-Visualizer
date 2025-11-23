@@ -6,6 +6,11 @@ from fastf1.ergast import Ergast
 from datetime import timedelta
 import logging
 
+import matplotlib.pyplot as plt
+import io
+import time
+import json
+
 from consts import *
 
 logging.disable(logging.CRITICAL) # silence logs from external API calls
@@ -39,21 +44,14 @@ def get_db_conn():
 def get_drivers(forename: str = None, surname: str = None, driver_id: int = None):
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
-    query = f"SELECT * FROM drivers WHERE 1=1"
-    params = []
-
+    query = f"SELECT * FROM drivers WHERE 1=1"  # We can also think about using an B*-Tree index on forename und surname
     if forename:
-        query += f" AND forename LIKE %s"
-        params.append(f"{forename}%")
+        query += f" AND forename = '{forename}'"  # We can also use the LIKE operator here, but this could slow done the query
     if surname:
-        query += f" AND surname LIKE %s"
-        params.append(f"{surname}%")
+        query += f" AND surname = '{surname}'"
     if driver_id:
-        query += f" AND driverId = %s"
-        params.append(driver_id)
-
-    cursor.execute(query, params)
-
+        query += f" AND driverId = {driver_id}"
+    cursor.execute(query)
     results = cursor.fetchall()
     cursor.close()
     conn.close()
@@ -412,3 +410,316 @@ def get_races(year: int = None):
     cursor.close()
     conn.close()
     return results
+
+def lap_pace_graph(driver_id: int, race_id: int):
+
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    query = """
+        SELECT
+            lt.driverId,
+            d.forename,
+            d.surname,
+            lt.raceId,
+            lt.lap,
+            lt.milliseconds AS lap_ms,
+            LAG(lt.milliseconds) OVER (
+                PARTITION BY lt.driverId, lt.raceId
+                ORDER BY lt.lap
+            ) AS prev_lap_ms,
+            lt.milliseconds - 
+                LAG(lt.milliseconds) OVER (
+                    PARTITION BY lt.driverId, lt.raceId
+                    ORDER BY lt.lap
+                ) AS delta_ms
+        FROM lap_times lt
+        JOIN drivers d ON d.driverId = lt.driverId
+        WHERE lt.raceId = %s AND lt.driverId = %s
+        ORDER BY lt.lap;
+    """
+
+    slow_query = """
+        SELECT
+        lt.driverId,
+        d.forename,
+        d.surname,
+        lt.raceId,
+        lt.lap,
+        lt.milliseconds AS lap_ms,
+        prev.milliseconds AS prev_lap_ms,
+        lt.milliseconds - prev.milliseconds AS delta_ms
+    FROM lap_times lt
+    JOIN drivers d ON d.driverId = lt.driverId
+    LEFT JOIN lap_times prev
+        ON prev.driverId = lt.driverId
+        AND prev.raceId = lt.raceId
+        AND prev.lap = lt.lap - 1
+    WHERE lt.raceId = %s AND lt.driverId = %s
+    ORDER BY lt.driverId, lt.lap
+    """
+
+    cursor.execute(query, (race_id, driver_id))
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    # Extract lap numbers and lap times
+    laps = [row["lap"] for row in rows]
+    lap_ms = [row["lap_ms"] for row in rows]
+
+    # Convert milliseconds → seconds
+    lap_sec = [x / 1000.0 for x in lap_ms]
+
+    # ---- Build Graph ----
+    plt.figure(figsize=(10, 5))
+    # plt.plot(laps, lap_sec, marker='o')
+    # plt.title(f"Lap Pace for {rows[0]['forename']} {rows[0]['surname']} (Race {race_id})")
+    # plt.xlabel("Lap")
+    # plt.ylabel("Lap Time (seconds)")
+    # plt.grid(True)
+
+    delta = [r["delta_ms"] for r in rows]
+
+    plt.plot(laps, delta, marker="o")
+    plt.title("Lap-to-Lap Delta (Tyre Degradation / Pit Loss)")
+    plt.xlabel("Lap")
+    plt.ylabel("Δ Lap Time (ms)")
+    plt.axhline(0, color="black")
+    plt.grid(True)
+
+
+    plt.savefig("lap_pace.png")
+    # Save figure to a bytes buffer
+    buf = io.BytesIO()
+    plt.savefig(buf, format="png")
+    plt.close()
+    buf.seek(0)
+
+    # return Response(content=buf.read(), media_type="image/png")
+
+def lap_pace_graph_all_drivers(race_id: int):
+    import matplotlib.pyplot as plt
+
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    # ----------------------------
+    # Query 1: Window function version
+    # ----------------------------
+    window_query = """
+        SELECT
+            lt.driverId,
+            d.forename,
+            d.surname,
+            lt.raceId,
+            lt.lap,
+            lt.milliseconds AS lap_ms,
+            LAG(lt.milliseconds) OVER (
+                PARTITION BY lt.driverId, lt.raceId
+                ORDER BY lt.lap
+            ) AS prev_lap_ms,
+            lt.milliseconds - 
+                LAG(lt.milliseconds) OVER (
+                    PARTITION BY lt.driverId, lt.raceId
+                    ORDER BY lt.lap
+                ) AS delta_ms
+        FROM lap_times lt
+        JOIN drivers d ON d.driverId = lt.driverId
+        WHERE lt.raceId = %s
+        ORDER BY lt.driverId, lt.lap;
+    """
+
+    t0 = time.perf_counter()
+    cursor.execute(window_query, (race_id,))
+    window_rows = cursor.fetchall()
+    t_window = time.perf_counter() - t0
+
+    # ----------------------------
+    # Query 2: Self-join "slow" version
+    # ----------------------------
+    slow_query = """
+        SELECT
+            lt.driverId,
+            d.forename,
+            d.surname,
+            lt.raceId,
+            lt.lap,
+            lt.milliseconds AS lap_ms,
+            prev.milliseconds AS prev_lap_ms,
+            lt.milliseconds - prev.milliseconds AS delta_ms
+        FROM lap_times lt
+        JOIN drivers d ON d.driverId = lt.driverId
+        LEFT JOIN lap_times prev
+            ON prev.driverId = lt.driverId
+            AND prev.raceId = lt.raceId
+            AND prev.lap = lt.lap - 1
+        WHERE lt.raceId = %s
+        ORDER BY lt.driverId, lt.lap;
+    """
+
+    t1 = time.perf_counter()
+    cursor.execute(slow_query, (race_id,))
+    slow_rows = cursor.fetchall()
+    t_slow = time.perf_counter() - t1
+
+    cursor.close()
+    conn.close()
+
+    # ----------------------------
+    # Helper: group rows by driverId
+    # ----------------------------
+    def group_by_driver(rows):
+        drivers = {}
+        for r in rows:
+            key = r["driverId"]
+            if key not in drivers:
+                drivers[key] = {
+                    "name": f"{r['forename']} {r['surname']}",
+                    "laps": [],
+                    "delta": []
+                }
+            drivers[key]["laps"].append(r["lap"])
+            drivers[key]["delta"].append(r["delta_ms"])
+        return drivers
+
+    window_data = group_by_driver(window_rows)
+    slow_data = group_by_driver(slow_rows)
+
+    # ----------------------------
+    # Plot 1: Window-function graph
+    # ----------------------------
+    plt.figure(figsize=(12, 6))
+    for driverId, info in window_data.items():
+        plt.plot(info["laps"], info["delta"], marker='o', label=info["name"])
+
+    plt.title(f"Lap Delta Graph (Window Functions) — Race {race_id}")
+    plt.xlabel("Lap")
+    plt.ylabel("Δ Lap Time (ms)")
+    plt.axhline(0, color="black")
+    plt.grid(True)
+    plt.legend()
+    plt.savefig("lap_delta_window.png")
+    plt.close()
+
+    # ----------------------------
+    # Plot 2: Slow join graph
+    # ----------------------------
+    plt.figure(figsize=(12, 6))
+    for driverId, info in slow_data.items():
+        plt.plot(info["laps"], info["delta"], marker='o', label=info["name"])
+
+    plt.title(f"Lap Delta Graph (Self Join Version) — Race {race_id}")
+    plt.xlabel("Lap")
+    plt.ylabel("Δ Lap Time (ms)")
+    plt.axhline(0, color="black")
+    plt.grid(True)
+    plt.legend()
+    plt.savefig("lap_delta_join.png")
+    plt.close()
+
+    print("Saved:")
+    print("  lap_delta_window.png")
+    print("  lap_delta_join.png")
+    print(f"Window function query: {t_window:.6f} seconds")
+    print(f"Slow self-join query: {t_slow:.6f} seconds")
+
+@app.get("/graph-data/{year}")
+def get_graph_data(year: int):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    # Nodes
+    cursor.execute("""
+        WITH drivers_in_season AS (
+          SELECT DISTINCT 
+                   res.driverId AS driver_id, 
+                   d.code AS driver_code, 
+                   d.forename AS forename,
+                   d.surname AS surname,
+                   c.colorPrimary AS ctor_color,
+                   c.name AS ctor_name
+          FROM results res
+          JOIN races r ON r.raceId = res.raceId
+          JOIN drivers d ON d.driverId = res.driverId
+          JOIN constructors c ON res.constructorId = c.constructorId
+          WHERE r.year = %s
+        )
+        SELECT driver_id, driver_code, forename, surname, ctor_name, ctor_color FROM drivers_in_season;
+    """, (year,))
+    drivers = cursor.fetchall()
+
+    # Edges
+    cursor.execute("""
+    WITH drivers_in_season AS (
+        SELECT DISTINCT res.driverId
+        FROM results res
+        JOIN races r ON r.raceId = res.raceId
+        WHERE r.year = %s
+    ),
+    edges_raw AS (
+        SELECT DISTINCT
+            LEAST(tp.driver_id, tp.teammate_id) AS driver_A_id,
+            GREATEST(tp.driver_id, tp.teammate_id) AS driver_B_id,
+            r.year,
+            tp.constructorId,
+            c.name AS ctor_name
+        FROM driver_teammate_pairs tp
+        JOIN races r ON r.raceId = tp.raceId
+        JOIN constructors c ON tp.constructorId = c.constructorId
+        WHERE tp.driver_id IN (SELECT driverId FROM drivers_in_season)
+        AND tp.teammate_id IN (SELECT driverId FROM drivers_in_season)
+    )
+
+    SELECT
+        driver_A_id,
+        driver_B_id,
+        da.code AS driver_A_code,
+        db.code AS driver_B_code,
+        JSON_ARRAYAGG(year) AS years_together,
+        JSON_ARRAYAGG(constructorId) AS constructors,
+        JSON_ARRAYAGG(ctor_name) AS constructorNames,
+        MAX(year = %s) AS is_current
+    FROM edges_raw e
+    JOIN drivers da ON da.driverId = e.driver_A_id
+    JOIN drivers db ON db.driverId = e.driver_B_id
+    GROUP BY driver_A_id, driver_B_id, da.code, db.code
+    """, (year,year))
+    edges = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    cy_nodes = [
+        {"data": {
+            "id": driver["driver_id"], 
+            "code": driver["driver_code"],
+            "color": driver["ctor_color"],
+            "forename": driver["forename"],
+            "surname": driver["surname"],
+            "ctor_name": driver["ctor_name"],
+            }} for driver in drivers]
+
+    cy_edges = [{
+        "data": {
+            "id": f"{edge['driver_A_id']}_{edge['driver_B_id']}",
+            "source": edge["driver_A_id"],
+            "target": edge["driver_B_id"],
+            "source_code": edge["driver_A_code"],
+            "target_code": edge["driver_B_code"],
+            "years": json.loads(edge["years_together"]),
+            "constructors": json.loads(edge["constructors"]),
+            "constructorNames": json.loads(edge["constructorNames"]),
+            "is_current": edge["is_current"] # true iff drivers were teammates for specified season
+        }
+    } for edge in edges
+    ]
+
+    return cy_nodes + cy_edges
+
+# TODO: colour edges green / red depending on if current / non-current teammates
+# add colouring to nodes
+# make nodes / edges clickable
+#   click node -> full name 
+#   clicke edge -> ctor name and years

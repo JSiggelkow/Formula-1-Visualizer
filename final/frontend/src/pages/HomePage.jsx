@@ -4,6 +4,7 @@ import DriverSearchBar from "../components/DriverSearchBar";
 import FastestLapCard from "../components/FastestLapCard";
 import SeasonWinnersCard from "../components/SeasonWinnersCard";
 import UpdateDataCard from "../components/UpdateDataCard"
+import TeammateGraphCard from "../components/TeammateGraphCard"
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
         <SeasonWinnersCard />
         <FastestLapCard />
         <UpdateDataCard />
+        <TeammateGraphCard />
       </Flex>
     </Box>
   );

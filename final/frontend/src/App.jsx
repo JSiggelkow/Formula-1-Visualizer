@@ -28,6 +28,10 @@ const App = () => {
             path="/fastest-lap/circuit/:circuitId"
             element={<InfoPage type="fastest-lap-by-circuit" />}
           />
+          <Route
+            path="/teammate-graph/:year"
+            element={<InfoPage type="teammate-graph" />}
+          />
         </Routes>
       </Router>
     </MantineProvider>
