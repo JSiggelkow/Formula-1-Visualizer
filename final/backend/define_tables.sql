@@ -14,7 +14,9 @@ CREATE TABLE constructors (
     constructorId INT PRIMARY KEY AUTO_INCREMENT,
     constructorRef VARCHAR(64) UNIQUE NOT NULL, -- unique string used to match results from FastF1 API
     name VARCHAR(255) NOT NULL,
-    nationality VARCHAR(64) NOT NULL
+    nationality VARCHAR(64) NOT NULL,
+    colorPrimary VARCHAR(16), -- hex color
+    colorSecondary VARCHAR(16) -- hex color
 );
 
 -- info on the different circuits, which Grand Prix (races) take place at

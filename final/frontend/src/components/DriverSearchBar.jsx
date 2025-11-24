@@ -22,7 +22,7 @@ const DriverSearchBar = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (searchTerm.length >= 1) {
+        if (searchTerm.length >= 2) {
             fetchDriverSuggestions(searchTerm);
         } else {
             setAutocompleteData([]);
@@ -91,7 +91,7 @@ const DriverSearchBar = () => {
                     onChange={setSearchTerm}
                     onOptionSubmit={handleDriverSelect}
                     data={autocompleteData}
-                    placeholder="Search for a driver by name (e.g. Max Verstappen)"
+                    placeholder="Search for a driver by first or last name (e.g., 'Lewis' or 'Hamilton')"
                     size="lg"
                     className="autocomplete"
                     classNames={{

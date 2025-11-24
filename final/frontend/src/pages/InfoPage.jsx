@@ -3,6 +3,7 @@ import { Box, Button, Group } from "@mantine/core";
 import DriverInfo from "../components/DriverInfo";
 import SeasonWinners from "../components/SeasonWinners";
 import FastestLap from "../components/FastestLap";
+import GraphPage from "./GraphPage";
 
 const InfoPage = ({ type }) => {
   const params = useParams();
@@ -23,6 +24,9 @@ const InfoPage = ({ type }) => {
       }
       case "fastest-lap-by-circuit": {
         return <FastestLap circuitId={parseInt(params.circuitId)} />;
+      }
+      case "teammate-graph": {
+        return <GraphPage year={params.year}/>
       }
       default:
         return <div>Unknown page type</div>;

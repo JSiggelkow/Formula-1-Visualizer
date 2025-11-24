@@ -6,6 +6,11 @@ from fastf1.ergast import Ergast
 from datetime import timedelta
 import logging
 
+import matplotlib.pyplot as plt
+import io
+import time
+import json
+
 from consts import *
 
 logging.disable(logging.CRITICAL) # silence logs from external API calls
@@ -39,21 +44,14 @@ def get_db_conn():
 def get_drivers(forename: str = None, surname: str = None, driver_id: int = None):
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
-    query = f"SELECT * FROM drivers WHERE 1=1"
-    params = []
-
+    query = f"SELECT * FROM drivers WHERE 1=1"  # We can also think about using an B*-Tree index on forename und surname
     if forename:
-        query += f" AND forename LIKE %s"
-        params.append(f"{forename}%")
+        query += f" AND forename = '{forename}'"  # We can also use the LIKE operator here, but this could slow done the query
     if surname:
-        query += f" AND surname LIKE %s"
-        params.append(f"{surname}%")
+        query += f" AND surname = '{surname}'"
     if driver_id:
-        query += f" AND driverId = %s"
-        params.append(driver_id)
-
-    cursor.execute(query, params)
-
+        query += f" AND driverId = {driver_id}"
+    cursor.execute(query)
     results = cursor.fetchall()
     cursor.close()
     conn.close()
@@ -412,3 +410,97 @@ def get_races(year: int = None):
     cursor.close()
     conn.close()
     return results
+
+@app.get("/graph-data/{year}")
+def get_graph_data(year: int):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    # Nodes
+    cursor.execute("""
+        WITH drivers_in_season AS (
+          SELECT DISTINCT 
+                   res.driverId AS driver_id, 
+                   d.code AS driver_code, 
+                   d.forename AS forename,
+                   d.surname AS surname,
+                   c.colorPrimary AS ctor_color,
+                   c.name AS ctor_name
+          FROM results res
+          JOIN races r ON r.raceId = res.raceId
+          JOIN drivers d ON d.driverId = res.driverId
+          JOIN constructors c ON res.constructorId = c.constructorId
+          WHERE r.year = %s
+        )
+        SELECT driver_id, driver_code, forename, surname, ctor_name, ctor_color FROM drivers_in_season;
+    """, (year,))
+    drivers = cursor.fetchall()
+
+    # Edges
+    cursor.execute("""
+    WITH drivers_in_season AS (
+        SELECT DISTINCT res.driverId
+        FROM results res
+        JOIN races r ON r.raceId = res.raceId
+        WHERE r.year = %s
+    ),
+    edges_raw AS (
+        SELECT DISTINCT
+            LEAST(tp.driver_id, tp.teammate_id) AS driver_A_id,
+            GREATEST(tp.driver_id, tp.teammate_id) AS driver_B_id,
+            r.year,
+            tp.constructorId,
+            c.name AS ctor_name
+        FROM driver_teammate_pairs tp
+        JOIN races r ON r.raceId = tp.raceId
+        JOIN constructors c ON tp.constructorId = c.constructorId
+        WHERE tp.driver_id IN (SELECT driverId FROM drivers_in_season)
+        AND tp.teammate_id IN (SELECT driverId FROM drivers_in_season)
+    )
+
+    SELECT
+        driver_A_id,
+        driver_B_id,
+        da.code AS driver_A_code,
+        db.code AS driver_B_code,
+        JSON_ARRAYAGG(year) AS years_together,
+        JSON_ARRAYAGG(constructorId) AS constructors,
+        JSON_ARRAYAGG(ctor_name) AS constructorNames,
+        MAX(year = %s) AS is_current
+    FROM edges_raw e
+    JOIN drivers da ON da.driverId = e.driver_A_id
+    JOIN drivers db ON db.driverId = e.driver_B_id
+    GROUP BY driver_A_id, driver_B_id, da.code, db.code
+    """, (year,year))
+    edges = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    cy_nodes = [
+        {"data": {
+            "id": driver["driver_id"], 
+            "code": driver["driver_code"],
+            "color": driver["ctor_color"],
+            "forename": driver["forename"],
+            "surname": driver["surname"],
+            "ctor_name": driver["ctor_name"],
+            }} for driver in drivers]
+
+    cy_edges = [{
+        "data": {
+            "id": f"{edge['driver_A_id']}_{edge['driver_B_id']}",
+            "source": edge["driver_A_id"],
+            "target": edge["driver_B_id"],
+            "source_code": edge["driver_A_code"],
+            "target_code": edge["driver_B_code"],
+            "years": json.loads(edge["years_together"]),
+            "constructors": json.loads(edge["constructors"]),
+            "constructorNames": json.loads(edge["constructorNames"]),
+            "is_current": edge["is_current"] # true iff drivers were teammates for specified season
+        }
+    } for edge in edges
+    ]
+
+    return cy_nodes + cy_edges
+
