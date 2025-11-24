@@ -5,6 +5,7 @@ import FastestLapCard from "../components/FastestLapCard";
 import SeasonWinnersCard from "../components/SeasonWinnersCard";
 import UpdateDataCard from "../components/UpdateDataCard"
 import TeammateGraphCard from "../components/TeammateGraphCard"
+import LapDeltaCard from "../components/LapDeltaGraphCard"
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
         <FastestLapCard />
         <UpdateDataCard />
         <TeammateGraphCard />
+        <LapDeltaCard />
       </Flex>
     </Box>
   );

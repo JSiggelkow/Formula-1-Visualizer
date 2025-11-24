@@ -412,7 +412,7 @@ def get_races(year: int = None):
     return results
 
 @app.get("/graph-data/{year}")
-def get_graph_data(year: int):
+def get_graph_data(year):
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
 
@@ -504,3 +504,55 @@ def get_graph_data(year: int):
 
     return cy_nodes + cy_edges
 
+@app.get("/lap-delta-all/{race_id}")
+def lap_delta_all(race_id):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    query = """
+        SELECT
+            lt.driverId,
+            d.forename,
+            d.surname,
+            lt.lap,
+            lt.milliseconds AS lap_ms,
+            lt.milliseconds -
+                LAG(lt.milliseconds) OVER (
+                    PARTITION BY lt.driverId, lt.raceId
+                    ORDER BY lt.lap
+                ) AS delta_ms
+        FROM lap_times lt
+        JOIN drivers d ON d.driverId = lt.driverId
+        WHERE lt.raceId = %s
+        ORDER BY lt.driverId, lt.lap
+    """
+
+    cursor.execute(query, (race_id,))
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    # Group rows by driver
+    drivers = {}
+    for r in rows:
+        driver_id = r["driverId"]
+        fullname = f"{r['forename']} {r['surname']}"
+
+        if driver_id not in drivers:
+            drivers[driver_id] = {
+                "driverId": driver_id,
+                "name": fullname,
+                "laps": [],
+                "delta": []
+            }
+
+        drivers[driver_id]["laps"].append(r["lap"])
+
+        # convert missing deltas to 0
+        drivers[driver_id]["delta"].append(r["delta_ms"] if r["delta_ms"] is not None else 0)
+
+    return {
+        "race_id": race_id,
+        "drivers": list(drivers.values())
+    }
