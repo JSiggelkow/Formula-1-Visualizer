@@ -9,20 +9,13 @@ import {
 } from "recharts";
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import api from "../api";
 
-// TODO: switch to using constructor colours
-const colors = [
-  "#e03131", "#1971c2", "#2f9e44", "#ae3ec9", "#fd7e14",
-  "#0ca678", "#1c7ed6", "#d6336c", "#5c940d", "#7048e8"
-];
-
-const LapDeltaPage = () => {
-  const { raceId } = useParams(); 
+const LapDeltaPage = ({ raceId }) => {
   const [data, setData] = useState([]);        // graph data
   const [drivers, setDrivers] = useState([]);  // names for legend
-  const [selectedInfo, setSelectedInfo] = useState(null);
+  const [raceName, setRaceName] = useState([]);
+  const [hiddenLines, setHiddenLines] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +23,14 @@ const LapDeltaPage = () => {
         const res = await api.get(`/lap-delta-all/${raceId}`);
         const drivers = res.data.drivers;
 
-        setDrivers(drivers);  
+        setDrivers(drivers);
+        setRaceName(res.data.race_name);
+
+        const hiddenInit = {};
+        drivers.forEach((d, idx) => {
+          hiddenInit[d.name] = idx !== 0;   // hide everything except index 0
+        });
+        setHiddenLines(hiddenInit);
 
         const chartRows = [];
         const maxLaps = Math.max(...drivers.map(d => d.laps.length));
@@ -65,6 +65,14 @@ const LapDeltaPage = () => {
     setSelectedInfo(`Driver: ${driverName}\nLap: ${lap}\nDelta: ${delta} ms`);
   };
 
+  const handleLegendClick = (e) => {
+    const driverName = e.value;   // legend label
+    setHiddenLines(prev => ({
+      ...prev,
+      [driverName]: !prev[driverName]
+    }));
+  };
+
   return (
     <div
       style={{
@@ -79,26 +87,28 @@ const LapDeltaPage = () => {
       <div style={{ flex: "1 1 auto", padding: "20px" }}>
         {data.length > 0 && (
           <LineChart
-            width={1000}
-            height={550}
+            width='100%'
+            height='90%'
             data={data}
             onClick={handleClickPoint}
+            margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="lap" label={{ value: "Lap", offset: -5, position: "insideBottom" }} />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+            <XAxis dataKey="lap" tickCount={10} label={{ value: "Lap", offset: -5, position: "insideBottom" }} />
             <YAxis label={{ value: "Δ Lap (ms)", angle: -90, dx: -10, position: "insideLeft" }} />
             <Tooltip />
-            <Legend />
+            <Legend onClick={handleLegendClick} />
 
             {drivers.map((d, idx) => (
               <Line
                 key={d.name}
                 type="monotone"
                 dataKey={d.name}
-                stroke={colors[idx % colors.length]}
+                stroke={d.color}
                 strokeWidth={2}
                 dot={false}
                 isAnimationActive={false}
+                hide={hiddenLines[d.name]}
               />
             ))}
           </LineChart>
@@ -120,7 +130,7 @@ const LapDeltaPage = () => {
         }}
       >
         <h3 style={{ color: "#e03131", marginBottom: "12px" }}>
-          {`Race ${raceId} — Lap Deltas`}
+          {`${raceName} — Lap Deltas`}
         </h3>
 
         <div
@@ -132,9 +142,6 @@ const LapDeltaPage = () => {
             paddingRight: "6px"
           }}
         >
-          {selectedInfo
-            ? selectedInfo
-            : "Click a driver's line or a point on the chart to see more details."}
         </div>
 
         {/* LEGEND */}
@@ -152,7 +159,7 @@ const LapDeltaPage = () => {
           <div style={{ color: "#555" }}>
             Each line represents a driver's lap-to-lap delta time.
             <br />
-            You can toggle lines by clicking the legend above the chart.
+            You can toggle lines by clicking the names below the chart.
           </div>
         </div>
       </div>

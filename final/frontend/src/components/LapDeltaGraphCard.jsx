@@ -30,7 +30,9 @@ const LapDeltaCard = () => {
   const fetchRacesByYear = async (year) => {
     try {
       const racesRes = await api.get(`/races?year=${year}`);
-      const list = racesRes.data.map((race) => ({
+      const list = racesRes.data
+      .filter(race => race.year >= 1996)   // laptime data starts in 1996
+      .map((race) => ({
         value: String(race.raceId),
         label: race.name,
       }));

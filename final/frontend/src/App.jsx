@@ -35,7 +35,7 @@ const App = () => {
           />
           <Route 
             path="/lap-delta/:raceId" 
-            element={<LapDeltaGraphPage />} 
+            element={<InfoPage type="lap-delta" />} 
             />
         </Routes>
       </Router>
