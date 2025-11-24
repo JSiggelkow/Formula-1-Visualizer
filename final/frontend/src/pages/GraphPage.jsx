@@ -88,7 +88,7 @@ const GraphPage = ({ year }) => {
         setSelectedInfo(
           `Edge: ${data.source_code} ↔ ${data.target_code}\n` +
           `Constructor: ${data.constructorNames.at(-1)}\n` +
-          `Years together: ${data.years?.join(", ")}\n`
+          `Years together: ${data.years?.sort((a, b) => a - b).join(", ")}\n`
         );
       });
 
@@ -150,7 +150,7 @@ const GraphPage = ({ year }) => {
         }}
       >
         <h3 style={{ color: "#e03131", marginBottom: "12px" }}>
-          Driver & Teammate Info
+          {`${year} Driver & Teammate Info`}
         </h3>
 
         <div
@@ -187,7 +187,7 @@ const GraphPage = ({ year }) => {
                 marginRight: "8px"
               }}
             />
-            <span style={{ color: "#555" }}>Current teammates</span>
+            <span style={{ color: "#555" }}>{`Teammates in ${year}`}</span>
           </div>
 
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -199,7 +199,7 @@ const GraphPage = ({ year }) => {
                 marginRight: "8px"
               }}
             />
-            <span style={{ color: "#555" }}>Past teammates</span>
+            <span style={{ color: "#555" }}>Former / later teammates</span>
           </div>
         </div>
 
