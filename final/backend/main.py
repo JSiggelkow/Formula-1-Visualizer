@@ -1,3 +1,5 @@
+import random
+
 import mysql.connector
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -541,8 +543,44 @@ def get_who_won_race_question():
         'wrongAnswers': wrongAnswers,
     }
 
+def get_driver_nationality_question():
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("""
+        SELECT driverId, forename, surname, nationality FROM drivers ORDER BY RAND() LIMIT 1;
+    """)
+    driver = cursor.fetchone()
+
+    full_name = f"{driver['forename']} {driver['surname']}"
+    question = f"What is the nationality of {full_name}?"
+    right_answer = driver['nationality']
+
+    cursor.execute("""
+                   SELECT DISTINCT nationality
+                   FROM drivers
+                   WHERE nationality != %s
+                   ORDER BY RAND()
+                       LIMIT 3
+                   """, (right_answer,))
+    wrong_answers = [row['nationality'] for row in cursor.fetchall()]
+
+    cursor.close()
+    conn.close()
+
+    return {
+        'question': question,
+        'rightAnswer': right_answer,
+        'wrongAnswers': wrong_answers,
+    }
+
+
+QUESTION_GENERATORS = [
+    get_who_won_race_question,
+    get_driver_nationality_question
+]
 
 @app.get("/trivia/question")
 def get_trivia_question():
-
-    return get_who_won_race_question()
+    generator = random.choice(QUESTION_GENERATORS)
+    return generator()
