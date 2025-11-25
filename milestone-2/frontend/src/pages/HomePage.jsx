@@ -3,7 +3,8 @@ import { Box, Flex, Text, Title } from "@mantine/core";
 import DriverSearchBar from "../components/DriverSearchBar";
 import FastestLapCard from "../components/FastestLapCard";
 import SeasonWinnersCard from "../components/SeasonWinnersCard";
-import UpdateDataCard from "../components/UpdateDataCard"
+import UpdateDataCard from "../components/UpdateDataCard";
+import ClosestCircuits from "../components/ClosestCircuit";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,9 @@ const HomePage = () => {
         <FastestLapCard />
         <UpdateDataCard />
       </Flex>
+      <Box mt="3rem" maw="1200px" mx="auto">
+        <ClosestCircuits />
+      </Box>
     </Box>
   );
 };

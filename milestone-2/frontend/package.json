@@ -13,6 +13,7 @@
     "@emotion/react": "^11.14.0",
     "@mantine/core": "^8.3.4",
     "@mantine/hooks": "^8.3.4",
+    "@tabler/icons-react": "^3.35.0",
     "axios": "^1.12.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

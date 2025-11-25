@@ -3,6 +3,7 @@ anyio==4.10.0
 click==8.3.0
 colorama==0.4.6
 fastapi==0.117.1
+geopy==2.4.1
 h11==0.16.0
 idna==3.10
 mysql-connector-python==9.4.0
