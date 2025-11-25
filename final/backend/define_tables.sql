@@ -6,7 +6,8 @@ CREATE TABLE drivers (
     forename VARCHAR(64) NOT NULL,
     surname VARCHAR(64) NOT NULL,
     dob DATE NOT NULL,
-    nationality VARCHAR(64) NOT NULL
+    nationality VARCHAR(64) NOT NULL,
+    about TEXT                               -- partial biography text scraped from Wikipedia
 );
 
 -- the teams that the drivers race for

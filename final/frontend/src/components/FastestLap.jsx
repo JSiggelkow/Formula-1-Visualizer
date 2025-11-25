@@ -19,8 +19,6 @@ const FastestLap = ({ raceId, circuitId }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log("FastestLap props:", { raceId, raceName, circuitId, circuitName });
-
   useEffect(() => {
     fetchFastestLaps();
   }, [raceId, circuitId]);
