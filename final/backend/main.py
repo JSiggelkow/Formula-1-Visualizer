@@ -504,3 +504,35 @@ def get_graph_data(year: int):
 
     return cy_nodes + cy_edges
 
+@app.get("/circuits/closest")
+def get_closest_circuits(userLat: float, userLng: float):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+    
+    query = """
+        SELECT 
+            circuitId,
+            circuitRef,
+            name,
+            city,
+            country,
+            lat,
+            lng,
+            ROUND(
+                ST_Distance_Sphere(
+                    POINT(lng, lat),
+                    POINT(%s, %s)
+                ) / 1000,
+                2
+            ) AS distance_km
+        FROM circuits
+        ORDER BY distance_km
+        LIMIT 10
+    """
+    
+    cursor.execute(query, (userLng, userLat))
+    circuits = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    
+    return {"circuits": circuits}

@@ -5,6 +5,7 @@ import FastestLapCard from "../components/FastestLapCard";
 import SeasonWinnersCard from "../components/SeasonWinnersCard";
 import UpdateDataCard from "../components/UpdateDataCard"
 import TeammateGraphCard from "../components/TeammateGraphCard"
+import ClosestCircuits from "../components/ClosestCircuit"
 
 const HomePage = () => {
   return (
@@ -24,6 +25,9 @@ const HomePage = () => {
         <UpdateDataCard />
         <TeammateGraphCard />
       </Flex>
+      <Box mt="3rem" maw="1200px" mx="auto">
+        <ClosestCircuits />
+      </Box>
     </Box>
   );
 };
