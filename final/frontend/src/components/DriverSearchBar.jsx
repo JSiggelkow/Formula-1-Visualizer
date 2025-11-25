@@ -181,6 +181,11 @@ const DriverSearchBar = () => {
         c="gray.3"
         display="inline-flex"
       />
+      {useAdvancedSearch && (
+        <Text size="sm" c="dimmed">
+          ⓘ Click "Search" to see matching drivers.
+        </Text>
+      )}
     </Box>
   );
 };

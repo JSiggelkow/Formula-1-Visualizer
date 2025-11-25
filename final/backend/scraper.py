@@ -82,13 +82,13 @@ class WikipediaScraper:
             
             if overview_text:
                 # Join all paragraphs with double newlines
-                full_text = '\\n\\n'.join(overview_text)
+                full_text = '\n\n'.join(overview_text)
                 
                 # Clean up the text - remove reference markers like [1], [2]
-                clean_text = re.sub(r'\\[\\d+\\]', '', full_text)
+                clean_text = re.sub(r'\[\d+]', '', full_text)
                 # Remove extra whitespace but preserve paragraph breaks
-                clean_text = re.sub(r'\\n\\n+', '\\n\\n', clean_text)
-                clean_text = re.sub(r'[ \\t]+', ' ', clean_text)
+                clean_text = re.sub(r'\n\n+', '\n\n', clean_text)
+                clean_text = re.sub(r'[ \t]+', ' ', clean_text)
                 clean_text = clean_text.strip()
                 
                 # Limit to reasonable length (first 2000 characters for full-text search)
