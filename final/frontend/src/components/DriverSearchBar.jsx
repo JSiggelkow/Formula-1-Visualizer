@@ -22,61 +22,27 @@ const DriverSearchBar = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [autocompleteData, setAutocompleteData] = useState([]);
     const [useAdvancedSearch, setUseAdvancedSearch] = useState(false);
-    const [lastSearchedTerm, setLastSearchedTerm] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
-    const pollIntervalRef = useRef(null);
-    const searchTermRef = useRef("");
-    const lastSearchedTermRef = useRef("");
+    const autocompleteRef = useRef(null);
 
-    useEffect(() => {
-        searchTermRef.current = searchTerm;
-    }, [searchTerm]);
-
-    useEffect(() => {
-        lastSearchedTermRef.current = lastSearchedTerm;
-    }, [lastSearchedTerm]);
-
-    // Handle immediate clearing when search becomes empty (don't wait for poll)
     useEffect(() => {
         if (searchTerm.length === 0) {
             setAutocompleteData([]);
-            setLastSearchedTerm("");
             setIsLoading(false);
-        }
-    }, [searchTerm]);
-
-    // Setup polling to check for search term changes to avoid excessive API calls
-    useEffect(() => {
-        if (pollIntervalRef.current) {
-            clearInterval(pollIntervalRef.current);
-        }
-        
-        // Trigger immediate search when switching search modes if there's a current search term
-        if (searchTerm.length > 0) {
+        } else if (!useAdvancedSearch && searchTerm.length >= 1) {
             setIsLoading(true);
             fetchDriverSuggestions(searchTerm);
-            setLastSearchedTerm(searchTerm);
         }
+    }, [searchTerm, useAdvancedSearch]);
 
-        const pollInterval = useAdvancedSearch ? 1000 : 100;   
-        pollIntervalRef.current = setInterval(() => {
-            const currentTerm = searchTermRef.current;
-            const lastTerm = lastSearchedTermRef.current;
-            
-            if (currentTerm !== lastTerm && currentTerm.length > 0) {
-                setIsLoading(true);
-                fetchDriverSuggestions(currentTerm);
-                setLastSearchedTerm(currentTerm);
-            }
-        }, pollInterval);
-        
-        return () => {
-            if (pollIntervalRef.current) {
-                clearInterval(pollIntervalRef.current);
-            }
-        };
+    useEffect(() => {
+        // Clear dropdown content when switching to advanced mode
+        if (useAdvancedSearch) {
+            setAutocompleteData([]);
+            setIsLoading(false);
+        }
     }, [useAdvancedSearch]);
 
     const fetchDriverSuggestions = async (term) => {
@@ -136,8 +102,19 @@ const DriverSearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (autocompleteData.length > 0) {
-            handleDriverSelect(autocompleteData[0].value);
+        if (searchTerm.length === 0) {
+            return;
+        }
+
+        if (useAdvancedSearch) {
+            setIsLoading(true);
+            fetchDriverSuggestions(searchTerm).then(() => {
+                autocompleteRef.current?.focus();
+            });
+        } else {
+            if (autocompleteData.length > 0) {
+                handleDriverSelect(autocompleteData[0].value);
+            }
         }
     };
 
@@ -145,9 +122,15 @@ const DriverSearchBar = () => {
         <Box w="60%">
             <Group gap={0} className="search-bar-container">
                 <Autocomplete
+                    ref={autocompleteRef}
                     value={searchTerm}
                     onChange={setSearchTerm}
                     onOptionSubmit={handleDriverSelect}
+                    onKeyDown={(e) => {
+                        if (useAdvancedSearch && e.key === 'Enter') {
+                            handleSubmit(e);
+                        }
+                    }}
                     data={autocompleteData}
                     placeholder={
                         useAdvancedSearch ?
@@ -171,8 +154,9 @@ const DriverSearchBar = () => {
                     color="red.5"
                     className="submit-button"
                     onClick={handleSubmit}
+                    disabled={searchTerm.length === 0 || (!useAdvancedSearch && autocompleteData.length === 0)}
                 >
-                    Search
+                    {useAdvancedSearch ? "Search" : "Go"}
                 </Button>
             </Group>
             <Switch
