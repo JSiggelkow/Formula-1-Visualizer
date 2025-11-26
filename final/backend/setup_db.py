@@ -3,6 +3,7 @@ import csv
 import mysql.connector
 import os
 
+from pathlib import Path
 from consts import *
 from scraper import WikipediaScraper
 
@@ -10,7 +11,10 @@ from scraper import WikipediaScraper
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description="Setup database script")
 parser.add_argument("--prod", action="store_true", help="Use production data instead of sample data")
-parser.add_argument("--fresh-scrape", action="store_true", help="Force fresh scraping of Wikipedia content (default: use cached)")
+parser.add_argument("--fresh-scrape", action="store_true",
+                    help="Force fresh scraping of Wikipedia content (default: use cached)")
+parser.add_argument("--docker", action="store_true", help="Run inside Docker container")
+
 args = parser.parse_args()
 
 if args.prod:
@@ -40,7 +44,7 @@ print(f"Database {database_name} created successfully.")
 
 # Create all tables from sql file
 with open("define_tables.sql", "r", encoding="utf-8") as f:
-    sql_commands = f.read().split(";")  
+    sql_commands = f.read().split(";")
 for command in sql_commands:
     if command.strip():  # skip empty lines
         cursor.execute(command)
@@ -58,7 +62,7 @@ conn.commit()
 for table_name in TABLE_NAMES:
 
     # Pull out the field names from the table, as we don't use everything in csv
-    cursor.execute(f"DESCRIBE {table_name}") 
+    cursor.execute(f"DESCRIBE {table_name}")
     columns = [row[0] for row in cursor.fetchall()]
 
     file_path = os.path.join(data_folder, f"{table_name}.csv")
@@ -67,9 +71,9 @@ for table_name in TABLE_NAMES:
         reader = csv.DictReader(csv_file)
 
         col_names = ", ".join(columns)
-        placeholders = ", ".join(["%s"] * len(columns))  
+        placeholders = ", ".join(["%s"] * len(columns))
         query = f"INSERT INTO {table_name} ({col_names}) VALUES ({placeholders})"
-        
+
         # Collect all rows
         if table_name == 'drivers':
             # Initialize scraper for drivers table with separate cache files for prod/sample
@@ -79,7 +83,7 @@ for table_name in TABLE_NAMES:
                 scraper.scrape_drivers_from_csv(file_path, force_refresh=True)
             else:
                 scraper.scrape_drivers_from_csv(file_path, force_refresh=False)
-            
+
             rows = []
             for row in reader:
                 row_data = []
@@ -111,5 +115,11 @@ print("Indexes created successfully.")
 conn.commit()
 cursor.close()
 conn.close()
+
+if args.docker:
+    if args.prod:
+        Path("/tmp/db_setup_prod_done").touch()
+    else:
+        Path("/tmp/db_setup_sample_done").touch()
 
 print("Done.")
