@@ -99,6 +99,7 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
 2. Run `cd final/backend/`.
 3. Run `python setup_db.py`. This script creates a sample database with data loaded from `final/backend/sample_data`, which is a subset of the production data.
     - The script has run successfully once you see "Done." printed to the terminal.
+    - If you'd like to do a fresh Wikipedia scrape of driver bios with the setup, add the `--fresh-scrape` flag.
 4. Optionally, if you plan to try the application, run `python setup_db.py --prod` to populate the production database.
 
 ### Run the back-end

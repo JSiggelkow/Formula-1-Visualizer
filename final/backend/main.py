@@ -7,10 +7,6 @@ import fastf1
 from fastf1.ergast import Ergast
 from datetime import timedelta
 import logging
-
-import matplotlib.pyplot as plt
-import io
-import time
 import json
 
 from consts import *
@@ -389,6 +385,30 @@ def update_latest_race() -> dict[str, int]:
     conn.close()
     return rows_added
 
+@app.get("/driver-v2")
+def get_drivers_v2(search_str: str):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+    query = """
+    SELECT 
+        driverId,
+        forename,
+        surname,
+        nationality,
+        MATCH(code, forename, surname, nationality, about) AGAINST (%s IN NATURAL LANGUAGE MODE) as relevance_score,
+        LEFT(about, 200) as bio_preview
+    FROM drivers 
+    WHERE MATCH(code, forename, surname, nationality, about) AGAINST (%s IN NATURAL LANGUAGE MODE)
+    ORDER BY relevance_score DESC;
+    """
+    params = [search_str, search_str]
+
+    cursor.execute(query, params)
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    return results
 
 @app.get("/circuits")
 def get_circuits():
@@ -417,7 +437,7 @@ def get_races(year: int = None):
 
 
 @app.get("/graph-data/{year}")
-def get_graph_data(year: int):
+def get_graph_data(year):
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
 
@@ -533,6 +553,76 @@ def get_who_won_race_question():
                    """, (race['raceId'],))
 
     wrongAnswers = [row['driver_name'] for row in cursor.fetchall()]
+@app.get("/lap-delta-all/{race_id}")
+def lap_delta_all(race_id):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+
+    # get race name
+    query = """
+        SELECT 
+            name, year
+        FROM races
+        WHERE raceId = %s
+    """
+    cursor.execute(query, (race_id,))
+    res = cursor.fetchone()
+    race_name = str(res['year']) + " " + res['name']
+
+    query = """
+        SELECT
+            lt.driverId,
+            d.forename,
+            d.surname,
+            lt.lap,
+            lt.milliseconds AS lap_ms,
+            lt.milliseconds -
+                LAG(lt.milliseconds) OVER (
+                    PARTITION BY lt.driverId, lt.raceId
+                    ORDER BY lt.lap
+                ) AS delta_ms
+        FROM lap_times lt
+        JOIN drivers d ON d.driverId = lt.driverId
+        WHERE lt.raceId = %s
+        ORDER BY lt.driverId, lt.lap
+    """
+
+    cursor.execute(query, (race_id,))
+    rows = cursor.fetchall()
+
+
+    # Group rows by driver
+    drivers = {}
+    for r in rows:
+        driver_id = r["driverId"]
+
+        # get ctor colour
+        query = """
+            SELECT c.colorPrimary color
+            FROM constructors c 
+            JOIN results r ON c.constructorId = r.constructorId
+            AND r.driverId = %s
+            AND r.raceId = %s
+        """
+
+        cursor.execute(query, (driver_id, race_id))
+        res = cursor.fetchone()
+        ctor_color = res['color']
+        fullname = f"{r['forename']} {r['surname']}"
+
+        if driver_id not in drivers:
+            drivers[driver_id] = {
+                "driverId": driver_id,
+                "name": fullname,
+                "color": ctor_color,
+                "laps": [],
+                "delta": []
+            }
+
+        drivers[driver_id]["laps"].append(r["lap"])
+
+        # convert missing deltas to 0
+        drivers[driver_id]["delta"].append(r["delta_ms"] if r["delta_ms"] is not None else 0)
 
     cursor.close()
     conn.close()
@@ -584,3 +674,7 @@ QUESTION_GENERATORS = [
 def get_trivia_question():
     generator = random.choice(QUESTION_GENERATORS)
     return generator()
+        "race_id": race_id,
+        "race_name": race_name,
+        "drivers": list(drivers.values())
+    }
