@@ -5,7 +5,7 @@ import FastestLapCard from "../components/FastestLapCard";
 import SeasonWinnersCard from "../components/SeasonWinnersCard";
 import UpdateDataCard from "../components/UpdateDataCard"
 import TeammateGraphCard from "../components/TeammateGraphCard"
-import ClosestCircuits from "../components/ClosestCircuit"
+import ClosestCircuitCard from "../components/ClosestCircuitCard"
 
 const HomePage = () => {
   return (
@@ -19,15 +19,13 @@ const HomePage = () => {
         </Text>
         <DriverSearchBar />
       </Flex>
-      <Flex justify="center" gap="xl">
+      <Flex justify="center" gap="xl" wrap="wrap" maw="1400px" mx="auto">
         <SeasonWinnersCard />
         <FastestLapCard />
         <UpdateDataCard />
         <TeammateGraphCard />
+        <ClosestCircuitCard />
       </Flex>
-      <Box mt="3rem" maw="1200px" mx="auto">
-        <ClosestCircuits />
-      </Box>
     </Box>
   );
 };

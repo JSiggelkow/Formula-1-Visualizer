@@ -4,6 +4,7 @@ import DriverInfo from "../components/DriverInfo";
 import SeasonWinners from "../components/SeasonWinners";
 import FastestLap from "../components/FastestLap";
 import GraphPage from "./GraphPage";
+import ClosestCircuitsResults from "../components/ClosestCircuitsResults";
 
 const InfoPage = ({ type }) => {
   const params = useParams();
@@ -27,6 +28,9 @@ const InfoPage = ({ type }) => {
       }
       case "teammate-graph": {
         return <GraphPage year={params.year}/>
+      }
+      case "closest-circuits": {
+        return <ClosestCircuitsResults />
       }
       default:
         return <div>Unknown page type</div>;
