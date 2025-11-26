@@ -5,6 +5,7 @@ import SeasonWinners from "../components/SeasonWinners";
 import FastestLap from "../components/FastestLap";
 import GraphPage from "./GraphPage";
 import ClosestCircuitsResults from "../components/ClosestCircuitsResults";
+import LapDeltaGraphPage from "./LapDeltaGraphPage"
 
 const InfoPage = ({ type }) => {
   const params = useParams();
@@ -31,6 +32,8 @@ const InfoPage = ({ type }) => {
       }
       case "closest-circuits": {
         return <ClosestCircuitsResults />
+      case "lap-delta": {
+        return <LapDeltaGraphPage raceId={parseInt(params.raceId)}/>
       }
       default:
         return <div>Unknown page type</div>;

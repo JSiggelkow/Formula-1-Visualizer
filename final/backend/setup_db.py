@@ -4,10 +4,13 @@ import mysql.connector
 import os
 
 from consts import *
+from scraper import WikipediaScraper
+
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description="Setup database script")
 parser.add_argument("--prod", action="store_true", help="Use production data instead of sample data")
+parser.add_argument("--fresh-scrape", action="store_true", help="Force fresh scraping of Wikipedia content (default: use cached)")
 args = parser.parse_args()
 
 if args.prod:
@@ -68,7 +71,28 @@ for table_name in TABLE_NAMES:
         query = f"INSERT INTO {table_name} ({col_names}) VALUES ({placeholders})"
         
         # Collect all rows
-        rows = [tuple(row[col] for col in columns) for row in reader]
+        if table_name == 'drivers':
+            # Initialize scraper for drivers table with separate cache files for prod/sample
+            cache_file = f"{data_folder}/scraped_driver_bios_{data_folder}.json"
+            scraper = WikipediaScraper(cache_file=cache_file)
+            if args.fresh_scrape:
+                scraper.scrape_drivers_from_csv(file_path, force_refresh=True)
+            else:
+                scraper.scrape_drivers_from_csv(file_path, force_refresh=False)
+            
+            rows = []
+            for row in reader:
+                row_data = []
+                for col in columns:
+                    if col == 'about':
+                        wiki_url = row.get('url', '')
+                        about_text = scraper.get_cached_content(wiki_url)
+                        row_data.append(about_text)
+                    else:
+                        row_data.append(row[col])
+                rows.append(tuple(row_data))
+        else:
+            rows = [tuple(row[col] for col in columns) for row in reader]
 
     # Bulk insert
     cursor.executemany(query, rows)

@@ -4,6 +4,7 @@ import "@mantine/core/styles.css";
 
 import HomePage from "./pages/HomePage";
 import InfoPage from "./pages/InfoPage";
+import LapDeltaGraphPage from "./pages/LapDeltaGraphPage"
 import { theme } from "./theme/theme";
 
 const App = () => {
@@ -36,6 +37,10 @@ const App = () => {
             path="/circuits"
             element={<InfoPage type="closest-circuits" />}
           />
+          <Route 
+            path="/lap-delta/:raceId" 
+            element={<InfoPage type="lap-delta" />} 
+            />
         </Routes>
       </Router>
     </MantineProvider>

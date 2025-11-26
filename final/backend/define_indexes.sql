@@ -26,3 +26,8 @@ CREATE INDEX idx_laptimes_raceId_ms ON lap_times (raceId, milliseconds);
 
 -- This is a covering index for the subquery that finds all races for a specific circuit.
 CREATE INDEX idx_races_circuitId_raceId ON races (circuitId, raceId);
+
+-- === Indexes for Advanced Feature #1: natural_language_driver_queries ===
+
+-- Composite full-text index for searching across basic driver fields and bio content
+CREATE FULLTEXT INDEX idx_fulltext ON drivers (code, forename, surname, nationality, about);
