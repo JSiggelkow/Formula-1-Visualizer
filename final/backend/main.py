@@ -45,14 +45,21 @@ def get_db_conn():
 def get_drivers(forename: str = None, surname: str = None, driver_id: int = None):
     conn = get_db_conn()
     cursor = conn.cursor(dictionary=True)
-    query = f"SELECT * FROM drivers WHERE 1=1"  # We can also think about using an B*-Tree index on forename und surname
+    query = f"SELECT * FROM drivers WHERE 1=1"
+    params = []
+
     if forename:
-        query += f" AND forename = '{forename}'"  # We can also use the LIKE operator here, but this could slow done the query
+        query += f" AND forename LIKE %s"
+        params.append(f"{forename}%")
     if surname:
-        query += f" AND surname = '{surname}'"
+        query += f" AND surname LIKE %s"
+        params.append(f"{surname}%")
     if driver_id:
-        query += f" AND driverId = {driver_id}"
-    cursor.execute(query)
+        query += f" AND driverId = %s"
+        params.append(driver_id)
+
+    cursor.execute(query, params)
+
     results = cursor.fetchall()
     cursor.close()
     conn.close()
