@@ -32,6 +32,7 @@ const InfoPage = ({ type }) => {
       }
       case "closest-circuits": {
         return <ClosestCircuitsResults />
+      }
       case "lap-delta": {
         return <LapDeltaGraphPage raceId={parseInt(params.raceId)}/>
       }
