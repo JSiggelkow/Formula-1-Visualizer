@@ -3,7 +3,7 @@ import { Box, Flex, Text, Title } from "@mantine/core";
 import DriverSearchBar from "../components/DriverSearchBar";
 import FastestLapCard from "../components/FastestLapCard";
 import SeasonWinnersCard from "../components/SeasonWinnersCard";
-import UpdateDataCard from "../components/UpdateDataCard"
+import UpdateDataCard from "../components/UpdateDataCard";
 
 const HomePage = () => {
   return (

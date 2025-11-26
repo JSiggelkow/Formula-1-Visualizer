@@ -7,6 +7,7 @@ import UpdateDataCard from "../components/UpdateDataCard"
 import TeammateGraphCard from "../components/TeammateGraphCard"
 import TriviaCard from "../components/TriviaCard.jsx";
 import LapDeltaCard from "../components/LapDeltaGraphCard"
+import ClosestCircuitCard from "../components/ClosestCircuitCard"
 
 const HomePage = () => {
     return (
@@ -27,6 +28,7 @@ const HomePage = () => {
                 <TeammateGraphCard/>
                 <TriviaCard/>
                 <LapDeltaCard />
+                <ClosestCircuitCard />
             </Flex>
         </Box>
     );

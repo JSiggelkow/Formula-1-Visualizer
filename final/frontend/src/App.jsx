@@ -33,6 +33,10 @@ const App = () => {
             path="/teammate-graph/:year"
             element={<InfoPage type="teammate-graph" />}
           />
+          <Route
+            path="/circuits"
+            element={<InfoPage type="closest-circuits" />}
+          />
           <Route 
             path="/lap-delta/:raceId" 
             element={<InfoPage type="lap-delta" />} 
