@@ -553,6 +553,12 @@ def get_who_won_race_question():
                    """, (race['raceId'],))
 
     wrongAnswers = [row['driver_name'] for row in cursor.fetchall()]
+    return {
+        'question': question,
+        'rightAnswer': rightAnswer,
+        'wrongAnswers': wrongAnswers,
+    }
+
 @app.get("/lap-delta-all/{race_id}")
 def lap_delta_all(race_id):
     conn = get_db_conn()
@@ -628,10 +634,12 @@ def lap_delta_all(race_id):
     conn.close()
 
     return {
-        'question': question,
-        'rightAnswer': rightAnswer,
-        'wrongAnswers': wrongAnswers,
+        "race_id": race_id,
+        "race_name": race_name,
+        "drivers": list(drivers.values())
     }
+
+
 
 def get_driver_nationality_question():
     conn = get_db_conn()
@@ -674,7 +682,3 @@ QUESTION_GENERATORS = [
 def get_trivia_question():
     generator = random.choice(QUESTION_GENERATORS)
     return generator()
-        "race_id": race_id,
-        "race_name": race_name,
-        "drivers": list(drivers.values())
-    }
