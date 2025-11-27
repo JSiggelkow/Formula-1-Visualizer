@@ -24,11 +24,11 @@ LIMIT 3;
 
 -- Inserts
 -- insert new driver
-INSERT INTO drivers (driverRef, code, forename, surname, dob, nationality)
-VALUES ('new_driver', 'NWD', 'new', 'driver','2000-01-01', 'Canadian');
+INSERT INTO drivers (driverRef, code, forename, surname, dob, nationality, about)
+VALUES ('new_driver', 'NWD', 'new', 'driver','2000-01-01', 'Canadian', 'This is a new driver added for testing purposes.');
 -- insert new constructor
-INSERT INTO constructors (constructorRef, name, nationality)
-VALUES ('new_ctor', 'New Constructor', 'Canadian');
+INSERT INTO constructors (constructorRef, name, nationality, colorPrimary, colorSecondary)
+VALUES ('new_ctor', 'New Constructor', 'Canadian', "#FFFFFF", "#000000");
 -- insert new circuit
 INSERT INTO circuits (circuitRef, name, city, country, lat, lng)
 VALUES ('ring_rd', 'Ring Road', 'Waterloo', 'Ontario', 99.9, -10.0);
