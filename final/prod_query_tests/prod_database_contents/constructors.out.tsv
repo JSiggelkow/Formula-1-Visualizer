@@ -1,213 +1,213 @@
-constructorId	constructorRef	name	nationality
-1	mclaren	McLaren	British
-2	bmw_sauber	BMW Sauber	German
-3	williams	Williams	British
-4	renault	Renault	French
-5	toro_rosso	Toro Rosso	Italian
-6	ferrari	Ferrari	Italian
-7	toyota	Toyota	Japanese
-8	super_aguri	Super Aguri	Japanese
-9	red_bull	Red Bull	Austrian
-10	force_india	Force India	Indian
-11	honda	Honda	Japanese
-12	spyker	Spyker	Dutch
-13	mf1	MF1	Russian
-14	spyker_mf1	Spyker MF1	Dutch
-15	sauber	Sauber	Swiss
-16	bar	BAR	British
-17	jordan	Jordan	Irish
-18	minardi	Minardi	Italian
-19	jaguar	Jaguar	British
-20	prost	Prost	French
-21	arrows	Arrows	British
-22	benetton	Benetton	Italian
-23	brawn	Brawn	British
-24	stewart1	Stewart	British
-25	tyrrell1	Tyrrell	British
-26	lola	Lola	British
-27	ligier	Ligier	French
-28	forti	Forti	Italian
-29	footwork	Footwork	British
-30	pacific	Pacific	British
-31	simtek	Simtek	British
-32	team_lotus	Team Lotus	British
-33	larrousse	Larrousse	French
-34	brabham	Brabham	British
-35	dallara	Dallara	Italian
-36	fondmetal	Fondmetal	Italian
-37	march	March	British
-38	moda	Andrea Moda	Italian
-39	ags	AGS	French
-40	lambo	Lambo	Italian
-41	leyton	Leyton House	British
-42	coloni	Coloni	Italian
-44	eurobrun	Euro Brun	Italian
-45	osella	Osella	Italian
-46	onyx	Onyx	British
-47	life	Life	Italian
-48	rial	Rial	German
-49	zakspeed	Zakspeed	German
-50	ram	RAM	British
-51	alfa	Alfa Romeo	Swiss
-52	spirit	Spirit	British
-53	toleman	Toleman	British
-54	ats	ATS	Italian
-55	theodore	Theodore	Hong Kong
-56	fittipaldi	Fittipaldi	Brazilian
-57	ensign	Ensign	British
-58	shadow	Shadow	British
-59	wolf	Wolf	Canadian
-60	merzario	Merzario	Italian
-61	kauhsen	Kauhsen	German
-62	rebaque	Rebaque	Mexican
-63	surtees	Surtees	British
-64	hesketh	Hesketh	British
-65	martini	Martini	French
-66	brm	BRM	British
-67	penske	Penske	American
-68	lec	LEC	British
-69	mcguire	McGuire	Australian
-70	boro	Boro	Dutch
-71	apollon	Apollon	Swiss
-72	kojima	Kojima	Japanese
-73	parnelli	Parnelli	American
-74	maki	Maki	Japanese
-75	hill	Embassy Hill	British
-76	lyncar	Lyncar	British
-77	trojan	Trojan	British
-78	amon	Amon	New Zealander
-79	token	Token	British
-80	iso_marlboro	Iso Marlboro	British
-81	tecno	Tecno	Italian
-82	matra	Matra	French
-83	politoys	Politoys	British
-84	connew	Connew	British
-85	bellasi	Bellasi	Swiss
-86	tomaso	De Tomaso	Italian
-87	cooper	Cooper	British
-88	eagle	Eagle	American
-89	lds	LDS	South African
-90	protos	Protos	British
-91	shannon	Shannon	British
-92	scirocco	Scirocco	British
-93	re	RE	Rhodesian
-94	brp	BRP	British
-95	porsche	Porsche	German
-96	derrington	Derrington	British
-97	gilby	Gilby	British
-98	stebro	Stebro	Canadian
-99	emeryson	Emeryson	British
-100	enb	ENB	Belgian
-101	jbw	JBW	British
-102	ferguson	Ferguson	British
-103	mbm	MBM	Swiss
-104	behra-porsche	Behra-Porsche	Italian
-105	maserati	Maserati	Italian
-106	scarab	Scarab	American
-107	watson	Watson	American
-108	epperly	Epperly	American
-109	phillips	Phillips	American
-110	lesovsky	Lesovsky	American
-111	trevis	Trevis	American
-112	meskowski	Meskowski	American
-113	kurtis_kraft	Kurtis Kraft	American
-114	kuzma	Kuzma	American
-115	vhristensen	Christensen	American
-116	ewing	Ewing	American
-117	aston_martin	Aston Martin	British
-118	vanwall	Vanwall	British
-119	moore	Moore	American
-120	dunn	Dunn	American
-121	elder	Elder	American
-122	sutton	Sutton	American
-123	fry	Fry	British
-124	tec-mec	Tec-Mec	Italian
-125	connaught	Connaught	British
-126	alta	Alta	British
-127	osca	OSCA	Italian
-128	gordini	Gordini	French
-129	stevens	Stevens	American
-130	bugatti	Bugatti	French
-131	mercedes	Mercedes	German
-132	lancia	Lancia	Italian
-133	hwm	HWM	British
-134	schroeder	Schroeder	American
-135	pawl	Pawl	American
-136	pankratz	Pankratz	American
-137	arzani-volpini	Arzani-Volpini	Italian
-138	nichels	Nichels	American
-139	bromme	Bromme	American
-140	klenk	Klenk	German
-141	simca	Simca	French
-142	turner	Turner	American
-143	del_roy	Del Roy	American
-144	veritas	Veritas	German
-145	bmw	BMW	German
-146	emw	EMW	East German
-147	afm	AFM	German
-148	frazer_nash	Frazer Nash	British
-149	sherman	Sherman	American
-150	deidt	Deidt	American
-151	era	ERA	British
-152	butterworth	Aston Butterworth	British
-153	cisitalia	Cisitalia	Italian
-154	lago	Talbot-Lago	French
-155	hall	Hall	American
-156	marchese	Marchese	American
-157	langley	Langley	American
-158	rae	Rae	American
-159	olson	Olson	American
-160	wetteroth	Wetteroth	American
-161	adams	Adams	American
-162	snowberger	Snowberger	American
-163	milano	Milano	Italian
-164	hrt	HRT	Spanish
-166	virgin	Virgin	British
-167	cooper-maserati	Cooper-Maserati	British
-168	cooper-osca	Cooper-OSCA	British
-169	cooper-borgward	Cooper-Borgward	British
-170	cooper-climax	Cooper-Climax	British
-171	cooper-castellotti	Cooper-Castellotti	British
-172	lotus-climax	Lotus-Climax	British
-173	lotus-maserati	Lotus-Maserati	British
-174	de_tomaso-osca	De Tomaso-Osca	Italian
-175	de_tomaso-alfa_romeo	De Tomaso-Alfa Romeo	Italian
-176	lotus-brm	Lotus-BRM	British
-177	lotus-borgward	Lotus-Borgward	British
-178	cooper-alfa_romeo	Cooper-Alfa Romeo	British
-179	de_tomaso-ferrari	De Tomaso-Ferrari	Italian
-180	lotus-ford	Lotus-Ford	British
-181	brabham-brm	Brabham-BRM	British
-182	brabham-ford	Brabham-Ford	British
-183	brabham-climax	Brabham-Climax	British
-184	lds-climax	LDS-Climax	South African
-185	lds-alfa_romeo	LDS-Alfa Romeo	South African
-186	hrt-f1-team	HRT	Spanish
-187	virgin1	Virgin	British
-188	caterham	Caterham	Malaysian
-189	stewart	Stewart	British
-190	tyrrell	Tyrrell	British
-191	march2	March	British
-192	shadow1	Shadow	British
-193	pens	Penske	American
-194	wolf1	Wolf	Canadian
-195	fittipaldi1	Fittipaldi	Brazilian
-196	merzario1	Merzario	Italian
-197	kauhsen1	Kauhsen	German
-198	rebaque1	Rebaque	Mexican
-199	ensign1	Ensign	British
-200	lec1	LEC	British
-201	martini1	Martini	Italian
-202	mbm1	MBM	Swiss
-203	lds1	LDS	South African
-204	emeryson1	Emeryson	British
-205	scarab1	Scarab	American
-206	stever	Stever	American
-207	connew1	Connew	British
-208	lotus_f1	Lotus F1	British
-209	manor	Manor Marussia	British
-210	haas	Haas F1 Team	American
-211	racing_point	Racing Point	British
-213	alphatauri	AlphaTauri	Italian
-214	alpine	Alpine F1 Team	French
-215	rb	RB F1 Team	Italian
+constructorId	constructorRef	name	nationality	colorPrimary	colorSecondary
+1	mclaren	McLaren	British	#F47600	NULL
+2	bmw_sauber	BMW Sauber	German	#FFFFFF	#16588E
+3	williams	Williams	British	#1868DB	NULL
+4	renault	Renault	French	#f7d747	NULL
+5	toro_rosso	Toro Rosso	Italian	#00144A	#EC0742
+6	ferrari	Ferrari	Italian	#EF1A2D	NULL
+7	toyota	Toyota	Japanese	#EB0A1E	#FFFFFF
+8	super_aguri	Super Aguri	Japanese	#FFFFFF	#e20010
+9	red_bull	Red Bull	Austrian	#121F45	#FF004C
+10	force_india	Force India	Indian	#00A85C	#F27836
+11	honda	Honda	Japanese	#FFFFFF	#f30f34
+12	spyker	Spyker	Dutch	#F1C31E	#C0C0C0
+13	mf1	MF1	Russian	#ff0000	#333333
+14	spyker_mf1	Spyker MF1	Dutch	NULL	NULL
+15	sauber	Sauber	Swiss	#01C00E	NULL
+16	bar	BAR	British	#F1C31E	#C0C0C0
+17	jordan	Jordan	Irish	#FFDD00	NULL
+18	minardi	Minardi	Italian	#FFFF00	NULL
+19	jaguar	Jaguar	British	#004225	NULL
+20	prost	Prost	French	#003B5C	NULL
+21	arrows	Arrows	British	#FF6600	#FF6600
+22	benetton	Benetton	Italian	#008860	NULL
+23	brawn	Brawn	British	#FFFFFF	#D1E200
+24	stewart1	Stewart	British	#FFFFFF	#2F4198
+25	tyrrell1	Tyrrell	British	#1b4971	NULL
+26	lola	Lola	British	#ed1b2c	#ed1b2c
+27	ligier	Ligier	French	#0056ba	NULL
+28	forti	Forti	Italian	#FFD700	#005BAC
+29	footwork	Footwork	British	#FF0000	#FFFFFF
+30	pacific	Pacific	British	#0033A0	#FFFFFF
+31	simtek	Simtek	British	#6A1B9A	#FFFFFF
+32	team_lotus	Team Lotus	British	#006A4E	#FFFF00
+33	larrousse	Larrousse	French	#FF0000	#FFFF00
+34	brabham	Brabham	British	#002F6C	#FFFFFF
+35	dallara	Dallara	Italian	#FFD100	#005BAC
+36	fondmetal	Fondmetal	Italian	#2C2C2C	#FFD100
+37	march	March	British	#FF0000	#FFFFFF
+38	moda	Andrea Moda	Italian	#000000	#FFFFFF
+39	ags	AGS	French	#002147	#FFD100
+40	lambo	Lambo	Italian	#FFD700	#006847
+41	leyton	Leyton House	British	#00B2A9	#FFFFFF
+42	coloni	Coloni	Italian	#FFD100	#005BAC
+44	eurobrun	Euro Brun	Italian	#B22222	#FFD100
+45	osella	Osella	Italian	#0033A0	#FFFFFF
+46	onyx	Onyx	British	#000000	#FF69B4
+47	life	Life	Italian	#FF0000	#FFFFFF
+48	rial	Rial	German	#0047AB	#FFD100
+49	zakspeed	Zakspeed	German	#FF0000	#FFFFFF
+50	ram	RAM	British	#002147	#FFFFFF
+51	alfa	Alfa Romeo	Swiss	#AA0000	#FFFFFF
+52	spirit	Spirit	British	#FF0000	#FFFFFF
+53	toleman	Toleman	British	#002147	#FFFFFF
+54	ats	ATS	Italian	#FFD100	#000000
+55	theodore	Theodore	Hong Kong	#FF0000	#FFFFFF
+56	fittipaldi	Fittipaldi	Brazilian	#FFD100	#00A859
+57	ensign	Ensign	British	#FF0000	#002147
+58	shadow	Shadow	British	#000000	#FFFFFF
+59	wolf	Wolf	Canadian	#002147	#FFD100
+60	merzario	Merzario	Italian	#00A859	#FF0000
+61	kauhsen	Kauhsen	German	#FFD100	#000000
+62	rebaque	Rebaque	Mexican	#006341	#FF0000
+63	surtees	Surtees	British	#002147	#FFFFFF
+64	hesketh	Hesketh	British	#FFFFFF	#FF0000
+65	martini	Martini	French	#002147	#FFFFFF
+66	brm	BRM	British	#004225	#FF0000
+67	penske	Penske	American	#FF0000	#FFFFFF
+68	lec	LEC	British	#FF6600	#FFFFFF
+69	mcguire	McGuire	Australian	#FFD100	#002147
+70	boro	Boro	Dutch	#FF0000	#FFFFFF
+71	apollon	Apollon	Swiss	#0000FF	#FFFFFF
+72	kojima	Kojima	Japanese	#FFFFFF	#FF0000
+73	parnelli	Parnelli	American	#FFD100	#000000
+74	maki	Maki	Japanese	#0000FF	#FFFFFF
+75	hill	Embassy Hill	British	#FF0000	#FFFFFF
+76	lyncar	Lyncar	British	#002147	#FF0000
+77	trojan	Trojan	British	#FF6600	#FFFFFF
+78	amon	Amon	New Zealander	#002147	#FFD100
+79	token	Token	British	#FFD100	#000000
+80	iso_marlboro	Iso Marlboro	British	#FF0000	#FFFFFF
+81	tecno	Tecno	Italian	#002147	#FFD100
+82	matra	Matra	French	#002395	#FFFFFF
+83	politoys	Politoys	British	#002147	#FF0000
+84	connew	Connew	British	#FF0000	#FFFFFF
+85	bellasi	Bellasi	Swiss	#FFD100	#FF0000
+86	tomaso	De Tomaso	Italian	#002147	#FFFFFF
+87	cooper	Cooper	British	#004225	#FFFFFF
+88	eagle	Eagle	American	#002147	#FFD100
+89	lds	LDS	South African	#FFD100	#000000
+90	protos	Protos	British	#002147	#FFFFFF
+91	shannon	Shannon	British	#006341	#FFFFFF
+92	scirocco	Scirocco	British	#002147	#FFD100
+93	re	RE	Rhodesian	#FFD100	#006341
+94	brp	BRP	British	#004225	#FFFFFF
+95	porsche	Porsche	German	#FFFFFF	#000000
+96	derrington	Derrington	British	#002147	#FFFFFF
+97	gilby	Gilby	British	#002147	#FF0000
+98	stebro	Stebro	Canadian	#FF0000	#FFFFFF
+99	emeryson	Emeryson	British	#000000	#FFFFFF
+100	enb	ENB	Belgian	#FFD100	#000000
+101	jbw	JBW	British	#002147	#FFFFFF
+102	ferguson	Ferguson	British	#002147	#FFD100
+103	mbm	MBM	Swiss	#FF0000	#FFFFFF
+104	behra-porsche	Behra-Porsche	Italian	#FFFFFF	#FF0000
+105	maserati	Maserati	Italian	#002147	#FF0000
+106	scarab	Scarab	American	#002147	#FFFFFF
+107	watson	Watson	American	#FFD100	#000000
+108	epperly	Epperly	American	#002147	#FFFFFF
+109	phillips	Phillips	American	#FF0000	#FFFFFF
+110	lesovsky	Lesovsky	American	#002147	#FFFFFF
+111	trevis	Trevis	American	#FF0000	#FFFFFF
+112	meskowski	Meskowski	American	#FFD100	#000000
+113	kurtis_kraft	Kurtis Kraft	American	#002147	#FFFFFF
+114	kuzma	Kuzma	American	#FF0000	#FFFFFF
+115	vhristensen	Christensen	American	#002147	#FFD100
+116	ewing	Ewing	American	#FF0000	#FFFFFF
+117	aston_martin	Aston Martin	British	#00665E	#CEDC00
+118	vanwall	Vanwall	British	#006341	#FFD100
+119	moore	Moore	American	#002147	#FFD100
+120	dunn	Dunn	American	#FF0000	#FFFFFF
+121	elder	Elder	American	#FFD100	#000000
+122	sutton	Sutton	American	#002147	#FFFFFF
+123	fry	Fry	British	#002147	#FFD100
+124	tec-mec	Tec-Mec	Italian	#002147	#FF0000
+125	connaught	Connaught	British	#004225	#FFFFFF
+126	alta	Alta	British	#002147	#FFD100
+127	osca	OSCA	Italian	#002147	#FFFFFF
+128	gordini	Gordini	French	#0033A0	#FFFFFF
+129	stevens	Stevens	American	#FF0000	#FFFFFF
+130	bugatti	Bugatti	French	#002147	#FFD100
+131	mercedes	Mercedes	German	#00D7B6	#C6C6C6
+132	lancia	Lancia	Italian	#002147	#FFFFFF
+133	hwm	HWM	British	#004225	#FFFFFF
+134	schroeder	Schroeder	American	#FF0000	#FFFFFF
+135	pawl	Pawl	American	#002147	#FFD100
+136	pankratz	Pankratz	American	#FF0000	#FFFFFF
+137	arzani-volpini	Arzani-Volpini	Italian	#FF0000	#FFFFFF
+138	nichels	Nichels	American	#FFD100	#000000
+139	bromme	Bromme	American	#002147	#FFFFFF
+140	klenk	Klenk	German	#0033A0	#FFD100
+141	simca	Simca	French	#0033A0	#FFFFFF
+142	turner	Turner	American	#FF0000	#FFFFFF
+143	del_roy	Del Roy	American	#FFD100	#000000
+144	veritas	Veritas	German	#002147	#FFD100
+145	bmw	BMW	German	#16588E	#FFFFFF
+146	emw	EMW	East German	#FF0000	#FFFFFF
+147	afm	AFM	German	#0033A0	#FFD100
+148	frazer_nash	Frazer Nash	British	#004225	#FFFFFF
+149	sherman	Sherman	American	#FF0000	#FFFFFF
+150	deidt	Deidt	American	#002147	#FFD100
+151	era	ERA	British	#004225	#FFFFFF
+152	butterworth	Aston Butterworth	British	#229971	#FFFFFF
+153	cisitalia	Cisitalia	Italian	#FF0000	#FFFFFF
+154	lago	Talbot-Lago	French	#002395	#FFFFFF
+155	hall	Hall	American	#FF0000	#FFFFFF
+156	marchese	Marchese	American	#002147	#FFD100
+157	langley	Langley	American	#FF0000	#FFFFFF
+158	rae	Rae	American	#FFD100	#000000
+159	olson	Olson	American	#FF0000	#FFFFFF
+160	wetteroth	Wetteroth	American	#002147	#FFD100
+161	adams	Adams	American	#FF0000	#FFFFFF
+162	snowberger	Snowberger	American	#FFD100	#000000
+163	milano	Milano	Italian	#FF0000	#FFFFFF
+164	hrt	HRT	Spanish	#A1928D	#FF0000
+166	virgin	Virgin	British	#FF0000	#000000
+167	cooper-maserati	Cooper-Maserati	British	#004225	#FFFFFF
+168	cooper-osca	Cooper-OSCA	British	#004225	#FFFFFF
+169	cooper-borgward	Cooper-Borgward	British	#004225	#FFFFFF
+170	cooper-climax	Cooper-Climax	British	#004225	#FFFFFF
+171	cooper-castellotti	Cooper-Castellotti	British	#004225	#FFFFFF
+172	lotus-climax	Lotus-Climax	British	#006A4E	#FFFF00
+173	lotus-maserati	Lotus-Maserati	British	#006A4E	#FFFF00
+174	de_tomaso-osca	De Tomaso-Osca	Italian	#002147	#FFFFFF
+175	de_tomaso-alfa_romeo	De Tomaso-Alfa Romeo	Italian	#002147	#FFFFFF
+176	lotus-brm	Lotus-BRM	British	#006A4E	#FFFF00
+177	lotus-borgward	Lotus-Borgward	British	#006A4E	#FFFF00
+178	cooper-alfa_romeo	Cooper-Alfa Romeo	British	#004225	#FFFFFF
+179	de_tomaso-ferrari	De Tomaso-Ferrari	Italian	#002147	#FFFFFF
+180	lotus-ford	Lotus-Ford	British	#006A4E	#FFFF00
+181	brabham-brm	Brabham-BRM	British	#002F6C	#FFFFFF
+182	brabham-ford	Brabham-Ford	British	#002F6C	#FFFFFF
+183	brabham-climax	Brabham-Climax	British	#002F6C	#FFFFFF
+184	lds-climax	LDS-Climax	South African	#FFD100	#000000
+185	lds-alfa_romeo	LDS-Alfa Romeo	South African	#FFD100	#000
+186	hrt-f1-team	HRT	Spanish	#A9A9A9	#FFD700
+187	virgin1	Virgin	British	#FF0000	#000000
+188	caterham	Caterham	Malaysian	#004225	#FFD700
+189	stewart	Stewart	British	#FFFFFF	#0033A0
+190	tyrrell	Tyrrell	British	#0033A0	#FFFFFF
+191	march2	March	British	#FF0000	#FFFFFF
+192	shadow1	Shadow	British	#000000	#FF0000
+193	pens	Penske	American	#FF0000	#FFFFFF
+194	wolf1	Wolf	Canadian	#000080	#FFD700
+195	fittipaldi1	Fittipaldi	Brazilian	#FFD700	#00A859
+196	merzario1	Merzario	Italian	#FFD700	#FF0000
+197	kauhsen1	Kauhsen	German	#FFD700	#000000
+198	rebaque1	Rebaque	Mexican	#006341	#FF0000
+199	ensign1	Ensign	British	#002147	#FF0000
+200	lec1	LEC	British	#FF4500	#FFFFFF
+201	martini1	Martini	Italian	#002147	#87CEEB
+202	mbm1	MBM	Swiss	#FF0000	#FFFFFF
+203	lds1	LDS	South African	#FFD700	#007749
+204	emeryson1	Emeryson	British	#800000	#FFFFFF
+205	scarab1	Scarab	American	#4682B4	#FFFFFF
+206	stever	Stever	American	#A9A9A9	#FF0000
+207	connew1	Connew	British	#8B0000	#FFFFFF
+208	lotus_f1	Lotus F1	British	#b39759	NULL
+209	manor	Manor Marussia	British	#db1922	NULL
+210	haas	Haas F1 Team	American	#000000	#DA291C
+211	racing_point	Racing Point	British	#F596C8	NULL
+213	alphatauri	AlphaTauri	Italian	#00293F	NULL
+214	alpine	Alpine F1 Team	French	#00A1E8	NULL
+215	rb	RB F1 Team	Italian	#6C98FF	NULL
