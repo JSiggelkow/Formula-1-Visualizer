@@ -113,7 +113,8 @@ def get_race_wins(year: int = None):
              f"JOIN races ON races.raceId = results.raceId "
              f"WHERE races.year = {year} "
              f"AND results.positionText = '1' "
-             f"GROUP BY drivers.forename, drivers.surname")
+             f"GROUP BY drivers.forename, drivers.surname"
+             f" ORDER BY wins DESC;")
     cursor.execute(query)
     results = cursor.fetchall()
     cursor.close()
