@@ -122,30 +122,55 @@ Feel free to type in a simple query like `SHOW DATABASES;` to test further.
 
 ### Supported features
 You can visit http://127.0.0.1:5173 and try out any of the following features:
+
 - **Basic feature #1 (R6):** When you type in a driver's name into the main search bar, a list of autocomplete suggestions pop up under the search bar.
-    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/DriverSearchBar.jsx)
-    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L37-L53)
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/DriverSearchBar.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L37-L53)
+
 - **Basic feature #2 (R7):** If you click on any of the suggested names, you will be taken to a new page with that driver's details, including basic personal information and a paginated list of their race results over the years.
-    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/DriverInfo.jsx)
-    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L55-L88)
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/DriverInfo.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L55-L88)
+
 - **Basic feature #3 (R8):** Back on the home page, you can scroll down to the "Season Winners" card, specify a year, and view all of the race winners from that year.
-    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/SeasonWinnersCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/SeasonWinners.jsx)
-    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L90-L105)
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/SeasonWinnersCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/SeasonWinners.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L90-L105)
+
 - **Basic feature #4 (R9):** Using the "Fastest Lap" card, you can toggle between the "By Race" and "By Circuit" search options. You can search for the fastest lap by selecting a year and race name, or by selecting a circuit name.
-    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/FastestLapCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/FastestLap.jsx)
-    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L107-L171) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L385-L407)
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/FastestLapCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/FastestLap.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L107-L171) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L385-L407)
+
 - **Basic feature #5 (R10):** Click on the red "Get Next Race" button to trigger an update. This will look up the next chronological race that is not currently in the database and will add all relevant data from that race. It will then report how many rows were added to each table.
-    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/frontend/src/components/UpdateDataCard.jsx)
-    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/main.py#L173-L383)
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/UpdateDataCard.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L173-L383)
+
+- **Advanced feature #1 (R11):** When you toggle on "Use advanced search mode" in the main search bar, you can search for drivers using natural-language keywords instead of just names. After clicking "Search", the most relevant matches are listed in the dropdown.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/DriverSearchBar.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L395-L418) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/scraper.py)
+
+- **Advanced feature #2 (R12):** Using the "Closest Circuits" card, you can type in any location (address, city, country, etc.) and view the 10 F1 circuits closest to that point, ranked by actual geographic distance.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/ClosestCircuitCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/ClosestCircuitsResults.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L531-L562)
+
+- **Advanced feature #3 (R13):** On the "Trivia Game" card, you can randomly generate multiple-choice F1 trivia questions sourced directly from the database and try to answer it correctly.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/TriviaCard.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L564-L599) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L683-L723)
+
+- **Advanced feature #4 (R14):** The “Teammate Graph” card lets you to explore a colour-coded visual network of driver-teammate relationships; selecting a driver displays all of the teammates they have had across their career.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/TeammateGraphCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/pages/GraphPage.jsx)
+    - Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L446-L529)
+
+- **Advanced feature #5 (R15):** Using the “Lap Delta Graph” card, you can select a year and race and view a line graph showing per-lap deltas for each driver.
+    - Front-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/components/LapDeltaGraphCard.jsx) [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/frontend/src/pages/LapDeltaGraphPage.jsx)
+    -  Back-end [↗](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/main.py#L601-L679)
 
 ## Evaluating query performance
 
 ### R6 - R9
 You can manually evaluate the performance following these steps:
 1. Connect to the database and select the production database: `USE f1db;`
-2. Execute the contents of [`define_temp_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/define_temp_indexes.sql). The comment at the top of the file explains why this is necessary.
-3. Execute the contents of [`drop_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/drop_indexes.sql) to remove performance optimizations.
-4. Run each production query in [`prod_query_tests/`](https://github.com/JSiggelkow/Formula-1-Visualizer/tree/main/milestone-2/prod_query_tests) with `EXPLAIN ANALYZE`. Record the last value of the `time` field shown at the root of the execution plan. For example, this shows that the query took 0.475 ms to complete:
+2. Execute the contents of [`define_temp_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/prod_query_tests/prod_performance_test/define_temp_indexes.sql). The comment at the top of the file explains why this is necessary.
+3. Execute the contents of [`drop_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/prod_query_tests/prod_performance_test/drop_indexes.sql) to remove performance optimizations.
+4. Run each production query in [`prod_query_tests/`](https://github.com/JSiggelkow/Formula-1-Visualizer/tree/main/final/prod_query_tests) with `EXPLAIN ANALYZE`. Record the last value of the `time` field shown at the root of the execution plan. For example, this shows that the query took 0.475 ms to complete:
     ```
     mysql> EXPLAIN ANALYZE SELECT * FROM drivers WHERE forename = 'Mark';
     +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -159,11 +184,11 @@ You can manually evaluate the performance following these steps:
     ```
     
     These values are query execution times _without_ performance optimizations.
-5. Execute the contents of [`define_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/backend/define_indexes.sql) to add back performance optimizations.
+5. Execute the contents of [`define_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/backend/define_indexes.sql) to add back performance optimizations. Note that you can skip the `FULLTEXT` index, as it wasn't dropped in the first place.
     - Please make sure to complete this step to restore the production database state.
-6. Execute the contents of [`drop_temp_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/drop_temp_indexes.sql). 
+6. Execute the contents of [`drop_temp_indexes.sql`](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/prod_query_tests/prod_performance_test/drop_temp_indexes.sql). 
 7. Repeat step 3. This time, the recorded values are query execution times _with_ performance optimizations.
 8. Compare the performance side by side for each production query.
 
 ### R10
-Run [this script](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/milestone-2/prod_query_tests/prod_performance_test/test.sh) to automatically evaluate the performance difference.
+Run [this script](https://github.com/JSiggelkow/Formula-1-Visualizer/blob/main/final/prod_query_tests/prod_performance_test/test.sh) to automatically evaluate the performance difference.
